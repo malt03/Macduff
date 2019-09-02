@@ -33,7 +33,8 @@ final class ImageDownloader {
             }
             guard
                 let location = location,
-                let image = NativeImage(contentsOfFile: location.path)
+                let data = try? Data(contentsOf: location),
+                let image = NativeImage(data: data)
                 else {
                     failure(Errors.unknown)
                     return

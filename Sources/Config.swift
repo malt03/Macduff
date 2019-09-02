@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Config {
-    static var `default` = Config()
+public struct Config {
+    public static var `default` = Config()
     
-    let cache: Cache = DiskCache()
-    let cacheTTL: TimeInterval = 60 * 60 * 24 * 30
+    public let cache: Cache = DiskCache()
+    public let cacheTTL: TimeInterval = 60 * 60 * 24 * 30
 }

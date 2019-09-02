@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Cache {
+public protocol Cache {
     func store(image: NativeImage, for key: String, expiresAt: Date)
     func get(for key: String) -> NativeImage?
     var wrapped: Cache? { get }
@@ -24,7 +24,7 @@ extension Cache {
     ) {
         queue.async {
             if let cached = self.wrapped?.get(for: key) ?? self.get(for: key) {
-                DispatchQueue.main.async { result(cached) }
+                result(cached)
                 return
             }
 

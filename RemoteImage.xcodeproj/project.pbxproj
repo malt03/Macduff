@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED098517231D360000A895E5 /* RemoteImage_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteImage_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED098517231D360000A895E5 /* RemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED09851A231D360100A895E5 /* RemoteImage_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteImage_iOS.h; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098526231D37FC00A895E5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		ED098518231D360000A895E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED098517231D360000A895E5 /* RemoteImage_iOS.framework */,
+				ED098517231D360000A895E5 /* RemoteImage.framework */,
 				EDD0373C231E508100D8047F /* Example.app */,
 			);
 			name = Products;
@@ -205,7 +205,7 @@
 			);
 			name = "RemoteImage-iOS";
 			productName = "RemoteImage-iOS";
-			productReference = ED098517231D360000A895E5 /* RemoteImage_iOS.framework */;
+			productReference = ED098517231D360000A895E5 /* RemoteImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDD0373B231E508100D8047F /* Example */ = {
@@ -406,7 +406,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.RemoteImage-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RemoteImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -479,7 +479,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.RemoteImage-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RemoteImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

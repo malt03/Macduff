@@ -30,17 +30,21 @@ final class ImageFetcher: ObservableObject {
     func fetch(completion: ((Status) -> Void)?) {
         if error != nil { error = nil }
         config.cache.getOrStore(key: provider.cacheKey, ttl: config.cacheTTL, fetch: { (fetchedHandler) in
-            self.provider.run(progress: {
-                self.progress = $0
+            self.provider.run(progress: { (progress) in
+                DispatchQueue.main.async { self.progress = progress }
             }, success: {
                 fetchedHandler($0)
-            }, failure: {
-                self.error = $0
-                completion?(.failure($0))
+            }, failure: { (error) in
+                DispatchQueue.main.async {
+                    self.error = error
+                    completion?(.failure(error))
+                }
             })
-        }, result: {
-            self.image = $0
-            completion?(.success($0))
+        }, result: { (image) in
+            DispatchQueue.main.async {
+                self.image = image
+                completion?(.success(image))
+            }
         })
     }
 }

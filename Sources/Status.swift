@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Status {
+public enum Status {
     case failure(Error)
     case success(NativeImage)
 }

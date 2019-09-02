@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol ImageProvider {
+public protocol ImageProvider {
     var cacheKey: String { get }
     func run(progress: @escaping (Float) -> Void, success: @escaping (NativeImage) -> Void, failure: @escaping (Error) -> Void)
 }

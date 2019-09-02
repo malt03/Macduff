@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol Source {
+public protocol Source {
     var provider: ImageProvider { get }
 }
 
 extension URL: Source {
-    var provider: ImageProvider { return RemoteURLImageProvider(url: self) }
+    public var provider: ImageProvider { return RemoteURLImageProvider(url: self) }
 }
