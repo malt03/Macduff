@@ -8,9 +8,9 @@
 import Foundation
 
 final class DiskCache: Cache {
-    var wrapped: Cache? { return nil }
+    let wrapped: Cache? = MemoryCache()
     
-    func store(image: NativeImage, for key: String, expiresAt: Date) {
+    func store(image: ExpirableImage, for key: String) {
         
     }
     

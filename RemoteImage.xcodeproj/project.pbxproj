@@ -27,6 +27,9 @@
 		EDD03745231E508200D8047F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD03744231E508200D8047F /* Assets.xcassets */; };
 		EDD03748231E508200D8047F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD03747231E508200D8047F /* Preview Assets.xcassets */; };
 		EDD0374B231E508200D8047F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD03749231E508200D8047F /* LaunchScreen.storyboard */; };
+		EDD03751231E614500D8047F /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
+		EDD03755231E69DE00D8047F /* ExpirableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* ExpirableImage.swift */; };
+		EDD03757231E69FA00D8047F /* NativeImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03756231E69FA00D8047F /* NativeImage+Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		EDD03747231E508200D8047F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDD0374A231E508200D8047F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDD0374C231E508200D8047F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD03750231E614500D8047F /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		EDD03754231E69DE00D8047F /* ExpirableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirableImage.swift; sourceTree = "<group>"; };
+		EDD03756231E69FA00D8047F /* NativeImage+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeImage+Cache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 			children = (
 				ED09852A231D383D00A895E5 /* Cache.swift */,
 				ED09852D231D38E100A895E5 /* DiskCache.swift */,
+				EDD03750231E614500D8047F /* MemoryCache.swift */,
+				EDD03754231E69DE00D8047F /* ExpirableImage.swift */,
+				EDD03756231E69FA00D8047F /* NativeImage+Cache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -297,7 +306,10 @@
 				ED098528231D37FC00A895E5 /* ImageCacheManager.swift in Sources */,
 				EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */,
 				ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */,
+				EDD03757231E69FA00D8047F /* NativeImage+Cache.swift in Sources */,
+				EDD03751231E614500D8047F /* MemoryCache.swift in Sources */,
 				ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */,
+				EDD03755231E69DE00D8047F /* ExpirableImage.swift in Sources */,
 				EDD03716231E11CE00D8047F /* Source.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

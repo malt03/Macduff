@@ -7,8 +7,8 @@
 
 import Foundation
 
-public protocol Cache {
-    func store(image: NativeImage, for key: String, expiresAt: Date)
+public protocol Cache: class {
+    func store(image: ExpirableImage, for key: String)
     func get(for key: String) -> NativeImage?
     var wrapped: Cache? { get }
 }
@@ -30,9 +30,9 @@ extension Cache {
 
             fetch { (fetched) in
                 guard let fetched = fetched else { return }
-                let expiresAt = Date().addingTimeInterval(ttl)
-                self.store(image: fetched, for: key, expiresAt: expiresAt)
-                self.wrapped?.store(image: fetched, for: key, expiresAt: expiresAt)
+                let expirable = fetched.withExpiresAt(Date().addingTimeInterval(ttl))
+                self.store(image: expirable, for: key)
+                self.wrapped?.store(image: expirable, for: key)
                 result(fetched)
             }
         }
