@@ -9,15 +9,15 @@ import SwiftUI
 import RemoteImage
 
 struct ContentView: View {
-    @State private var randomImages = (0..<10).map { RandomImageModel(id: $0) }
+    @State private var images = (0..<10).map { ImageModel(id: $0) }
     
     var body: some View {
-        List(randomImages) { (image) in
+        List(images) { (image) in
             RemoteImage(source: image.url, loadingPlaceHolder: { _ in
                 Spacer()
                     .frame(width: 100, height: 100, alignment: .center)
                     .background(Color.blue)
-            }, errorPlaceHolder: { _ in
+            }, errorPlaceHolder: { (error) in
                 Spacer()
                     .frame(width: 100, height: 100, alignment: .center)
                     .background(Color.red)
@@ -26,10 +26,9 @@ struct ContentView: View {
     }
 }
 
-struct RandomImageModel: Identifiable {
+struct ImageModel: Identifiable {
     let id: Int
-    
-    var url: URL { return URL(string: "https://picsum.photos/100/100?random=\(id)")! }
+    var url: URL { return URL(string: "https://picsum.photos/id/\(id)/100/100")! }
 }
 
 struct ContentView_Previews: PreviewProvider {

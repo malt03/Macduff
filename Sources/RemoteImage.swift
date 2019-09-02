@@ -64,6 +64,7 @@ extension RemoteImage: View {
             loadingPlaceHolder
             errorPlaceHolder
         }.onAppear {
+            if self.imageFetcher.image != nil { return }
             self.imageFetcher.fetch(completion: self.completionHandler)
         }
     }
