@@ -11,10 +11,9 @@ import Combine
 final class ImageDownloaderSessionDelegate: NSObject, URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {}
     
-    var progress: AnyPublisher<Float, Never> { return progressSubject }
-    private let progressSubject = CurrentValueSubject<Float, Never>(0)
+    var progressHandler: ((Float) -> Void)?
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        progressSubject.send(Float(totalBytesWritten) / Float(totalBytesExpectedToWrite))
+        progressHandler?(Float(totalBytesWritten) / Float(totalBytesExpectedToWrite))
     }
 }

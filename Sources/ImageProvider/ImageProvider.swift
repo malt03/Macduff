@@ -9,6 +9,6 @@ import Foundation
 import Combine
 
 protocol ImageProvider {
-    var progress: AnyPublisher<Float, Never>? { get }
-    var completion: AnyPublisher<NativeImage, Error> { get }
+    var cacheKey: String { get }
+    func run(progress: @escaping (Float) -> Void, success: @escaping (NativeImage) -> Void, failure: @escaping (Error) -> Void)
 }

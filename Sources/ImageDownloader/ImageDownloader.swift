@@ -15,11 +15,6 @@ final class ImageDownloader {
     
     private let url: URL
     
-    var progress: AnyPublisher<Float, Never>? { return sessionDelegate.progress }
-    var completion: AnyPublisher<NativeImage, Error>
-    
-    private let completionSubject = CurrentValueSubject<NativeImage, Error>(<#T##value: NativeImage##NativeImage#>)
-    
     private let session: URLSession
     private let sessionDelegate = ImageDownloaderSessionDelegate()
     
@@ -28,23 +23,22 @@ final class ImageDownloader {
         session = URLSession(configuration: .ephemeral, delegate: sessionDelegate, delegateQueue: nil)
     }
     
-    func download() {
-        sessionDelegate.progress = { [weak self] (progress) in
-            self?.progress(progress)
-        }
+    func download(progress: @escaping (Float) -> Void, success: @escaping (NativeImage) -> Void, failure: @escaping (Error) -> Void) {
+        sessionDelegate.progressHandler = progress
         session.downloadTask(with: url, completionHandler: { (location, _, error) in
+            self.sessionDelegate.progressHandler = nil
             if let error = error {
-                self.failure(error)
+                failure(error)
                 return
             }
             guard
                 let location = location,
                 let image = NativeImage(contentsOfFile: location.path)
                 else {
-                    self.failure(Errors.unknown)
+                    failure(Errors.unknown)
                     return
                 }
-            self.success(image)
+            success(image)
         }).resume()
     }
 }

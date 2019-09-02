@@ -9,6 +9,5 @@ import Foundation
 
 enum Status {
     case failure(Error)
-    case progress(Float)
     case success(NativeImage)
 }

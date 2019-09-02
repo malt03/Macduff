@@ -7,23 +7,47 @@
 
 import SwiftUI
 
-struct RemoteImage {
-    private var imageProvider: ImageProvider? = nil
+struct RemoteImage<PlaceHolderView: View> {
+    @ObservedObject private var imageFetcher: ImageFetcher
     
-    init(url: URL) {
-        imageProvider = RemoteURLImageProvider(url: url)
+    private let completionHandler: ((Status) -> Void)?
+    private let placeHolderHandler: ((Float) -> PlaceHolderView)?
+    
+    init(
+        provider: ImageProvider,
+        placeHolder: ((Float) -> PlaceHolderView)? = nil,
+        config: Config = .default,
+        completion: ((Status) -> Void)? = nil
+    ) {
+        imageFetcher = ImageFetcher(provider: provider, config: config)
+        placeHolderHandler = placeHolder
+        completionHandler = completion
+    }
+    
+    init(source: Source, config: Config = .default) {
+        self.init(provider: source.provider, config: config)
     }
 }
 
-//extension RemoteImage: View {
-//    var body: some View {
-//        
-//    }
-//    
-//    func onAppear(perform action: (() -> Void)? = nil) -> some View
-//    {
-//        imageProvider?.provide(progress: <#T##(Float) -> Void#>, success: <#T##(NativeImage) -> Void#>, failure: <#T##(Error) -> Void#>)
-//        action?()
-//        return self
-//    }
-//}
+extension RemoteImage: View {
+    var body: some View {
+        if let image = imageFetcher.image {
+            return ZStack<TupleView<(Image?, PlaceHolderView?)>> {
+                Image(nativeImage: image)
+                nil
+            }
+        } else {
+            return ZStack<TupleView<(Image?, PlaceHolderView?)>> {
+                nil
+                placeHolderHandler?(imageFetcher.progress)
+            }
+        }
+    }
+    
+    func onAppear(perform action: (() -> Void)? = nil) -> some View
+    {
+        imageFetcher.fetch(completion: completionHandler)
+        action?()
+        return self
+    }
+}

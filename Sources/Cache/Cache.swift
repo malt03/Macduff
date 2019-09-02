@@ -19,7 +19,7 @@ extension Cache {
     func getOrStore(
         key: String,
         ttl: TimeInterval,
-        fetch: @escaping ((NativeImage?) -> Void) -> Void,
+        fetch: @escaping (@escaping (NativeImage?) -> Void) -> Void,
         result: @escaping (NativeImage) -> Void
     ) {
         queue.async {

@@ -11,4 +11,5 @@ struct Config {
     static var `default` = Config()
     
     let cache: Cache = DiskCache()
+    let cacheTTL: TimeInterval = 60 * 60 * 24 * 30
 }

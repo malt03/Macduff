@@ -13,12 +13,14 @@
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
 		ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		ED098536231D4D9100A895E5 /* NativeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeImage.swift */; };
+		ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
 		ED098538231D536D00A895E5 /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* URLImageProvider.swift */; };
 		ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
 		ED09853D231D59D600A895E5 /* ImageDownloaderSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853C231D59D600A895E5 /* ImageDownloaderSessionDelegate.swift */; };
 		ED09853F231D644C00A895E5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
 		ED098541231D66B800A895E5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
+		EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03713231E11B300D8047F /* ImageFetcher.swift */; };
+		EDD03716231E11CE00D8047F /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +32,14 @@
 		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		ED09852D231D38E100A895E5 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		ED098530231D4C4300A895E5 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		ED098535231D4D9100A895E5 /* NativeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeImage.swift; sourceTree = "<group>"; };
+		ED098535231D4D9100A895E5 /* NativeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSupport.swift; sourceTree = "<group>"; };
 		ED098537231D536D00A895E5 /* URLImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageProvider.swift; sourceTree = "<group>"; };
 		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED09853C231D59D600A895E5 /* ImageDownloaderSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderSessionDelegate.swift; sourceTree = "<group>"; };
 		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EDD03713231E11B300D8047F /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		EDD03715231E11CE00D8047F /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +83,14 @@
 			isa = PBXGroup;
 			children = (
 				ED098539231D597F00A895E5 /* ImageDownloader */,
-				ED098534231D4D7700A895E5 /* NativeImage */,
+				ED098534231D4D7700A895E5 /* NativeSupport */,
 				ED09852F231D4C3700A895E5 /* ImageProvider */,
 				ED09852C231D38C100A895E5 /* Cache */,
 				ED098526231D37FC00A895E5 /* ImageCacheManager.swift */,
 				ED098527231D37FC00A895E5 /* RemoteImage.swift */,
 				ED09853E231D644C00A895E5 /* Status.swift */,
 				ED098540231D66B800A895E5 /* Config.swift */,
+				EDD03713231E11B300D8047F /* ImageFetcher.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -104,16 +109,17 @@
 			children = (
 				ED098530231D4C4300A895E5 /* ImageProvider.swift */,
 				ED098537231D536D00A895E5 /* URLImageProvider.swift */,
+				EDD03715231E11CE00D8047F /* Source.swift */,
 			);
 			path = ImageProvider;
 			sourceTree = "<group>";
 		};
-		ED098534231D4D7700A895E5 /* NativeImage */ = {
+		ED098534231D4D7700A895E5 /* NativeSupport */ = {
 			isa = PBXGroup;
 			children = (
-				ED098535231D4D9100A895E5 /* NativeImage.swift */,
+				ED098535231D4D9100A895E5 /* NativeSupport.swift */,
 			);
-			path = NativeImage;
+			path = NativeSupport;
 			sourceTree = "<group>";
 		};
 		ED098539231D597F00A895E5 /* ImageDownloader */ = {
@@ -204,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED09853D231D59D600A895E5 /* ImageDownloaderSessionDelegate.swift in Sources */,
-				ED098536231D4D9100A895E5 /* NativeImage.swift in Sources */,
+				ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */,
 				ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */,
 				ED098538231D536D00A895E5 /* URLImageProvider.swift in Sources */,
 				ED09853F231D644C00A895E5 /* Status.swift in Sources */,
@@ -212,8 +218,10 @@
 				ED09852B231D383D00A895E5 /* Cache.swift in Sources */,
 				ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */,
 				ED098528231D37FC00A895E5 /* ImageCacheManager.swift in Sources */,
+				EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */,
 				ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */,
 				ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */,
+				EDD03716231E11CE00D8047F /* Source.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
