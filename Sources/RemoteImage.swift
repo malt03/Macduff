@@ -7,20 +7,24 @@
 
 import SwiftUI
 
-struct RemoteImage<PlaceHolderView: View> {
+struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
     @ObservedObject private var imageFetcher: ImageFetcher
     
     private let completionHandler: ((Status) -> Void)?
-    private let placeHolderHandler: ((Float) -> PlaceHolderView)?
+    private let loadingPlaceHolderHandler: ((Float) -> LoadingPlaceHolder)?
+    private let errorPlaceHolderHandler: ((Error) -> ErrorPlaceHolder)?
     
     init(
         provider: ImageProvider,
-        placeHolder: ((Float) -> PlaceHolderView)? = nil,
+        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)? = nil,
+        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)? = nil,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         imageFetcher = ImageFetcher(provider: provider, config: config)
-        placeHolderHandler = placeHolder
+        loadingPlaceHolderHandler = loadingPlaceHolder
+        errorPlaceHolderHandler = errorPlaceHolder
+        
         completionHandler = completion
     }
     
@@ -31,23 +35,24 @@ struct RemoteImage<PlaceHolderView: View> {
 
 extension RemoteImage: View {
     var body: some View {
+        var imageView: Image? = nil
+        var loadingPlaceHolder: LoadingPlaceHolder? = nil
+        var errorPlaceHolder: ErrorPlaceHolder? = nil
+        
         if let image = imageFetcher.image {
-            return ZStack<TupleView<(Image?, PlaceHolderView?)>> {
-                Image(nativeImage: image)
-                nil
-            }
+            imageView = Image(nativeImage: image)
+        } else if let error = imageFetcher.error {
+            errorPlaceHolder = errorPlaceHolderHandler?(error)
         } else {
-            return ZStack<TupleView<(Image?, PlaceHolderView?)>> {
-                nil
-                placeHolderHandler?(imageFetcher.progress)
-            }
+            loadingPlaceHolder = loadingPlaceHolderHandler?(imageFetcher.progress)
         }
-    }
-    
-    func onAppear(perform action: (() -> Void)? = nil) -> some View
-    {
-        imageFetcher.fetch(completion: completionHandler)
-        action?()
-        return self
+        
+        return ZStack<TupleView<(Image?, LoadingPlaceHolder?, ErrorPlaceHolder?)>> {
+            imageView
+            loadingPlaceHolder
+            errorPlaceHolder
+        }.onAppear {
+            self.imageFetcher.fetch(completion: self.completionHandler)
+        }
     }
 }
