@@ -10,7 +10,7 @@ import Foundation
 public protocol Cache: class {
     func store(image: ExpirableImage, for key: String)
     func get(for key: String) -> NativeImage?
-    var wrapped: Cache? { get }
+    var fallbackCache: Cache? { get }
 }
 
 extension Cache {
@@ -23,7 +23,7 @@ extension Cache {
         result: @escaping (NativeImage) -> Void
     ) {
         queue.async {
-            if let cached = self.wrapped?.get(for: key) ?? self.get(for: key) {
+            if let cached = self.get(for: key) ?? self.fallbackCache?.get(for: key) {
                 result(cached)
                 return
             }
@@ -32,7 +32,7 @@ extension Cache {
                 guard let fetched = fetched else { return }
                 let expirable = fetched.withExpiresAt(Date().addingTimeInterval(ttl))
                 self.store(image: expirable, for: key)
-                self.wrapped?.store(image: expirable, for: key)
+                self.fallbackCache?.store(image: expirable, for: key)
                 result(fetched)
             }
         }

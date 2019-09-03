@@ -8,7 +8,11 @@
 import Foundation
 
 final class DiskCache: Cache {
-    let wrapped: Cache? = MemoryCache()
+    let fallbackCache: Cache?
+    
+    init(fallbackCache: Cache? = nil) {
+        self.fallbackCache = fallbackCache
+    }
     
     func store(image: ExpirableImage, for key: String) {
         
