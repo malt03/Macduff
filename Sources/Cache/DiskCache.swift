@@ -31,6 +31,12 @@ public final class DiskCache: Cache {
         self.cacheDirectory = cacheDirectory
     }
     
+    // heavy operation
+    private func clean() {
+        
+        FileManager.default.contentsOfDirectory(at: cacheDirectory, includingPropertiesForKeys: <#T##[URLResourceKey]?#>, options: <#T##FileManager.DirectoryEnumerationOptions#>)
+    }
+    
     public let fallbackCache: Cache?
     private let cacheDirectory: URL
     
@@ -53,10 +59,31 @@ public final class DiskCache: Cache {
     }
 }
 
+fileprivate struct CacheImageInfo: Codable {
+    let expiresAt: Date
+}
+
 extension CacheImage {
     private static let expiresAtBufferSize: Int = MemoryLayout<TimeInterval>.size
     
-    fileprivate func write(to url: URL) {
+    private func originalDataURL(base: URL) -> URL {
+        base.appendingPathComponent("image")
+    }
+    
+    private func infoURL(base: URL) -> URL {
+        base.appendingPathComponent("info.json")
+    }
+    
+    private var info: CacheImageInfo {
+        CacheImageInfo(expiresAt: expiresAt)
+    }
+    
+    fileprivate func write(to url: URL) throws {
+        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        try originalData.write(to: originalDataURL(base: url))
+        
+        
+
         var expiresAtSince1970 = expiresAt.timeIntervalSince1970
         var data = Data(bytes: &expiresAtSince1970, count: CacheImage.expiresAtBufferSize)
         data.append(originalData)
