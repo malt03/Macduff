@@ -8,8 +8,14 @@
 import SwiftUI
 
 public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
-    @ObservedObject private var imageFetcher: ImageFetcher
+    public enum FetchTrigger {
+        case initialize
+        case appear
+    }
     
+    @ObservedObject private var imageFetcher: ImageFetcher
+
+    private let fetchTrigger: FetchTrigger
     private let completionHandler: ((Status) -> Void)?
     private let loadingPlaceHolderHandler: ((Float) -> LoadingPlaceHolder)?
     private let errorPlaceHolderHandler: ((Error) -> ErrorPlaceHolder)?
@@ -19,13 +25,19 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
         loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)? = nil,
         errorPlaceHolder: ((Error) -> ErrorPlaceHolder)? = nil,
         config: Config = .default,
+        fetchTrigger: FetchTrigger = .appear,
         completion: ((Status) -> Void)? = nil
     ) {
         imageFetcher = ImageFetcher(provider: provider, config: config)
         loadingPlaceHolderHandler = loadingPlaceHolder
         errorPlaceHolderHandler = errorPlaceHolder
         
+        self.fetchTrigger = fetchTrigger
         completionHandler = completion
+        
+        if fetchTrigger == .initialize {
+            self.fetch()
+        }
     }
     
     public init(
@@ -33,6 +45,7 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
         loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)? = nil,
         errorPlaceHolder: ((Error) -> ErrorPlaceHolder)? = nil,
         config: Config = .default,
+        fetchTrigger: FetchTrigger = .appear,
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
@@ -40,8 +53,14 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
             loadingPlaceHolder: loadingPlaceHolder,
             errorPlaceHolder: errorPlaceHolder,
             config: config,
+            fetchTrigger: fetchTrigger,
             completion: completion
         )
+    }
+    
+    private func fetch() {
+        if self.imageFetcher.image != nil { return }
+        imageFetcher.fetch(completion: completionHandler)
     }
 }
 
@@ -64,8 +83,7 @@ extension RemoteImage: View {
             loadingPlaceHolder
             errorPlaceHolder
         }.onAppear {
-            if self.imageFetcher.image != nil { return }
-            self.imageFetcher.fetch(completion: self.completionHandler)
+            if self.fetchTrigger == .appear { self.fetch() }
         }
     }
 }

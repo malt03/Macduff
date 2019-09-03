@@ -9,7 +9,7 @@ import SwiftUI
 import RemoteImage
 
 struct ContentView: View {
-    @State private var randomImages = (0..<10).map { RandomImageModel(id: $0) }
+    @State private var randomImages = (0..<50).map { RandomImageModel(id: $0) }
     
     var body: some View {
         List(randomImages) { (image) in
