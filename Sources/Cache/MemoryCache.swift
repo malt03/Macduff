@@ -8,15 +8,15 @@
 import Foundation
 import Combine
 
-final class MemoryCache: Cache {
-    static var defaultByteLimit: Int {
+public final class MemoryCache: Cache {
+    public static var defaultByteLimit: Int {
         let limit = ProcessInfo.processInfo.physicalMemory / 4
         return Int(min(limit, UInt64(Int.max)))
     }
     
-    let fallbackCache: Cache?
+    public let fallbackCache: Cache?
     
-    init(byteLimit: Int = defaultByteLimit, cleanInterval: TimeInterval = 120, fallbackCache: Cache? = DiskCache()) {
+    public init(byteLimit: Int = defaultByteLimit, cleanInterval: TimeInterval = 120, fallbackCache: Cache? = DiskCache()) {
         self.fallbackCache = fallbackCache
         cache.totalCostLimit = byteLimit
         
@@ -50,7 +50,7 @@ final class MemoryCache: Cache {
         }
     }
     
-    func store(image: CacheImage, for key: String) {
+    public func store(image: CacheImage, for key: String) {
         lock.lock()
         defer { lock.unlock() }
 
@@ -58,7 +58,7 @@ final class MemoryCache: Cache {
         allCachedKeys.insert(key as NSString)
     }
     
-    func get(for key: String) -> CacheImage? {
+    public func get(for key: String) -> CacheImage? {
         lock.lock()
         defer { lock.unlock() }
 

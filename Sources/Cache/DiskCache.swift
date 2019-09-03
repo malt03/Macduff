@@ -7,17 +7,17 @@
 
 import Foundation
 
-final class DiskCache: Cache {
-    private static var defaultCacheDirectory: URL? {
+public final class DiskCache: Cache {
+    public static var defaultCacheDirectory: URL? {
         let userCacheDirectory = try? FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         return userCacheDirectory?.appendingPathComponent("com.malt03.RemoteImage.DiskCache")
     }
     
-    let fallbackCache: Cache?
+    public let fallbackCache: Cache?
     
     private let cacheDirectory: URL
     
-    init?(cacheDirectory: URL? = defaultCacheDirectory, fallbackCache: Cache? = nil) {
+    public init?(cacheDirectory: URL? = defaultCacheDirectory, fallbackCache: Cache? = nil) {
         guard let cacheDirectory = cacheDirectory else { return nil }
         self.fallbackCache = fallbackCache
         self.cacheDirectory = cacheDirectory
@@ -29,11 +29,11 @@ final class DiskCache: Cache {
         return cacheDirectory.appendingPathComponent(key)
     }
     
-    func store(image: CacheImage, for key: String) {
+    public func store(image: CacheImage, for key: String) {
         image.write(to: cacheURL(for: key))
     }
     
-    func get(for key: String) -> CacheImage? {
+    public func get(for key: String) -> CacheImage? {
         let cacheURL = self.cacheURL(for: key)
         guard let image = CacheImage(contentsOf: cacheURL) else { return nil }
         if image.isExpired {
