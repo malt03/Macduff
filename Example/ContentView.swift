@@ -12,6 +12,18 @@ struct ContentView: View {
     @State private var randomImages = (0..<50).map { RandomImageModel(id: $0) }
     
     var body: some View {
+        NavigationView {
+            List {
+                NavigationLink(destination: ImagesView()) { Text("Show Images") }
+            }.navigationBarTitle("RemoteImage")
+        }
+    }
+}
+
+struct ImagesView: View {
+    @State private var randomImages = (0..<50).map { RandomImageModel(id: $0) }
+    
+    var body: some View {
         List(randomImages) { (image) in
             RemoteImage(source: image.url, loadingPlaceHolder: { _ in
                 Spacer()
@@ -22,7 +34,7 @@ struct ContentView: View {
                     .frame(width: 100, height: 100, alignment: .center)
                     .background(Color.red)
             })
-        }
+        }.navigationBarTitle("Images")
     }
 }
 
