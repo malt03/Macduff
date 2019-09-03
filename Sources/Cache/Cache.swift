@@ -17,26 +17,30 @@ extension Cache {
     private var queue: DispatchQueue { return DispatchQueue(label: "com.malt03.RemoteImage.ImageCache") }
     
     func getOrStore(
-        key: String,
+        key: String?,
         ttl: TimeInterval,
         provide: @escaping (@escaping (ProvidingImage) -> Void) -> Void,
         result: @escaping (NativeImage) -> Void
     ) {
         queue.async {
-            if let cached = self.get(for: key)?.image {
-                result(cached)
-                return
-            }
-            if let fallbackCached = self.fallbackCache?.get(for: key), let image = fallbackCached.image {
-                self.store(image: fallbackCached, for: key)
-                result(image)
-                return
+            if let key = key {
+                if let cached = self.get(for: key)?.image {
+                    result(cached)
+                    return
+                }
+                if let fallbackCached = self.fallbackCache?.get(for: key), let image = fallbackCached.image {
+                    self.store(image: fallbackCached, for: key)
+                    result(image)
+                    return
+                }
             }
 
             provide { (provided) in
                 let cacheImage = CacheImage(originalData: provided.originalData, expiresAt: Date().addingTimeInterval(ttl))
-                self.store(image: cacheImage, for: key)
-                self.fallbackCache?.store(image: cacheImage, for: key)
+                if let key = key {
+                    self.store(image: cacheImage, for: key)
+                    self.fallbackCache?.store(image: cacheImage, for: key)
+                }
                 result(provided.image)
             }
         }
