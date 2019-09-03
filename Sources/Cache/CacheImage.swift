@@ -13,10 +13,14 @@ public final class CacheImage {
     
     struct Info: Codable {
         let expiresAt: Date
+        
+        var isExpired: Bool {
+            return expiresAt.timeIntervalSince(Date()) < 0
+        }
     }
     
     var isExpired: Bool {
-        return info.expiresAt.timeIntervalSince(Date()) < 0
+        return info.isExpired
     }
 
     init(originalData: Data, info: Info) {

@@ -34,6 +34,17 @@ public final class DiskCache: Cache {
     public let fallbackCache: Cache?
     private let cacheDirectory: URL
     
+    private func clean() {
+        do {
+            let contents = try FileManager.default.contentsOfDirectory(at: cacheDirectory, includingPropertiesForKeys: [], options: [])
+            for content in contents {
+                guard let info = try? CacheImage.Info.load(from: content) else { continue }
+                if !info.isExpired { continue }
+                try? FileManager.default.removeItem(at: content)
+            }
+        } catch {}
+    }
+    
     private func cacheURL(for key: String) -> URL {
         return cacheDirectory.appendingPathComponent(key)
     }
