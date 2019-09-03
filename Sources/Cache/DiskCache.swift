@@ -60,21 +60,32 @@ extension CacheImage {
         base.appendingPathComponent("image")
     }
     
-    private static func infoURL(base: URL) -> URL {
-        base.appendingPathComponent("info.json")
-    }
-    
     fileprivate func write(to url: URL) throws {
         if !FileManager.default.fileExists(atPath: url.path) {
             try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
         }
         try originalData.write(to: CacheImage.originalDataURL(base: url))
-        try JSONEncoder().encode(info).write(to: CacheImage.infoURL(base: url))
+        try info.write(to: url)
     }
     
     fileprivate convenience init(contentsOf url: URL) throws {
         let imageData = try Data(contentsOf: CacheImage.originalDataURL(base: url))
-        let info = try JSONDecoder().decode(Info.self, from: try Data(contentsOf: CacheImage.infoURL(base: url)))
+        let info = try Info.load(from: url)
+        
         self.init(originalData: imageData, info: info)
+    }
+}
+
+extension CacheImage.Info {
+    private static func url(base: URL) -> URL {
+        base.appendingPathComponent("info.json")
+    }
+    
+    fileprivate static func load(from base: URL) throws -> CacheImage.Info {
+        return try JSONDecoder().decode(CacheImage.Info.self, from: try Data(contentsOf: CacheImage.Info.url(base: base)))
+    }
+    
+    fileprivate func write(to base: URL) throws {
+        try JSONEncoder().encode(self).write(to: CacheImage.Info.url(base: base))
     }
 }
