@@ -24,10 +24,10 @@ final class MemoryCache: Cache {
         })
     }
     
-    private let cache = NSCache<NSString, ExpirableImage>()
+    private let cache = NSCache<NSString, CacheImage>()
     private var allCachedKeys = Set<NSString>()
     private let lock = NSLock()
-    private let cleanTimer: Timer
+    private var cleanTimer: Timer?
 
     private func clean() {
         lock.lock()
@@ -44,15 +44,15 @@ final class MemoryCache: Cache {
         }
     }
     
-    func store(image: ExpirableImage, for key: String) {
+    func store(image: CacheImage, for key: String) {
         lock.lock()
         defer { lock.unlock() }
 
-        cache.setObject(image, forKey: key as NSString, cost: image.value.cacheCost)
+        cache.setObject(image, forKey: key as NSString, cost: image.originalData.count)
         allCachedKeys.insert(key as NSString)
     }
     
-    func get(for key: String) -> NativeImage? {
+    func get(for key: String) -> CacheImage? {
         lock.lock()
         defer { lock.unlock() }
 
@@ -62,7 +62,6 @@ final class MemoryCache: Cache {
             allCachedKeys.remove(key as NSString)
             return nil
         }
-        return cached.value
+        return cached
     }
-    
 }

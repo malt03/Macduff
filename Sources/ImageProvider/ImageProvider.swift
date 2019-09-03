@@ -10,5 +10,10 @@ import Combine
 
 public protocol ImageProvider {
     var cacheKey: String { get }
-    func run(progress: @escaping (Float) -> Void, success: @escaping (NativeImage) -> Void, failure: @escaping (Error) -> Void)
+    func run(progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void)
+}
+
+public struct ProvidingImage {
+    let image: NativeImage
+    let originalData: Data
 }

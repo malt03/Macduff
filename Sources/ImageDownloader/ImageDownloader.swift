@@ -23,7 +23,7 @@ final class ImageDownloader {
         session = URLSession(configuration: .ephemeral, delegate: sessionDelegate, delegateQueue: nil)
     }
     
-    func download(progress: @escaping (Float) -> Void, success: @escaping (NativeImage) -> Void, failure: @escaping (Error) -> Void) {
+    func download(progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void) {
         sessionDelegate.progressHandler = progress
         session.downloadTask(with: url, completionHandler: { (location, _, error) in
             self.sessionDelegate.progressHandler = nil
@@ -39,7 +39,7 @@ final class ImageDownloader {
                     failure(Errors.unknown)
                     return
                 }
-            success(image)
+            success(ProvidingImage(image: image, originalData: data))
         }).resume()
     }
 }

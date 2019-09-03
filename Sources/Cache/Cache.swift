@@ -8,8 +8,8 @@
 import Foundation
 
 public protocol Cache: class {
-    func store(image: ExpirableImage, for key: String)
-    func get(for key: String) -> NativeImage?
+    func store(image: CacheImage, for key: String)
+    func get(for key: String) -> CacheImage?
     var fallbackCache: Cache? { get }
 }
 
@@ -19,21 +19,25 @@ extension Cache {
     func getOrStore(
         key: String,
         ttl: TimeInterval,
-        fetch: @escaping (@escaping (NativeImage?) -> Void) -> Void,
+        provide: @escaping (@escaping (ProvidingImage) -> Void) -> Void,
         result: @escaping (NativeImage) -> Void
     ) {
         queue.async {
-            if let cached = self.get(for: key) ?? self.fallbackCache?.get(for: key) {
+            if let cached = self.get(for: key)?.image {
                 result(cached)
                 return
             }
+            if let fallbackCached = self.fallbackCache?.get(for: key), let image = fallbackCached.image {
+                self.store(image: fallbackCached, for: key)
+                result(image)
+                return
+            }
 
-            fetch { (fetched) in
-                guard let fetched = fetched else { return }
-                let expirable = fetched.withExpiresAt(Date().addingTimeInterval(ttl))
-                self.store(image: expirable, for: key)
-                self.fallbackCache?.store(image: expirable, for: key)
-                result(fetched)
+            provide { (provided) in
+                let cacheImage = CacheImage(originalData: provided.originalData, expiresAt: Date().addingTimeInterval(ttl))
+                self.store(image: cacheImage, for: key)
+                self.fallbackCache?.store(image: cacheImage, for: key)
+                result(provided.image)
             }
         }
     }
