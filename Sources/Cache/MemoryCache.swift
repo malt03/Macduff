@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class MemoryCache: Cache {
     static var defaultByteLimit: Int {
@@ -22,13 +23,18 @@ final class MemoryCache: Cache {
         cleanTimer = Timer.scheduledTimer(withTimeInterval: cleanInterval, repeats: true, block: { [weak self] _ in
             self?.clean()
         })
+        
+        NotificationCenter.default.publisherForMemoryWarning()?.sink(receiveValue: { [weak self] _ in
+            self?.removeAll()
+        }).store(in: &cancellables)
     }
     
     private let cache = NSCache<NSString, CacheImage>()
     private var allCachedKeys = Set<NSString>()
     private let lock = NSLock()
     private var cleanTimer: Timer?
-
+    private var cancellables = Set<AnyCancellable>()
+    
     private func clean() {
         lock.lock()
         defer { lock.unlock() }
@@ -63,5 +69,13 @@ final class MemoryCache: Cache {
             return nil
         }
         return cached
+    }
+    
+    private func removeAll() {
+        lock.lock()
+        defer { lock.unlock() }
+
+        cache.removeAllObjects()
+        allCachedKeys.removeAll()
     }
 }
