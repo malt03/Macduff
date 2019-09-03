@@ -15,14 +15,19 @@ final class MemoryCache: Cache {
     
     let fallbackCache: Cache?
     
-    init(byteLimit: Int = defaultByteLimit, fallbackCache: Cache? = DiskCache()) {
+    init(byteLimit: Int = defaultByteLimit, cleanInterval: TimeInterval = 120, fallbackCache: Cache? = DiskCache()) {
         self.fallbackCache = fallbackCache
         cache.totalCostLimit = byteLimit
+        
+        cleanTimer = Timer.scheduledTimer(withTimeInterval: cleanInterval, repeats: true, block: { [weak self] _ in
+            self?.clean()
+        })
     }
     
     private let cache = NSCache<NSString, ExpirableImage>()
     private var allCachedKeys = Set<NSString>()
     private let lock = NSLock()
+    private let cleanTimer: Timer
 
     private func clean() {
         lock.lock()
