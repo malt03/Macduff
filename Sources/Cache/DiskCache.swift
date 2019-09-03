@@ -13,17 +13,26 @@ public final class DiskCache: Cache {
         return userCacheDirectory?.appendingPathComponent("com.malt03.RemoteImage.DiskCache")
     }
     
-    public let fallbackCache: Cache?
-    
-    private let cacheDirectory: URL
+    public func removeAll() throws {
+        if !FileManager.default.fileExists(atPath: cacheDirectory.path) { return }
+        try FileManager.default.removeItem(at: cacheDirectory)
+        try FileManager.default.createDirectory(at: cacheDirectory, withIntermediateDirectories: true, attributes: nil)
+    }
     
     public init?(cacheDirectory: URL? = defaultCacheDirectory, fallbackCache: Cache? = nil) {
         guard let cacheDirectory = cacheDirectory else { return nil }
+        do {
+            try FileManager.default.createDirectory(at: cacheDirectory, withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            return nil
+        }
+
         self.fallbackCache = fallbackCache
         self.cacheDirectory = cacheDirectory
-        
-        try? FileManager.default.createDirectory(at: cacheDirectory, withIntermediateDirectories: true, attributes: nil)
     }
+    
+    public let fallbackCache: Cache?
+    private let cacheDirectory: URL
     
     private func cacheURL(for key: String) -> URL {
         return cacheDirectory.appendingPathComponent(key)
@@ -47,14 +56,14 @@ public final class DiskCache: Cache {
 extension CacheImage {
     private static let expiresAtBufferSize: Int = MemoryLayout<TimeInterval>.size
     
-    func write(to url: URL) {
+    fileprivate func write(to url: URL) {
         var expiresAtSince1970 = expiresAt.timeIntervalSince1970
         var data = Data(bytes: &expiresAtSince1970, count: CacheImage.expiresAtBufferSize)
         data.append(originalData)
         try? data.write(to: url)
     }
     
-    convenience init?(contentsOf url: URL) {
+    fileprivate convenience init?(contentsOf url: URL) {
         guard let data = try? Data(contentsOf: url) else { return nil }
         if data.count <= CacheImage.expiresAtBufferSize { return nil }
         let expiresAtSince1970 = data.prefix(CacheImage.expiresAtBufferSize).withUnsafeBytes { $0.load(as: TimeInterval.self) }
