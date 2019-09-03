@@ -36,7 +36,7 @@ extension Cache {
             }
 
             provide { (provided) in
-                let cacheImage = CacheImage(originalData: provided.originalData, expiresAt: Date().addingTimeInterval(ttl))
+                let cacheImage = CacheImage(originalData: provided.originalData, info: .init(expiresAt: Date().addingTimeInterval(ttl)))
                 if let key = key {
                     self.store(image: cacheImage, for: key)
                     self.fallbackCache?.store(image: cacheImage, for: key)

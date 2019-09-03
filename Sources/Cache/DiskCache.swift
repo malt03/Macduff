@@ -31,12 +31,6 @@ public final class DiskCache: Cache {
         self.cacheDirectory = cacheDirectory
     }
     
-    // heavy operation
-    private func clean() {
-        
-        FileManager.default.contentsOfDirectory(at: cacheDirectory, includingPropertiesForKeys: <#T##[URLResourceKey]?#>, options: <#T##FileManager.DirectoryEnumerationOptions#>)
-    }
-    
     public let fallbackCache: Cache?
     private let cacheDirectory: URL
     
@@ -45,12 +39,12 @@ public final class DiskCache: Cache {
     }
     
     public func store(image: CacheImage, for key: String) {
-        image.write(to: cacheURL(for: key))
+        try? image.write(to: cacheURL(for: key))
     }
     
     public func get(for key: String) -> CacheImage? {
         let cacheURL = self.cacheURL(for: key)
-        guard let image = CacheImage(contentsOf: cacheURL) else { return nil }
+        guard let image = try? CacheImage(contentsOf: cacheURL) else { return nil }
         if image.isExpired {
             try? FileManager.default.removeItem(at: cacheURL)
             return nil
@@ -59,43 +53,28 @@ public final class DiskCache: Cache {
     }
 }
 
-fileprivate struct CacheImageInfo: Codable {
-    let expiresAt: Date
-}
-
 extension CacheImage {
     private static let expiresAtBufferSize: Int = MemoryLayout<TimeInterval>.size
     
-    private func originalDataURL(base: URL) -> URL {
+    private static func originalDataURL(base: URL) -> URL {
         base.appendingPathComponent("image")
     }
     
-    private func infoURL(base: URL) -> URL {
+    private static func infoURL(base: URL) -> URL {
         base.appendingPathComponent("info.json")
     }
     
-    private var info: CacheImageInfo {
-        CacheImageInfo(expiresAt: expiresAt)
-    }
-    
     fileprivate func write(to url: URL) throws {
-        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
-        try originalData.write(to: originalDataURL(base: url))
-        
-        
-
-        var expiresAtSince1970 = expiresAt.timeIntervalSince1970
-        var data = Data(bytes: &expiresAtSince1970, count: CacheImage.expiresAtBufferSize)
-        data.append(originalData)
-        try? data.write(to: url)
+        if !FileManager.default.fileExists(atPath: url.path) {
+            try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        }
+        try originalData.write(to: CacheImage.originalDataURL(base: url))
+        try JSONEncoder().encode(info).write(to: CacheImage.infoURL(base: url))
     }
     
-    fileprivate convenience init?(contentsOf url: URL) {
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        if data.count <= CacheImage.expiresAtBufferSize { return nil }
-        let expiresAtSince1970 = data.prefix(CacheImage.expiresAtBufferSize).withUnsafeBytes { $0.load(as: TimeInterval.self) }
-        let expiresAt = Date(timeIntervalSince1970: expiresAtSince1970)
-        let originalData = data.suffix(from: CacheImage.expiresAtBufferSize)
-        self.init(originalData: originalData, expiresAt: expiresAt)
+    fileprivate convenience init(contentsOf url: URL) throws {
+        let imageData = try Data(contentsOf: CacheImage.originalDataURL(base: url))
+        let info = try JSONDecoder().decode(Info.self, from: try Data(contentsOf: CacheImage.infoURL(base: url)))
+        self.init(originalData: imageData, info: info)
     }
 }

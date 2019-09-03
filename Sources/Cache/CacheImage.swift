@@ -7,26 +7,24 @@
 
 import Foundation
 
-public final class CacheImage: HasExpiresAt {
+public final class CacheImage {
     let originalData: Data
-    let expiresAt: Date
+    let info: Info
     
-    init(originalData: Data, expiresAt: Date) {
+    struct Info: Codable {
+        let expiresAt: Date
+    }
+    
+    var isExpired: Bool {
+        return info.expiresAt.timeIntervalSince(Date()) < 0
+    }
+
+    init(originalData: Data, info: Info) {
         self.originalData = originalData
-        self.expiresAt = expiresAt
+        self.info = info
     }
     
     var image: NativeImage? {
         NativeImage(data: originalData)
-    }
-}
-
-protocol HasExpiresAt {
-    var expiresAt: Date { get }
-}
-
-extension HasExpiresAt {
-    var isExpired: Bool {
-        return expiresAt.timeIntervalSince(Date()) < 0
     }
 }
