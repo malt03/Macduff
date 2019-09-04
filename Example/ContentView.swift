@@ -24,15 +24,11 @@ struct ImagesView: View {
     var body: some View {
         List(randomImages) { (image) in
             RemoteImage(source: image.url, loadingPlaceHolder: { _ in
-                Spacer()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.blue)
+                Rectangle().fill(Color.blue)
             }, errorPlaceHolder: { _ in
-                Spacer()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.red)
+                Rectangle().fill(Color.red)
             }, fetchTrigger: .initialize).scaledToFit().frame(width: 50, height: 50, alignment: .center)
-        }.navigationBarTitle("Images")
+        }.navigationBarTitle("Images", displayMode: .inline)
     }
 }
 
