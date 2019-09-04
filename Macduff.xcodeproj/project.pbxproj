@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED09851C231D360100A895E5 /* RemoteImage_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ED09851A231D360100A895E5 /* RemoteImage_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED09851C231D360100A895E5 /* Macduff_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ED09851A231D360100A895E5 /* Macduff_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED098528231D37FC00A895E5 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098526231D37FC00A895E5 /* ImageCacheManager.swift */; };
 		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
@@ -32,8 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED098517231D360000A895E5 /* RemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED09851A231D360100A895E5 /* RemoteImage_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteImage_iOS.h; sourceTree = "<group>"; };
+		ED098517231D360000A895E5 /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED09851A231D360100A895E5 /* Macduff_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macduff_iOS.h; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098526231D37FC00A895E5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			children = (
 				EDD0373D231E508100D8047F /* Example */,
 				ED098525231D37FC00A895E5 /* Sources */,
-				ED098519231D360000A895E5 /* RemoteImage-iOS */,
+				ED098519231D360000A895E5 /* Macduff-iOS */,
 				ED098518231D360000A895E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,19 +91,19 @@
 		ED098518231D360000A895E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED098517231D360000A895E5 /* RemoteImage.framework */,
+				ED098517231D360000A895E5 /* Macduff.framework */,
 				EDD0373C231E508100D8047F /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED098519231D360000A895E5 /* RemoteImage-iOS */ = {
+		ED098519231D360000A895E5 /* Macduff-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				ED09851A231D360100A895E5 /* RemoteImage_iOS.h */,
+				ED09851A231D360100A895E5 /* Macduff_iOS.h */,
 				ED09851B231D360100A895E5 /* Info.plist */,
 			);
-			path = "RemoteImage-iOS";
+			path = "Macduff-iOS";
 			sourceTree = "<group>";
 		};
 		ED098525231D37FC00A895E5 /* Sources */ = {
@@ -189,16 +189,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED09851C231D360100A895E5 /* RemoteImage_iOS.h in Headers */,
+				ED09851C231D360100A895E5 /* Macduff_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		ED098516231D360000A895E5 /* RemoteImage-iOS */ = {
+		ED098516231D360000A895E5 /* Macduff-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED09851D231D360100A895E5 /* Build configuration list for PBXNativeTarget "RemoteImage-iOS" */;
+			buildConfigurationList = ED09851D231D360100A895E5 /* Build configuration list for PBXNativeTarget "Macduff-iOS" */;
 			buildPhases = (
 				ED098512231D360000A895E5 /* Headers */,
 				ED098513231D360000A895E5 /* Sources */,
@@ -209,9 +209,9 @@
 			);
 			dependencies = (
 			);
-			name = "RemoteImage-iOS";
-			productName = "RemoteImage-iOS";
-			productReference = ED098517231D360000A895E5 /* RemoteImage.framework */;
+			name = "Macduff-iOS";
+			productName = "Macduff-iOS";
+			productReference = ED098517231D360000A895E5 /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDD0373B231E508100D8047F /* Example */ = {
@@ -248,7 +248,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED09850E231D35B800A895E5 /* Build configuration list for PBXProject "RemoteImage" */;
+			buildConfigurationList = ED09850E231D35B800A895E5 /* Build configuration list for PBXProject "Macduff" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -261,7 +261,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED098516231D360000A895E5 /* RemoteImage-iOS */,
+				ED098516231D360000A895E5 /* Macduff-iOS */,
 				EDD0373B231E508100D8047F /* Example */,
 			);
 		};
@@ -402,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "RemoteImage-iOS/Info.plist";
+				INFOPLIST_FILE = "Macduff-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,8 +413,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.RemoteImage-iOS";
-				PRODUCT_NAME = RemoteImage;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.Macduff-iOS";
+				PRODUCT_NAME = Macduff;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -476,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "RemoteImage-iOS/Info.plist";
+				INFOPLIST_FILE = "Macduff-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,8 +486,8 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.RemoteImage-iOS";
-				PRODUCT_NAME = RemoteImage;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.Macduff-iOS";
+				PRODUCT_NAME = Macduff;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -643,7 +643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED09850E231D35B800A895E5 /* Build configuration list for PBXProject "RemoteImage" */ = {
+		ED09850E231D35B800A895E5 /* Build configuration list for PBXProject "Macduff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED09850F231D35B800A895E5 /* Debug */,
@@ -652,7 +652,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED09851D231D360100A895E5 /* Build configuration list for PBXNativeTarget "RemoteImage-iOS" */ = {
+		ED09851D231D360100A895E5 /* Build configuration list for PBXNativeTarget "Macduff-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED09851E231D360100A895E5 /* Debug */,

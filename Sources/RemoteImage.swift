@@ -1,6 +1,6 @@
 //
 //  RemoteImage.swift
-//  RemoteImage
+//  Macduff
 //
 //  Created by Koji Murata on 2019/09/02.
 //

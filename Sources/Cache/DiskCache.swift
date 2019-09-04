@@ -1,6 +1,6 @@
 //
 //  DiskCache.swift
-//  RemoteImage-iOS
+//  Macduff
 //
 //  Created by Koji Murata on 2019/09/02.
 //
@@ -11,7 +11,7 @@ import Combine
 public final class DiskCache: Cache {
     public static var defaultCacheDirectory: URL? {
         let userCacheDirectory = try? FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        return userCacheDirectory?.appendingPathComponent("com.malt03.RemoteImage.DiskCache")
+        return userCacheDirectory?.appendingPathComponent("com.malt03.Macduff.DiskCache")
     }
     
     public func removeAll() throws {

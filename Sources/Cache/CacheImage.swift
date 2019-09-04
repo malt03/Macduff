@@ -1,6 +1,6 @@
 //
 //  CacheImage.swift
-//  RemoteImage-iOS
+//  Macduff
 //
 //  Created by Koji Murata on 2019/09/03.
 //

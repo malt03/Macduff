@@ -1,6 +1,6 @@
 //
 //  Cache.swift
-//  RemoteImage-iOS
+//  Macduff
 //
 //  Created by Koji Murata on 2019/09/02.
 //
@@ -13,7 +13,7 @@ public protocol Cache: class {
     var fallbackCache: Cache? { get }
 }
 
-fileprivate let cacheQueue = DispatchQueue(label: "com.malt03.RemoteImage.ImageCache")
+fileprivate let cacheQueue = DispatchQueue(label: "com.malt03.Macduff.ImageCache")
 
 extension Cache {
     var queue: DispatchQueue { return cacheQueue }

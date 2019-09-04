@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import RemoteImage
+import Macduff
 
 struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
                 NavigationLink(destination: ImagesView()) { Text("Show Images") }
-            }.navigationBarTitle("RemoteImage")
+            }.navigationBarTitle("Macduff")
         }
     }
 }
