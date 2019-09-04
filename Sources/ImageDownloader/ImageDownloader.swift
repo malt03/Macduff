@@ -26,6 +26,8 @@ final class ImageDownloader {
     func download(progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void) {
         sessionDelegate.progressHandler = progress
         session.downloadTask(with: url, completionHandler: { (location, _, error) in
+            defer { self.session.finishTasksAndInvalidate() }
+
             self.sessionDelegate.progressHandler = nil
             if let error = error {
                 failure(error)

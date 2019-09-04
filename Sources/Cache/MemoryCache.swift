@@ -30,6 +30,7 @@ public final class MemoryCache: Cache {
     }
     
     deinit {
+        cleanTimer?.invalidate()
         cancellables.forEach { $0.cancel() }
     }
     
