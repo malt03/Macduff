@@ -52,8 +52,12 @@ extension NotificationCenter {
 }
 
 func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
-    let identifier = UIApplication.shared.beginBackgroundTask(expirationHandler: expirationHandler)
-    task { UIApplication.shared.endBackgroundTask(identifier) }
+    var identifier = UIApplication.shared.beginBackgroundTask(expirationHandler: expirationHandler)
+    task {
+        if identifier == .invalid { return }
+        UIApplication.shared.endBackgroundTask(identifier)
+        identifier = .invalid
+    }
 }
 
 #endif
