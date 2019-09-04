@@ -23,8 +23,8 @@ struct ImagesView: View {
     
     var body: some View {
         List(randomImages) { (image) in
-            RemoteImage(source: image.url, loadingPlaceHolder: { _ in
-                Rectangle().fill(Color.blue)
+            RemoteImage(source: image.url, loadingPlaceHolder: { (progress) -> ProgressView in
+                return ProgressView(progress: progress)
             }, errorPlaceHolder: { _ in
                 Rectangle().fill(Color.red)
             }, fetchTrigger: .initialize).scaledToFit().frame(width: 50, height: 50, alignment: .center)
@@ -32,9 +32,23 @@ struct ImagesView: View {
     }
 }
 
+struct ProgressView: View {
+    let progress: Float
+    
+    var body: some View {
+        return GeometryReader { (geometry) in
+            ZStack(alignment: .bottom) {
+                Rectangle().fill(Color.gray)
+                Rectangle().fill(Color.green).frame(width: nil, height: geometry.frame(in: .global).height * CGFloat(self.progress), alignment: .bottom)
+            }
+        }
+        
+    }
+}
+
 struct RandomImageModel: Identifiable {
     let id: Int
-    var url: URL { return URL(string: "https://picsum.photos/200/100?random=\(id)")! }
+    var url: URL { return URL(string: "https://example.com/200/100?random=\(id)")! }
 }
 
 struct ContentView_Previews: PreviewProvider {
