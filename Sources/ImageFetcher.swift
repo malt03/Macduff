@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ImageFetcher: ObservableObject {
+public final class ImageFetcher: ObservableObject {
     @Published var progress: Float = 0
     @Published var image: NativeImage? = nil
     @Published var error: Error? = nil
@@ -18,16 +18,16 @@ final class ImageFetcher: ObservableObject {
 
     private var cancellables = Set<AnyCancellable>()
     
-    init(provider: ImageProvider, config: Config = .default) {
+    public init(provider: ImageProvider, config: Config = .default) {
         self.provider = provider
         self.config = config
     }
     
-    convenience init(source: Source, config: Config = .default) {
+    public convenience init(source: Source, config: Config = .default) {
         self.init(provider: source.provider, config: config)
     }
     
-    func fetch(completion: ((Status) -> Void)?) {
+    public func fetch(completion: ((Status) -> Void)?) {
         if error != nil { error = nil }
         config.cache.getOrStore(key: provider.hashedCacheKey, ttl: config.cacheTTL, provide: { (fetchedHandler) in
             self.provider.run(progress: { (progress) in
