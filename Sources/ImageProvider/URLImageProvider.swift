@@ -14,6 +14,6 @@ struct RemoteURLImageProvider: ImageProvider {
     let url: URL
         
     func run(progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void) {
-        ImageDownloader(url: url).download(progress: progress, success: success, failure: failure)
+        ImageDownloader(url: url, progress: progress, success: success, failure: failure).download()
     }
 }

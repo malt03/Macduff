@@ -9,41 +9,32 @@ import Foundation
 import Combine
 
 final class ImageDownloader {
-    enum Errors: Error {
-        case unknown
-    }
+    let url: URL
     
-    private let url: URL
+    private let progressHandler: (Float) -> Void
+    private let successHandler: (ProvidingImage) -> Void
+    private let failureHandler: (Error) -> Void
     
-    private let session: URLSession
-    private let sessionDelegate = ImageDownloaderSessionDelegate()
-    
-    init(url: URL) {
+    init(url: URL, progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void) {
         self.url = url
-        session = URLSession(configuration: .ephemeral, delegate: sessionDelegate, delegateQueue: nil)
+        progressHandler = progress
+        successHandler = success
+        failureHandler = failure
     }
     
-    func download(progress: @escaping (Float) -> Void, success: @escaping (ProvidingImage) -> Void, failure: @escaping (Error) -> Void) {
-        sessionDelegate.progressHandler = progress
-        session.downloadTask(with: url, completionHandler: { (location, _, error) in
-            defer { self.session.finishTasksAndInvalidate() }
+    func download() {
+        ImageDownloaderSession.shared.run(downloader: self)
+    }
+    
+    func progress(progress: Float) {
+        progressHandler(progress)
+    }
 
-            self.sessionDelegate.progressHandler = nil
-            if let error = error {
-                failure(error)
-                return
-            }
-            guard
-                let location = location,
-                let data = try? Data(contentsOf: location),
-                let image = NativeImage(data: data)
-                else {
-                    failure(Errors.unknown)
-                    return
-                }
-            success(ProvidingImage(image: image, originalData: data))
-        }).resume()
+    func success(image: ProvidingImage) {
+        successHandler(image)
+    }
+    
+    func failure(error: Error) {
+        failureHandler(error)
     }
 }
-
-
