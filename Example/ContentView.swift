@@ -23,15 +23,18 @@ struct ImagesView: View {
     
     var body: some View {
         List(randomImages) { (image) in
-            RemoteImage(source: image.url, loadingPlaceHolder: { (progress) -> ProgressView in
-                return ProgressView(progress: progress)
-            }, errorPlaceHolder: { _ in
-                Rectangle().fill(Color.red)
-            })
-                .scaledToFill()
-                .frame(width: 50, height: 50, alignment: .center)
-                .clipped()
-                .cornerRadius(4)
+            HStack {
+                RemoteImage(source: image.url, loadingPlaceHolder: { (progress) -> ProgressView in
+                    return ProgressView(progress: progress)
+                }, errorPlaceHolder: { _ in
+                    Rectangle().fill(Color.red)
+                })
+                    .scaledToFill()
+                    .frame(width: 50, height: 50, alignment: .center)
+                    .clipped()
+                    .cornerRadius(4)
+                Text(image.url.absoluteString).font(Font.system(.subheadline))
+            }
         }.navigationBarTitle("Images", displayMode: .inline)
     }
 }
