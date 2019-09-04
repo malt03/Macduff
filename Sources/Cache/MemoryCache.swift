@@ -29,6 +29,10 @@ public final class MemoryCache: Cache {
         }).store(in: &cancellables)
     }
     
+    deinit {
+        cancellables.forEach { $0.cancel() }
+    }
+    
     private let cache = NSCache<NSString, CacheImage>()
     private var allCachedKeys = Set<NSString>()
     private let lock = NSLock()

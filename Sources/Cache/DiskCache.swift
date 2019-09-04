@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 public final class DiskCache: Cache {
     public static var defaultCacheDirectory: URL? {
@@ -29,20 +30,36 @@ public final class DiskCache: Cache {
 
         self.fallbackCache = fallbackCache
         self.cacheDirectory = cacheDirectory
+        
+        NotificationCenter.default.didEnterBackground().sink { [weak self] _ in self?.clean() }.store(in: &cancellables)
     }
     
     public let fallbackCache: Cache?
     private let cacheDirectory: URL
+    private var cancellables = Set<AnyCancellable>()
+    
+    deinit {
+        cancellables.forEach { $0.cancel() }
+    }
     
     private func clean() {
-        do {
-            let contents = try FileManager.default.contentsOfDirectory(at: cacheDirectory, includingPropertiesForKeys: [], options: [])
-            for content in contents {
-                guard let info = try? CacheImage.Info.load(from: content) else { continue }
-                if !info.isExpired { continue }
-                try? FileManager.default.removeItem(at: content)
+        var willExpiration = false
+        backgroundTask(expirationHandler: {
+            willExpiration = true
+        }, task: { (completion) in
+            DispatchQueue.global(qos: .background).async {
+                do {
+                    let contents = try FileManager.default.contentsOfDirectory(at: self.cacheDirectory, includingPropertiesForKeys: [], options: [])
+                    for content in contents {
+                        if willExpiration { break }
+                        guard let info = try? CacheImage.Info.load(from: content) else { continue }
+                        if !info.isExpired { continue }
+                        try? FileManager.default.removeItem(at: content)
+                    }
+                } catch {}
+                completion()
             }
-        } catch {}
+        })
     }
     
     private func cacheURL(for key: String) -> URL {

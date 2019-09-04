@@ -13,8 +13,10 @@ public protocol Cache: class {
     var fallbackCache: Cache? { get }
 }
 
+fileprivate let cacheQueue = DispatchQueue(label: "com.malt03.RemoteImage.ImageCache")
+
 extension Cache {
-    private var queue: DispatchQueue { return DispatchQueue(label: "com.malt03.RemoteImage.ImageCache") }
+    var queue: DispatchQueue { return cacheQueue }
     
     func getOrStore(
         key: String?,

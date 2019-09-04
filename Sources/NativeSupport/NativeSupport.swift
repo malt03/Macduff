@@ -20,10 +20,16 @@ extension Image {
 }
 
 extension NotificationCenter {
-    func publisherForMemoryWarning() -> NotificationCenter.Publisher? {
-        return nil
+    func publisherForMemoryWarning() -> NotificationCenter.Publisher? { nil }
+    func didEnterBackground() -> NotificationCenter.Publisher {
+        publisher(for: NSApplication.didResignActiveNotification)
     }
 }
+
+func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
+    task { _ in }
+}
+
 #else
 
 import UIKit
@@ -39,6 +45,15 @@ extension NotificationCenter {
     func publisherForMemoryWarning() -> NotificationCenter.Publisher? {
         publisher(for: UIApplication.didReceiveMemoryWarningNotification)
     }
+    
+    func didEnterBackground() -> NotificationCenter.Publisher {
+        publisher(for: UIApplication.didEnterBackgroundNotification)
+    }
+}
+
+func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
+    let identifier = UIApplication.shared.beginBackgroundTask(expirationHandler: expirationHandler)
+    task { UIApplication.shared.endBackgroundTask(identifier) }
 }
 
 #endif
