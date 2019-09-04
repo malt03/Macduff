@@ -9,8 +9,6 @@ import SwiftUI
 import RemoteImage
 
 struct ContentView: View {
-    @State private var randomImages = (0..<50).map { RandomImageModel(id: $0) }
-    
     var body: some View {
         NavigationView {
             List {
@@ -33,14 +31,14 @@ struct ImagesView: View {
                 Spacer()
                     .frame(width: 100, height: 100, alignment: .center)
                     .background(Color.red)
-            })
+            }, fetchTrigger: .initialize).scaledToFit().frame(width: 50, height: 50, alignment: .center)
         }.navigationBarTitle("Images")
     }
 }
 
 struct RandomImageModel: Identifiable {
     let id: Int
-    var url: URL { return URL(string: "https://picsum.photos/100/100?random=\(id)")! }
+    var url: URL { return URL(string: "https://picsum.photos/200/100?random=\(id)")! }
 }
 
 struct ContentView_Previews: PreviewProvider {

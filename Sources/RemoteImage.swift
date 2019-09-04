@@ -78,11 +78,11 @@ extension RemoteImage: View {
             loadingPlaceHolder = loadingPlaceHolderHandler?(imageFetcher.progress)
         }
         
-        return ZStack<TupleView<(Image?, LoadingPlaceHolder?, ErrorPlaceHolder?)>> {
-            imageView
-            loadingPlaceHolder
+        return TupleView((
+            imageView?.resizable(),
+            loadingPlaceHolder,
             errorPlaceHolder
-        }.onAppear {
+        )).onAppear {
             if self.fetchTrigger == .appear { self.fetch() }
         }
     }
