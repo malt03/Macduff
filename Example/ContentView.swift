@@ -27,7 +27,7 @@ struct ImagesView: View {
                 return ProgressView(progress: progress)
             }, errorPlaceHolder: { _ in
                 Rectangle().fill(Color.red)
-            }, fetchTrigger: .initialize)
+            })
                 .scaledToFill()
                 .frame(width: 50, height: 50, alignment: .center)
                 .clipped()
