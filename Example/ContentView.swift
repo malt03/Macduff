@@ -27,7 +27,11 @@ struct ImagesView: View {
                 return ProgressView(progress: progress)
             }, errorPlaceHolder: { _ in
                 Rectangle().fill(Color.red)
-            }, fetchTrigger: .initialize).scaledToFit().frame(width: 50, height: 50, alignment: .center)
+            }, fetchTrigger: .initialize)
+                .scaledToFill()
+                .frame(width: 50, height: 50, alignment: .center)
+                .clipped()
+                .cornerRadius(4)
         }.navigationBarTitle("Images", displayMode: .inline)
     }
 }
@@ -39,7 +43,8 @@ struct ProgressView: View {
         return GeometryReader { (geometry) in
             ZStack(alignment: .bottom) {
                 Rectangle().fill(Color.gray)
-                Rectangle().fill(Color.green).frame(width: nil, height: geometry.frame(in: .global).height * CGFloat(self.progress), alignment: .bottom)
+                Rectangle().fill(Color.green)
+                    .frame(width: nil, height: geometry.frame(in: .global).height * CGFloat(self.progress), alignment: .bottom)
             }
         }
         
@@ -48,7 +53,7 @@ struct ProgressView: View {
 
 struct RandomImageModel: Identifiable {
     let id: Int
-    var url: URL { return URL(string: "https://example.com/200/100?random=\(id)")! }
+    var url: URL { return URL(string: "https://picsum.photos/200/100?random=\(id)")! }
 }
 
 struct ContentView_Previews: PreviewProvider {

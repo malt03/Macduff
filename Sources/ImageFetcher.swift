@@ -38,13 +38,13 @@ public final class ImageFetcher: ObservableObject {
                 fetchedHandler($0)
             }, failure: { (error) in
                 DispatchQueue.main.async {
-                    self.error = error
+                    withAnimation { self.error = error }
                     completion?(.failure(error))
                 }
             })
         }, result: { (image) in
             DispatchQueue.main.async {
-                self.image = image
+                withAnimation { self.image = image }
                 completion?(.success(image))
             }
         })

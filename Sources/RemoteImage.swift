@@ -19,6 +19,7 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
     private let completionHandler: ((Status) -> Void)?
     private let loadingPlaceHolderHandler: ((Float) -> LoadingPlaceHolder)?
     private let errorPlaceHolderHandler: ((Error) -> ErrorPlaceHolder)?
+    private let transition: AnyTransition
     
     public init(
         provider: ImageProvider,
@@ -34,6 +35,8 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
         
         self.fetchTrigger = fetchTrigger
         completionHandler = completion
+        
+        transition = config.transition
         
         if fetchTrigger == .initialize {
             self.fetch()
@@ -84,6 +87,6 @@ extension RemoteImage: View {
             errorPlaceHolder
         )).onAppear {
             if self.fetchTrigger == .appear { self.fetch() }
-        }
+        }.transition(transition)
     }
 }
