@@ -5,7 +5,7 @@
 //  Created by Koji Murata on 2019/09/03.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 public final class ImageFetcher: ObservableObject {
@@ -31,7 +31,9 @@ public final class ImageFetcher: ObservableObject {
         if error != nil { error = nil }
         config.cache.getOrStore(key: provider.hashedCacheKey, ttl: config.cacheTTL, provide: { (fetchedHandler) in
             self.provider.run(progress: { (progress) in
-                DispatchQueue.main.async { self.progress = progress }
+                DispatchQueue.main.async {
+                    withAnimation { self.progress = progress }
+                }
             }, success: {
                 fetchedHandler($0)
             }, failure: { (error) in
