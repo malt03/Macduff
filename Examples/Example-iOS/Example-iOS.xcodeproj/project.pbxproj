@@ -15,6 +15,9 @@
 		EDCD9BE523212F0B009A17DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9BE423212F0B009A17DB /* ContentView.swift */; };
 		EDCD9BE823212F30009A17DB /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9BE723212F30009A17DB /* Macduff.framework */; };
 		EDCD9BE923212F30009A17DB /* Macduff.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9BE723212F30009A17DB /* Macduff.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDFA1E6A2321E036009E68D3 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E692321E036009E68D3 /* ImagesView.swift */; };
+		EDFA1E6C2321E0B6009E68D3 /* RemoteImageInitializersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E6B2321E0B6009E68D3 /* RemoteImageInitializersView.swift */; };
+		EDFA1E6E2321E131009E68D3 /* SlowImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E6D2321E131009E68D3 /* SlowImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +44,9 @@
 		EDCD9BDC23212EC3009A17DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDCD9BE423212F0B009A17DB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDCD9BE723212F30009A17DB /* Macduff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Macduff.framework; path = ../../Carthage/Build/iOS/Macduff.framework; sourceTree = "<group>"; };
+		EDFA1E692321E036009E68D3 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
+		EDFA1E6B2321E0B6009E68D3 /* RemoteImageInitializersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageInitializersView.swift; sourceTree = "<group>"; };
+		EDFA1E6D2321E131009E68D3 /* SlowImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowImageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				EDCD9BCE23212EC1009A17DB /* AppDelegate.swift */,
 				EDCD9BD023212EC1009A17DB /* SceneDelegate.swift */,
 				EDCD9BE423212F0B009A17DB /* ContentView.swift */,
+				EDFA1E692321E036009E68D3 /* ImagesView.swift */,
+				EDFA1E6B2321E0B6009E68D3 /* RemoteImageInitializersView.swift */,
+				EDFA1E6D2321E131009E68D3 /* SlowImageProvider.swift */,
 				EDCD9BD423212EC3009A17DB /* Assets.xcassets */,
 				EDCD9BD923212EC3009A17DB /* LaunchScreen.storyboard */,
 				EDCD9BDC23212EC3009A17DB /* Info.plist */,
@@ -174,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFA1E6A2321E036009E68D3 /* ImagesView.swift in Sources */,
+				EDFA1E6C2321E0B6009E68D3 /* RemoteImageInitializersView.swift in Sources */,
 				EDCD9BCF23212EC1009A17DB /* AppDelegate.swift in Sources */,
 				EDCD9BD123212EC1009A17DB /* SceneDelegate.swift in Sources */,
 				EDCD9BE523212F0B009A17DB /* ContentView.swift in Sources */,
+				EDFA1E6E2321E131009E68D3 /* SlowImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
