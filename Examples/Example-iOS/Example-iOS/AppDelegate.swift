@@ -1,8 +1,9 @@
 //
 //  AppDelegate.swift
-//  Example
+//  Example-iOS
 //
-//  Created by Koji Murata on 2019/09/03.
+//  Created by Koji Murata on 2019/09/05.
+//  Copyright © 2019 Koji Murata. All rights reserved.
 //
 
 import UIKit
