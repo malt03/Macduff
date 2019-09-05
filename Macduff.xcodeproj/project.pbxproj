@@ -16,6 +16,26 @@
 		ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
 		ED09853F231D644C00A895E5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
 		ED098541231D66B800A895E5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
+		EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
+		EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
+		EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
+		EDC867AC23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
+		EDC867AE2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
+		EDC867AF2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
+		EDC867B02322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
+		EDC867B12322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
+		EDC867B3232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
+		EDC867B4232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
+		EDC867B5232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
+		EDC867B6232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
+		EDC867BE2322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
+		EDC867BF2322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
+		EDC867C02322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
+		EDC867C12322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
+		EDC867C3232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
+		EDC867C4232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
+		EDC867C5232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
+		EDC867C6232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
 		EDCD9B9523212BC5009A17DB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
 		EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
 		EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
@@ -84,6 +104,11 @@
 		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilterImageProcessor.swift; sourceTree = "<group>"; };
+		EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
+		EDC867BD2322488800D6EDC1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
+		EDC867C2232248F100D6EDC1 /* Data+hashed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+hashed.swift"; sourceTree = "<group>"; };
 		EDCD9B8D23212BB2009A17DB /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteImage+Initializers.swift"; sourceTree = "<group>"; };
 		EDD03713231E11B300D8047F /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
@@ -146,6 +171,8 @@
 		ED098525231D37FC00A895E5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EDC867B7232247BF00D6EDC1 /* Utility */,
+				EDC867A723223F3900D6EDC1 /* ImageProcessor */,
 				EDC867A623223F1300D6EDC1 /* RemoteImage */,
 				ED098539231D597F00A895E5 /* ImageDownloader */,
 				ED098534231D4D7700A895E5 /* NativeSupport */,
@@ -165,6 +192,7 @@
 				ED09852D231D38E100A895E5 /* DiskCache.swift */,
 				EDD03750231E614500D8047F /* MemoryCache.swift */,
 				EDD03754231E69DE00D8047F /* CacheImage.swift */,
+				EDC867BD2322488800D6EDC1 /* CacheKey.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -204,6 +232,24 @@
 				EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */,
 			);
 			path = RemoteImage;
+			sourceTree = "<group>";
+		};
+		EDC867A723223F3900D6EDC1 /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */,
+				EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */,
+				EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		EDC867B7232247BF00D6EDC1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EDC867C2232248F100D6EDC1 /* Data+hashed.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */,
+				EDC867B3232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
 				ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */,
 				ED098538231D536D00A895E5 /* URLImageProvider.swift in Sources */,
 				ED09853F231D644C00A895E5 /* Status.swift in Sources */,
@@ -404,9 +451,13 @@
 				EDCD9C74232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDD03751231E614500D8047F /* MemoryCache.swift in Sources */,
+				EDC867AE2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
 				ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */,
+				EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
+				EDC867BE2322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDD03755231E69DE00D8047F /* CacheImage.swift in Sources */,
 				EDD03716231E11CE00D8047F /* Source.swift in Sources */,
+				EDC867C3232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDFA1E682320D86D009E68D3 /* ImageDownloaderSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCD9B9E23212BC5009A17DB /* CacheImage.swift in Sources */,
+				EDC867B4232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
 				EDCD9B9D23212BC5009A17DB /* MemoryCache.swift in Sources */,
 				EDCD9B9B23212BC5009A17DB /* Cache.swift in Sources */,
 				EDCD9BA223212BC5009A17DB /* Config.swift in Sources */,
@@ -427,9 +479,13 @@
 				EDCD9BA323212BC5009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C75232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */,
+				EDC867AF2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
 				EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
+				EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
+				EDC867BF2322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BA123212BC5009A17DB /* Status.swift in Sources */,
 				EDCD9B9923212BC5009A17DB /* URLImageProvider.swift in Sources */,
+				EDC867C4232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCD9BAD23212BC5009A17DB /* CacheImage.swift in Sources */,
+				EDC867B5232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
 				EDCD9BAC23212BC5009A17DB /* MemoryCache.swift in Sources */,
 				EDCD9BAA23212BC5009A17DB /* Cache.swift in Sources */,
 				EDCD9BB123212BC5009A17DB /* Config.swift in Sources */,
@@ -450,9 +507,13 @@
 				EDCD9BB223212BC5009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C76232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
+				EDC867B02322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
 				EDCD9BA523212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
+				EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
+				EDC867C02322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BB023212BC5009A17DB /* Status.swift in Sources */,
 				EDCD9BA823212BC5009A17DB /* URLImageProvider.swift in Sources */,
+				EDC867C5232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9BA623212BC5009A17DB /* NativeSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCD9BBC23212BC6009A17DB /* CacheImage.swift in Sources */,
+				EDC867B6232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
 				EDCD9BBB23212BC6009A17DB /* MemoryCache.swift in Sources */,
 				EDCD9BB923212BC6009A17DB /* Cache.swift in Sources */,
 				EDCD9BC023212BC6009A17DB /* Config.swift in Sources */,
@@ -473,9 +535,13 @@
 				EDCD9BC123212BC6009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C77232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
+				EDC867B12322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
 				EDCD9BB423212BC6009A17DB /* ImageDownloaderSession.swift in Sources */,
+				EDC867AC23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
+				EDC867C12322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BBF23212BC6009A17DB /* Status.swift in Sources */,
 				EDCD9BB723212BC6009A17DB /* URLImageProvider.swift in Sources */,
+				EDC867C6232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9BB523212BC6009A17DB /* NativeSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

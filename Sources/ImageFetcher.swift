@@ -29,13 +29,18 @@ public final class ImageFetcher: ObservableObject {
     
     public func fetch(completion: ((Status) -> Void)?) {
         if error != nil { error = nil }
-        config.cache.getOrStore(key: provider.hashedCacheKey, ttl: config.cacheTTL, provide: { (fetchedHandler) in
+        let key = CacheKey(provider: provider, processor: config.imageProcessor)
+        config.cache.getOrStore(key: key, ttl: config.cacheTTL, provide: { (fetchedHandler) in
             self.provider.run(progress: { (progress) in
                 DispatchQueue.main.async {
                     withAnimation { self.progress = progress }
                 }
-            }, success: {
-                fetchedHandler($0)
+            }, success: { (image) in
+                if let processor = self.config.imageProcessor {
+                    processor.processAsync(image: image, completion: fetchedHandler)
+                } else {
+                    fetchedHandler(image)
+                }
             }, failure: { (error) in
                 DispatchQueue.main.async {
                     withAnimation { self.error = error }
@@ -48,5 +53,19 @@ public final class ImageFetcher: ObservableObject {
                 completion?(.success(image))
             }
         })
+    }
+}
+
+extension ImageProcessor {
+    fileprivate func processAsync(image: ProvidingImage, completion: @escaping (ProvidingImage) -> Void) {
+        DispatchQueue.global().async {
+            guard
+                let processedImage = self.process(image: image.image)
+                else {
+                    completion(image)
+                    return
+                }
+            completion(ProvidingImage(image: processedImage, originalData: processedImage.pngData()))
+        }
     }
 }

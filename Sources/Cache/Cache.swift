@@ -19,13 +19,14 @@ extension Cache {
     var queue: DispatchQueue { return cacheQueue }
     
     func getOrStore(
-        key: String?,
+        key: CacheKey,
         ttl: TimeInterval,
         provide: @escaping (@escaping (ProvidingImage) -> Void) -> Void,
         result: @escaping (NativeImage) -> Void
     ) {
+        let cacheKey = key.generate()
         queue.async {
-            if let key = key {
+            if let key = cacheKey {
                 if let cached = self.get(for: key)?.image {
                     result(cached)
                     return
@@ -38,12 +39,14 @@ extension Cache {
             }
 
             provide { (provided) in
-                let cacheImage = CacheImage(originalData: provided.originalData, info: .init(expiresAt: Date().addingTimeInterval(ttl)))
-                if let key = key {
+                result(provided.image)
+                
+                guard let data = provided.originalData ?? provided.image.pngData() else { return }
+                let cacheImage = CacheImage(originalData: data, info: .init(expiresAt: Date().addingTimeInterval(ttl)))
+                if let key = cacheKey {
                     self.store(image: cacheImage, for: key)
                     self.fallbackCache?.store(image: cacheImage, for: key)
                 }
-                result(provided.image)
             }
         }
     }
