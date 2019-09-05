@@ -70,7 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED098517231D360000A895E5 /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098526231D37FC00A895E5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -82,8 +81,6 @@
 		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		EDCD9B7323212B48009A17DB /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDCD9B8023212B86009A17DB /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCD9B8D23212BB2009A17DB /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD03713231E11B300D8047F /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		EDD03715231E11CE00D8047F /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
@@ -136,9 +133,6 @@
 		ED098518231D360000A895E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED098517231D360000A895E5 /* Macduff.framework */,
-				EDCD9B7323212B48009A17DB /* Macduff.framework */,
-				EDCD9B8023212B86009A17DB /* Macduff.framework */,
 				EDCD9B8D23212BB2009A17DB /* Macduff.framework */,
 			);
 			name = Products;
@@ -247,7 +241,7 @@
 			);
 			name = "Macduff-iOS";
 			productName = "Macduff-iOS";
-			productReference = ED098517231D360000A895E5 /* Macduff.framework */;
+			productReference = EDCD9B8D23212BB2009A17DB /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDCD9B7223212B48009A17DB /* Macduff-watchOS */ = {
@@ -265,7 +259,7 @@
 			);
 			name = "Macduff-watchOS";
 			productName = "Macduff-watchOS";
-			productReference = EDCD9B7323212B48009A17DB /* Macduff.framework */;
+			productReference = EDCD9B8D23212BB2009A17DB /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDCD9B7F23212B86009A17DB /* Macduff-tvOS */ = {
@@ -283,7 +277,7 @@
 			);
 			name = "Macduff-tvOS";
 			productName = "Macduff-tvOS";
-			productReference = EDCD9B8023212B86009A17DB /* Macduff.framework */;
+			productReference = EDCD9B8D23212BB2009A17DB /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EDCD9B8C23212BB2009A17DB /* Macduff-macOS */ = {
