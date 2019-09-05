@@ -45,7 +45,7 @@
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EDD03713231E11B300D8047F /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		EDD03715231E11CE00D8047F /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		EDD0373C231E508100D8047F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD0373C231E508100D8047F /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD0373E231E508100D8047F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD03740231E508100D8047F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDD03742231E508100D8047F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		ED09850A231D35B800A895E5 = {
 			isa = PBXGroup;
 			children = (
-				EDD0373D231E508100D8047F /* Example */,
+				EDCD9B30232127C4009A17DB /* Examples */,
 				ED098525231D37FC00A895E5 /* Sources */,
 				ED098519231D360000A895E5 /* Macduff-iOS */,
 				ED098518231D360000A895E5 /* Products */,
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				ED098517231D360000A895E5 /* Macduff.framework */,
-				EDD0373C231E508100D8047F /* Example.app */,
+				EDD0373C231E508100D8047F /* Example-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,7 +157,15 @@
 			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
-		EDD0373D231E508100D8047F /* Example */ = {
+		EDCD9B30232127C4009A17DB /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				EDD0373D231E508100D8047F /* Example-iOS */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		EDD0373D231E508100D8047F /* Example-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				EDD0373E231E508100D8047F /* AppDelegate.swift */,
@@ -168,7 +176,7 @@
 				EDD0374C231E508200D8047F /* Info.plist */,
 				EDD03746231E508200D8047F /* Preview Content */,
 			);
-			path = Example;
+			path = "Example-iOS";
 			sourceTree = "<group>";
 		};
 		EDD03746231E508200D8047F /* Preview Content */ = {
@@ -210,9 +218,9 @@
 			productReference = ED098517231D360000A895E5 /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EDD0373B231E508100D8047F /* Example */ = {
+		EDD0373B231E508100D8047F /* Example-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDD0374D231E508200D8047F /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = EDD0374D231E508200D8047F /* Build configuration list for PBXNativeTarget "Example-iOS" */;
 			buildPhases = (
 				EDD03738231E508100D8047F /* Sources */,
 				EDD03739231E508100D8047F /* Frameworks */,
@@ -222,9 +230,9 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = "Example-iOS";
 			productName = Example;
-			productReference = EDD0373C231E508100D8047F /* Example.app */;
+			productReference = EDD0373C231E508100D8047F /* Example-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +266,7 @@
 			projectRoot = "";
 			targets = (
 				ED098516231D360000A895E5 /* Macduff-iOS */,
-				EDD0373B231E508100D8047F /* Example */,
+				EDD0373B231E508100D8047F /* Example-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -532,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Examples/Example-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -550,7 +558,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = "Examples/Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Examples/Example-iOS/Preview Content\"";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -617,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = "Examples/Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDD0374D231E508200D8047F /* Build configuration list for PBXNativeTarget "Example" */ = {
+		EDD0374D231E508200D8047F /* Build configuration list for PBXNativeTarget "Example-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDD0374E231E508200D8047F /* Debug */,
