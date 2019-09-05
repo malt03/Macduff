@@ -10,6 +10,6 @@ import CoreImage
 
 public final class GaussianBlurImageProcessor: CIFilterImageProcessor {
     public init(radius: Double = 10) {
-        super.init(filter: CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius": NSNumber(floatLiteral: radius)])!)
+        super.init(filter: CIFilter(name: "CIGaussianBlur", parameters: [kCIInputRadiusKey: NSNumber(floatLiteral: radius)])!)
     }
 }
