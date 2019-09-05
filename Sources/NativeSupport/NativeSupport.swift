@@ -8,6 +8,55 @@
 import Foundation
 import SwiftUI
 
+#if os(iOS) || os(tvOS)
+
+extension NotificationCenter {
+    func publisherForMemoryWarning() -> NotificationCenter.Publisher? {
+        publisher(for: UIApplication.didReceiveMemoryWarningNotification)
+    }
+    
+    func didEnterBackground() -> NotificationCenter.Publisher? {
+        publisher(for: UIApplication.didEnterBackgroundNotification)
+    }
+}
+
+#elseif os(macOS)
+
+extension NotificationCenter {
+    func publisherForMemoryWarning() -> NotificationCenter.Publisher? { nil }
+    func didEnterBackground() -> NotificationCenter.Publisher? {
+        publisher(for: NSApplication.didResignActiveNotification)
+    }
+}
+
+#else
+
+extension NotificationCenter {
+    func publisherForMemoryWarning() -> NotificationCenter.Publisher? { nil }
+    func didEnterBackground() -> NotificationCenter.Publisher? { nil }
+}
+
+#endif
+
+#if os(iOS) || os(tvOS)
+
+func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
+    var identifier = UIApplication.shared.beginBackgroundTask(expirationHandler: expirationHandler)
+    task {
+        if identifier == .invalid { return }
+        UIApplication.shared.endBackgroundTask(identifier)
+        identifier = .invalid
+    }
+}
+
+#else
+
+func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
+    task { }
+}
+
+#endif
+
 #if os(macOS)
 
 import AppKit
@@ -19,16 +68,6 @@ extension Image {
     }
 }
 
-extension NotificationCenter {
-    func publisherForMemoryWarning() -> NotificationCenter.Publisher? { nil }
-    func didEnterBackground() -> NotificationCenter.Publisher {
-        publisher(for: NSApplication.didResignActiveNotification)
-    }
-}
-
-func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
-    task { _ in }
-}
 
 #else
 
@@ -38,25 +77,6 @@ public typealias NativeImage = UIImage
 extension Image {
     init(nativeImage: NativeImage) {
         self.init(uiImage: nativeImage)
-    }
-}
-
-extension NotificationCenter {
-    func publisherForMemoryWarning() -> NotificationCenter.Publisher? {
-        publisher(for: UIApplication.didReceiveMemoryWarningNotification)
-    }
-    
-    func didEnterBackground() -> NotificationCenter.Publisher {
-        publisher(for: UIApplication.didEnterBackgroundNotification)
-    }
-}
-
-func backgroundTask(expirationHandler: @escaping () -> Void, task: (@escaping () -> Void) -> Void) {
-    var identifier = UIApplication.shared.beginBackgroundTask(expirationHandler: expirationHandler)
-    task {
-        if identifier == .invalid { return }
-        UIApplication.shared.endBackgroundTask(identifier)
-        identifier = .invalid
     }
 }
 

@@ -31,7 +31,7 @@ public final class DiskCache: Cache {
         self.fallbackCache = fallbackCache
         self.cacheDirectory = cacheDirectory
         
-        NotificationCenter.default.didEnterBackground().sink { [weak self] _ in self?.clean() }.store(in: &cancellables)
+        NotificationCenter.default.didEnterBackground()?.sink { [weak self] _ in self?.clean() }.store(in: &cancellables)
     }
     
     public let fallbackCache: Cache?
