@@ -71,6 +71,10 @@
 		EDD03751231E614500D8047F /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
 		EDD03755231E69DE00D8047F /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* CacheImage.swift */; };
 		EDFA1E682320D86D009E68D3 /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
+		EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
+		EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
+		EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
+		EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,7 @@
 		EDD03750231E614500D8047F /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
 		EDD03754231E69DE00D8047F /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderSession.swift; sourceTree = "<group>"; };
+		EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +156,7 @@
 				ED09852F231D4C3700A895E5 /* ImageProvider */,
 				ED09852C231D38C100A895E5 /* Cache */,
 				ED098526231D37FC00A895E5 /* ImageCacheManager.swift */,
+				EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */,
 				ED098527231D37FC00A895E5 /* RemoteImage.swift */,
 				EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */,
 				ED09853E231D644C00A895E5 /* Status.swift */,
@@ -395,6 +401,7 @@
 				EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */,
 				ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */,
 				EDCD9C74232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
+				EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDD03751231E614500D8047F /* MemoryCache.swift in Sources */,
 				ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */,
 				EDD03755231E69DE00D8047F /* CacheImage.swift in Sources */,
@@ -418,6 +425,7 @@
 				EDCD9B9A23212BC5009A17DB /* Source.swift in Sources */,
 				EDCD9BA323212BC5009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C75232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
+				EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
 				EDCD9BA123212BC5009A17DB /* Status.swift in Sources */,
 				EDCD9B9923212BC5009A17DB /* URLImageProvider.swift in Sources */,
@@ -441,6 +449,7 @@
 				EDCD9BA923212BC5009A17DB /* Source.swift in Sources */,
 				EDCD9BB223212BC5009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C76232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
+				EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDCD9BA523212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
 				EDCD9BB023212BC5009A17DB /* Status.swift in Sources */,
 				EDCD9BA823212BC5009A17DB /* URLImageProvider.swift in Sources */,
@@ -464,6 +473,7 @@
 				EDCD9BB823212BC6009A17DB /* Source.swift in Sources */,
 				EDCD9BC123212BC6009A17DB /* ImageFetcher.swift in Sources */,
 				EDCD9C77232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
+				EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDCD9BB423212BC6009A17DB /* ImageDownloaderSession.swift in Sources */,
 				EDCD9BBF23212BC6009A17DB /* Status.swift in Sources */,
 				EDCD9BB723212BC6009A17DB /* URLImageProvider.swift in Sources */,

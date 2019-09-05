@@ -41,7 +41,6 @@ struct ProgressView: View {
                     .frame(width: nil, height: geometry.frame(in: .global).height * CGFloat(self.progress), alignment: .bottom)
             }
         }
-        
     }
 }
 
