@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED921018232200EA00C277CE /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED921017232200EA00C277CE /* ProgressView.swift */; };
 		EDCD9BCF23212EC1009A17DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9BCE23212EC1009A17DB /* AppDelegate.swift */; };
 		EDCD9BD123212EC1009A17DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9BD023212EC1009A17DB /* SceneDelegate.swift */; };
 		EDCD9BD523212EC3009A17DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCD9BD423212EC3009A17DB /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED921017232200EA00C277CE /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		EDCD9BCB23212EC1009A17DB /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCD9BCE23212EC1009A17DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCD9BD023212EC1009A17DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				EDFA1E692321E036009E68D3 /* ImagesView.swift */,
 				EDFA1E6B2321E0B6009E68D3 /* RemoteImageInitializersView.swift */,
 				EDFA1E6D2321E131009E68D3 /* SlowImageProvider.swift */,
+				ED921017232200EA00C277CE /* ProgressView.swift */,
 				EDCD9BD423212EC3009A17DB /* Assets.xcassets */,
 				EDCD9BD923212EC3009A17DB /* LaunchScreen.storyboard */,
 				EDCD9BDC23212EC3009A17DB /* Info.plist */,
@@ -187,6 +190,7 @@
 				EDFA1E6C2321E0B6009E68D3 /* RemoteImageInitializersView.swift in Sources */,
 				EDCD9BCF23212EC1009A17DB /* AppDelegate.swift in Sources */,
 				EDCD9BD123212EC1009A17DB /* SceneDelegate.swift in Sources */,
+				ED921018232200EA00C277CE /* ProgressView.swift in Sources */,
 				EDCD9BE523212F0B009A17DB /* ContentView.swift in Sources */,
 				EDFA1E6E2321E131009E68D3 /* SlowImageProvider.swift in Sources */,
 			);

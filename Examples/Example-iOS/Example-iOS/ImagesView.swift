@@ -30,20 +30,6 @@ struct ImagesView: View {
     }
 }
 
-struct ProgressView: View {
-    let progress: Float
-    
-    var body: some View {
-        return GeometryReader { (geometry) in
-            ZStack(alignment: .bottom) {
-                Rectangle().fill(Color.gray)
-                Rectangle().fill(Color.green)
-                    .frame(width: nil, height: geometry.frame(in: .global).height * CGFloat(self.progress), alignment: .bottom)
-            }
-        }
-    }
-}
-
 fileprivate struct RandomImageModel: Identifiable {
     let id: Int
     var url: URL { return URL(string: "https://picsum.photos/200/100?random=\(id)")! }
