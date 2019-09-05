@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Example
+//  Example-iOS
 //
 //  Created by Koji Murata on 2019/09/03.
 //

@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Example
+//  Example-tvOS
 //
 //  Created by Koji Murata on 2019/09/03.
 //
