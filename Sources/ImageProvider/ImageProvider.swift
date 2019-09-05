@@ -21,6 +21,11 @@ extension ImageProvider {
 }
 
 public struct ProvidingImage {
-    let image: NativeImage
-    let originalData: Data
+    public let image: NativeImage
+    public let originalData: Data
+    
+    public init(image: NativeImage, originalData: Data) {
+        self.image = image
+        self.originalData = originalData
+    }
 }
