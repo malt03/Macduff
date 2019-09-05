@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
+public struct RemoteImage<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
     @ObservedObject private var imageFetcher: ImageFetcher
 
     private let completionHandler: ((Status) -> Void)?
+    private let imageViewHandler: (NativeImage) -> ImageView
     private let loadingPlaceHolderHandler: ((Float) -> LoadingPlaceHolder)?
     private let errorPlaceHolderHandler: ((Error) -> ErrorPlaceHolder)?
     private let transition: AnyTransition
     private let fetchTrigger: Config.FetchTrigger
 
-    public init(
-        provider: ImageProvider,
-        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)? = nil,
-        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)? = nil,
+    init(
+        with provider: ImageProvider,
+        imageView: @escaping (NativeImage) -> ImageView,
+        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
+        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         imageFetcher = ImageFetcher(provider: provider, config: config)
+        
+        imageViewHandler = imageView
         loadingPlaceHolderHandler = loadingPlaceHolder
         errorPlaceHolderHandler = errorPlaceHolder
         
@@ -37,15 +41,17 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
         }
     }
     
-    public init(
-        source: Source,
-        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)? = nil,
-        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)? = nil,
+    init(
+        with source: Source,
+        imageView: @escaping (NativeImage) -> ImageView,
+        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
+        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            provider: source.provider,
+            with: source.provider,
+            imageView: imageView,
             loadingPlaceHolder: loadingPlaceHolder,
             errorPlaceHolder: errorPlaceHolder,
             config: config,
@@ -61,12 +67,12 @@ public struct RemoteImage<LoadingPlaceHolder: View, ErrorPlaceHolder: View> {
 
 extension RemoteImage: View {
     public var body: some View {
-        var imageView: Image? = nil
+        var imageView: ImageView? = nil
         var loadingPlaceHolder: LoadingPlaceHolder? = nil
         var errorPlaceHolder: ErrorPlaceHolder? = nil
         
         if let image = imageFetcher.image {
-            imageView = Image(nativeImage: image)
+            imageView = imageViewHandler(image)
         } else if let error = imageFetcher.error {
             errorPlaceHolder = errorPlaceHolderHandler?(error)
         } else {
@@ -74,7 +80,7 @@ extension RemoteImage: View {
         }
         
         return TupleView((
-            imageView?.resizable(),
+            imageView,
             loadingPlaceHolder,
             errorPlaceHolder
         )).onAppear {

@@ -24,7 +24,7 @@ struct ImagesView: View {
     var body: some View {
         List(randomImages) { (image) in
             HStack {
-                RemoteImage(source: image.url, loadingPlaceHolder: { (progress) -> ProgressView in
+                RemoteImage(with: image.url, loadingPlaceHolder: { (progress) -> ProgressView in
                     return ProgressView(progress: progress)
                 }, errorPlaceHolder: { _ in
                     Rectangle().fill(Color.red)
