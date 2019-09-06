@@ -5,6 +5,8 @@
 //  Created by Koji Murata on 2019/09/06.
 //
 
+#if !os(watchOS)
+
 import Foundation
 import CoreImage
 
@@ -25,3 +27,5 @@ extension CIFilterImageProcessor {
         return NativeImage(cgImage: cgImage)
     }
 }
+
+#endif
