@@ -22,6 +22,21 @@
 		ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
 		ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
 		ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
+		ED8A5AD323234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD223234191007619AA /* GaussianBlurImageProcessorTest.swift */; };
+		ED8A5AD423234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD223234191007619AA /* GaussianBlurImageProcessorTest.swift */; };
+		ED8A5AD523234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD223234191007619AA /* GaussianBlurImageProcessorTest.swift */; };
+		ED8A5AD823234355007619AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD723234355007619AA /* Image.swift */; };
+		ED8A5AD923234355007619AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD723234355007619AA /* Image.swift */; };
+		ED8A5ADA23234355007619AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AD723234355007619AA /* Image.swift */; };
+		ED8A5AE023234940007619AA /* BlurLena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5ADF23234940007619AA /* BlurLena.png */; };
+		ED8A5AE123234940007619AA /* BlurLena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5ADF23234940007619AA /* BlurLena.png */; };
+		ED8A5AE223234940007619AA /* BlurLena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5ADF23234940007619AA /* BlurLena.png */; };
+		ED8A5AE423234A14007619AA /* Lena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5AE323234A14007619AA /* Lena.png */; };
+		ED8A5AE523234A14007619AA /* Lena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5AE323234A14007619AA /* Lena.png */; };
+		ED8A5AE623234A14007619AA /* Lena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5AE323234A14007619AA /* Lena.png */; };
+		ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */; };
+		ED8A5AE923235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */; };
+		ED8A5AEA23235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */; };
 		EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
 		EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
 		EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
@@ -139,6 +154,11 @@
 		ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHashedTests.swift; sourceTree = "<group>"; };
+		ED8A5AD223234191007619AA /* GaussianBlurImageProcessorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessorTest.swift; sourceTree = "<group>"; };
+		ED8A5AD723234355007619AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		ED8A5ADF23234940007619AA /* BlurLena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlurLena.png; sourceTree = "<group>"; };
+		ED8A5AE323234A14007619AA /* Lena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lena.png; sourceTree = "<group>"; };
+		ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessorArrayTest.swift; sourceTree = "<group>"; };
 		EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilterImageProcessor.swift; sourceTree = "<group>"; };
 		EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
@@ -298,10 +318,31 @@
 		ED6A6AB52322B5A400E29B65 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				ED8A5AD62323430F007619AA /* TestUtility */,
+				ED8A5AD12323416D007619AA /* ImageProcessor */,
+				ED8A5ADF23234940007619AA /* BlurLena.png */,
+				ED8A5AE323234A14007619AA /* Lena.png */,
 				ED35B4D82322BA0100473AC8 /* Utility */,
 				ED6A6AB82322B5A400E29B65 /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		ED8A5AD12323416D007619AA /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				ED8A5AD223234191007619AA /* GaussianBlurImageProcessorTest.swift */,
+				ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		ED8A5AD62323430F007619AA /* TestUtility */ = {
+			isa = PBXGroup;
+			children = (
+				ED8A5AD723234355007619AA /* Image.swift */,
+			);
+			path = TestUtility;
 			sourceTree = "<group>";
 		};
 		EDC867A623223F1300D6EDC1 /* RemoteImage */ = {
@@ -560,6 +601,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AE023234940007619AA /* BlurLena.png in Resources */,
+				ED8A5AE423234A14007619AA /* Lena.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +610,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AE123234940007619AA /* BlurLena.png in Resources */,
+				ED8A5AE523234A14007619AA /* Lena.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +619,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AE223234940007619AA /* BlurLena.png in Resources */,
+				ED8A5AE623234A14007619AA /* Lena.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +680,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AD323234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED8A5AD823234355007619AA /* Image.swift in Sources */,
+				ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
 				ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +691,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AD423234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED8A5AD923234355007619AA /* Image.swift in Sources */,
+				ED8A5AE923235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
 				ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +702,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A5AD523234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED8A5ADA23234355007619AA /* Image.swift in Sources */,
+				ED8A5AEA23235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
 				ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
