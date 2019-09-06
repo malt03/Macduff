@@ -14,7 +14,7 @@ public protocol CIFilterImageProcessor: ImageProcessor {
 
 extension CIFilterImageProcessor {
     public func process(image: NativeImage) -> NativeImage? {
-        guard let ciImage = image.ciImage ?? CIImage(image: image) else { return nil }
+        guard let ciImage = CIImage(image: image) else { return nil }
         filter.setValue(ciImage, forKey: kCIInputImageKey)
         guard let outputCIImage = filter.outputImage else { return nil }
         

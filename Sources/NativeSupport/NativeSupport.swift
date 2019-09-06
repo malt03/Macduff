@@ -68,6 +68,26 @@ extension Image {
     }
 }
 
+extension NSImage {
+    func pngData() -> Data? {
+        guard let cgRef = cgImage(forProposedRect: nil, context: nil, hints: nil) else { return nil }
+        let newRep = NSBitmapImageRep(cgImage: cgRef)
+        newRep.size = size
+        return newRep.representation(using: .png, properties: [:])
+    }
+    
+    convenience init(cgImage: CGImage) {
+        let size = CGSize(width: cgImage.width, height: cgImage.height)
+        self.init(cgImage: cgImage, size: size)
+    }
+}
+
+extension CIImage {
+    convenience init?(image: NSImage) {
+        guard let cgRef = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else { return nil }
+        self.init(cgImage: cgRef)
+    }
+}
 
 #else
 
