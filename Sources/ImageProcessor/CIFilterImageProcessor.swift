@@ -8,9 +8,11 @@
 import Foundation
 import CoreImage
 
-open class CIFilterImageProcessor: ImageProcessor {
-    public let cacheKey: String
-    
+public protocol CIFilterImageProcessor: ImageProcessor {
+    var filter: CIFilter { get }
+}
+
+extension CIFilterImageProcessor {
     public func process(image: NativeImage) -> NativeImage? {
         guard let ciImage = image.ciImage ?? CIImage(image: image) else { return nil }
         filter.setValue(ciImage, forKey: kCIInputImageKey)
@@ -21,12 +23,5 @@ open class CIFilterImageProcessor: ImageProcessor {
         let context = CIContext()
         guard let cgImage = context.createCGImage(outputCIImage, from: outputCIImage.extent) else { return nil }
         return NativeImage(cgImage: cgImage)
-    }
-    
-    private let filter: CIFilter
-    
-    public init(filter: CIFilter) {
-        self.filter = filter
-        cacheKey = "com.malt03.Macduff.CIFilterImageProcessor.\(filter.name).\(String(describing: filter.attributes))"
     }
 }

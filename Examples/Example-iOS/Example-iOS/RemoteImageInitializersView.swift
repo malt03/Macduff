@@ -26,6 +26,9 @@ struct RemoteImageInitializersView: View {
                 .frame(width: 50, height: 50, alignment: .center)
             RemoteImage(with: ErrorProvider(), loadingPlaceHolder: { ProgressView(progress: $0) }, errorPlaceHolder: { ErrorView(error: $0) })
                 .frame(width: 50, height: 50, alignment: .center)
+            RemoteImage(with: SlowLena(id: 1), config: Config(imageProcessor: GaussianBlurImageProcessor(radius: 50)))
+                .frame(width: 50, height: 50, alignment: .center)
+            
         }
     }
 }
