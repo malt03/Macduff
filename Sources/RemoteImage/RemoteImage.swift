@@ -11,7 +11,7 @@ public struct RemoteImage<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
     private let content: RemoteImageContent<ImageView, LoadingPlaceHolder, ErrorPlaceHolder>
 
     init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         imageView: @escaping (NativeImage) -> ImageView,
         loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
         errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
@@ -29,7 +29,7 @@ public struct RemoteImage<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
     }
     
     init(
-        with source: Source,
+        with source: Source?,
         imageView: @escaping (NativeImage) -> ImageView,
         loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
         errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
@@ -37,7 +37,7 @@ public struct RemoteImage<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            with: source.provider,
+            with: source?.provider,
             imageView: imageView,
             loadingPlaceHolder: loadingPlaceHolder,
             errorPlaceHolder: errorPlaceHolder,

@@ -13,12 +13,12 @@ public final class ImageFetcher: ObservableObject {
     @Published var image: NativeImage? = nil
     @Published var error: Error? = nil
     
-    private let provider: ImageProvider
+    private let provider: ImageProvider?
     private let config: Config
 
     private var cancellables = Set<AnyCancellable>()
     
-    public init(provider: ImageProvider, config: Config = .default) {
+    public init(provider: ImageProvider?, config: Config = .default) {
         self.provider = provider
         self.config = config
     }
@@ -28,10 +28,14 @@ public final class ImageFetcher: ObservableObject {
     }
     
     public func fetch(completion: ((Status) -> Void)?) {
-        if error != nil { error = nil }
+        progress = 0
+        image = nil
+        error = nil
+
+        guard let provider = provider else { return }
         let key = CacheKey(provider: provider, processor: config.imageProcessor)
         config.cache.getOrStore(key: key, ttl: config.cacheTTL, provide: { (fetchedHandler) in
-            self.provider.run(progress: { (progress) in
+            provider.run(progress: { (progress) in
                 DispatchQueue.main.async {
                     withAnimation { self.progress = progress }
                 }

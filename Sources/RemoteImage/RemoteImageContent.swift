@@ -18,7 +18,7 @@ struct RemoteImageContent<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
     private let fetchTrigger: Config.FetchTrigger
 
     init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         imageView: @escaping (NativeImage) -> ImageView,
         loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
         errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
