@@ -16,6 +16,12 @@
 		ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
 		ED09853F231D644C00A895E5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
 		ED098541231D66B800A895E5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
+		ED6A6AB92322B5A400E29B65 /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9B8D23212BB2009A17DB /* Macduff.framework */; };
+		ED6A6AC82322B90E00E29B65 /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9B8D23212BB2009A17DB /* Macduff.framework */; };
+		ED6A6AD72322B91700E29B65 /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9B8D23212BB2009A17DB /* Macduff.framework */; };
+		ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
+		ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
+		ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
 		EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
 		EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
 		EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
@@ -93,6 +99,30 @@
 		EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ED6A6ABA2322B5A400E29B65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED09850B231D35B800A895E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED098516231D360000A895E5;
+			remoteInfo = "Macduff-iOS";
+		};
+		ED6A6AC92322B90E00E29B65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED09850B231D35B800A895E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCD9B7F23212B86009A17DB;
+			remoteInfo = "Macduff-tvOS";
+		};
+		ED6A6AD82322B91700E29B65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED09850B231D35B800A895E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCD9B7F23212B86009A17DB;
+			remoteInfo = "Macduff-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -104,6 +134,11 @@
 		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ED6A6AB42322B5A400E29B65 /* MacduffTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A6AB82322B5A400E29B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHashedTests.swift; sourceTree = "<group>"; };
 		EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilterImageProcessor.swift; sourceTree = "<group>"; };
 		EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
@@ -124,6 +159,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AB12322B5A400E29B65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AB92322B5A400E29B65 /* Macduff.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AC02322B90E00E29B65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AC82322B90E00E29B65 /* Macduff.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6ACF2322B91700E29B65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AD72322B91700E29B65 /* Macduff.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				ED098525231D37FC00A895E5 /* Sources */,
+				ED6A6AB52322B5A400E29B65 /* Tests */,
 				ED098518231D360000A895E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				EDCD9B8D23212BB2009A17DB /* Macduff.framework */,
+				ED6A6AB42322B5A400E29B65 /* MacduffTests-iOS.xctest */,
+				ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */,
+				ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +285,23 @@
 				EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		ED35B4D82322BA0100473AC8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		ED6A6AB52322B5A400E29B65 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ED35B4D82322BA0100473AC8 /* Utility */,
+				ED6A6AB82322B5A400E29B65 /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		EDC867A623223F1300D6EDC1 /* RemoteImage */ = {
@@ -304,6 +384,60 @@
 			productReference = EDCD9B8D23212BB2009A17DB /* Macduff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		ED6A6AB32322B5A400E29B65 /* MacduffTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6A6ABE2322B5A400E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-iOS" */;
+			buildPhases = (
+				ED6A6AB02322B5A400E29B65 /* Sources */,
+				ED6A6AB12322B5A400E29B65 /* Frameworks */,
+				ED6A6AB22322B5A400E29B65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED6A6ABB2322B5A400E29B65 /* PBXTargetDependency */,
+			);
+			name = "MacduffTests-iOS";
+			productName = "MacduffTests-iOS";
+			productReference = ED6A6AB42322B5A400E29B65 /* MacduffTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED6A6AC22322B90E00E29B65 /* MacduffTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6A6ACB2322B90E00E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-tvOS" */;
+			buildPhases = (
+				ED6A6ABF2322B90E00E29B65 /* Sources */,
+				ED6A6AC02322B90E00E29B65 /* Frameworks */,
+				ED6A6AC12322B90E00E29B65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED6A6ACA2322B90E00E29B65 /* PBXTargetDependency */,
+			);
+			name = "MacduffTests-tvOS";
+			productName = "MacduffTests-tvOS";
+			productReference = ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED6A6AD12322B91700E29B65 /* MacduffTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6A6ADA2322B91700E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-macOS" */;
+			buildPhases = (
+				ED6A6ACE2322B91700E29B65 /* Sources */,
+				ED6A6ACF2322B91700E29B65 /* Frameworks */,
+				ED6A6AD02322B91700E29B65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED6A6AD92322B91700E29B65 /* PBXTargetDependency */,
+			);
+			name = "MacduffTests-macOS";
+			productName = "MacduffTests-macOS";
+			productReference = ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EDCD9B7223212B48009A17DB /* Macduff-watchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDCD9B7A23212B48009A17DB /* Build configuration list for PBXNativeTarget "Macduff-watchOS" */;
@@ -370,6 +504,15 @@
 					ED098516231D360000A895E5 = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					ED6A6AB32322B5A400E29B65 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					ED6A6AC22322B90E00E29B65 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					ED6A6AD12322B91700E29B65 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					EDCD9B7223212B48009A17DB = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -398,12 +541,36 @@
 				EDCD9B7223212B48009A17DB /* Macduff-watchOS */,
 				EDCD9B7F23212B86009A17DB /* Macduff-tvOS */,
 				EDCD9B8C23212BB2009A17DB /* Macduff-macOS */,
+				ED6A6AB32322B5A400E29B65 /* MacduffTests-iOS */,
+				ED6A6AC22322B90E00E29B65 /* MacduffTests-tvOS */,
+				ED6A6AD12322B91700E29B65 /* MacduffTests-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ED098515231D360000A895E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AB22322B5A400E29B65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AC12322B90E00E29B65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AD02322B91700E29B65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,6 +626,30 @@
 				EDD03716231E11CE00D8047F /* Source.swift in Sources */,
 				EDC867C3232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDFA1E682320D86D009E68D3 /* ImageDownloaderSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6AB02322B5A400E29B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6ABF2322B90E00E29B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6A6ACE2322B91700E29B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +738,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED6A6ABB2322B5A400E29B65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED098516231D360000A895E5 /* Macduff-iOS */;
+			targetProxy = ED6A6ABA2322B5A400E29B65 /* PBXContainerItemProxy */;
+		};
+		ED6A6ACA2322B90E00E29B65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCD9B7F23212B86009A17DB /* Macduff-tvOS */;
+			targetProxy = ED6A6AC92322B90E00E29B65 /* PBXContainerItemProxy */;
+		};
+		ED6A6AD92322B91700E29B65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCD9B7F23212B86009A17DB /* Macduff-tvOS */;
+			targetProxy = ED6A6AD82322B91700E29B65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ED09850F231D35B800A895E5 /* Debug */ = {
@@ -712,6 +921,414 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED6A6ABC2322B5A400E29B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED6A6ABD2322B5A400E29B65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED6A6ACC2322B90E00E29B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		ED6A6ACD2322B90E00E29B65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED6A6ADB2322B91700E29B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		ED6A6ADC2322B91700E29B65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.malt03.MacduffTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1195,6 +1812,33 @@
 			buildConfigurations = (
 				ED09851E231D360100A895E5 /* Debug */,
 				ED09851F231D360100A895E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6A6ABE2322B5A400E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6A6ABC2322B5A400E29B65 /* Debug */,
+				ED6A6ABD2322B5A400E29B65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6A6ACB2322B90E00E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6A6ACC2322B90E00E29B65 /* Debug */,
+				ED6A6ACD2322B90E00E29B65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6A6ADA2322B91700E29B65 /* Build configuration list for PBXNativeTarget "MacduffTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6A6ADB2322B91700E29B65 /* Debug */,
+				ED6A6ADC2322B91700E29B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
