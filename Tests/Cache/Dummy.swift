@@ -5,7 +5,7 @@
 //  Created by Koji Murata on 2019/09/07.
 //
 
-import Foundation
+import XCTest
 @testable import Macduff
 
 struct DummyImageProvider: ImageProvider {
@@ -16,4 +16,10 @@ struct DummyImageProvider: ImageProvider {
 struct DummyImageProcessor: ImageProcessor {
     let cacheKey: String
     func process(image: NativeImage) -> NativeImage? { nil }
+}
+
+extension XCTestCase {
+    func key(_ provider: String, _ processor: String) -> CacheKey {
+        CacheKey(provider: DummyImageProvider(cacheKey: provider), processor: DummyImageProcessor(cacheKey: processor))
+    }
 }

@@ -25,6 +25,9 @@
 		ED008D8B2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		ED008D8C2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		ED008D8D2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
+		ED008D8F2323E7F100641F21 /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */; };
+		ED008D902323E7F100641F21 /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */; };
+		ED008D912323E7F100641F21 /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */; };
 		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -178,6 +181,7 @@
 		ED008D812323D53B00641F21 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		ED008D852323DDA600641F21 /* DateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
 		ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedDateProvider.swift; sourceTree = "<group>"; };
+		ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheTest.swift; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				ED008D7D2323D49000641F21 /* DiskCacheTest.swift */,
+				ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */,
 				ED008D812323D53B00641F21 /* Dummy.swift */,
 				ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */,
 			);
@@ -771,6 +776,7 @@
 				ED008D7E2323D49000641F21 /* DiskCacheTest.swift in Sources */,
 				ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
 				ED008D822323D53B00641F21 /* Dummy.swift in Sources */,
+				ED008D8F2323E7F100641F21 /* MemoryCacheTest.swift in Sources */,
 				ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +790,7 @@
 				ED008D8C2323DE4600641F21 /* FixedDateProvider.swift in Sources */,
 				ED8A5AD923234355007619AA /* Image.swift in Sources */,
 				ED8A5AE923235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
+				ED008D902323E7F100641F21 /* MemoryCacheTest.swift in Sources */,
 				ED008D832323D53B00641F21 /* Dummy.swift in Sources */,
 				ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
@@ -798,6 +805,7 @@
 				ED008D8D2323DE4600641F21 /* FixedDateProvider.swift in Sources */,
 				ED8A5ADA23234355007619AA /* Image.swift in Sources */,
 				ED8A5AEA23235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
+				ED008D912323E7F100641F21 /* MemoryCacheTest.swift in Sources */,
 				ED008D842323D53B00641F21 /* Dummy.swift in Sources */,
 				ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);

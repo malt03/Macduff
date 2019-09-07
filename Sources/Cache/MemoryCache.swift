@@ -40,7 +40,7 @@ public final class MemoryCache: Cache {
     private var cleanTimer: Timer?
     private var cancellables = Set<AnyCancellable>()
     
-    private func clean() {
+    public func clean() {
         lock.lock()
         defer { lock.unlock() }
 

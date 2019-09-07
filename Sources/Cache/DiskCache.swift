@@ -42,7 +42,7 @@ public final class DiskCache: Cache {
         cancellables.forEach { $0.cancel() }
     }
     
-    private func clean() {
+    public func clean() {
         var willExpiration = false
         backgroundTask(expirationHandler: {
             willExpiration = true
