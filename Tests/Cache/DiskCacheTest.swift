@@ -17,7 +17,10 @@ final class DiskCacheTest: XCTestCase {
     
     func test() {
         let cache = DiskCache()!
-        defer { try! cache.removeAll() }
+        defer {
+            try! cache.removeAll()
+            usleep(100_000)
+        }
         
         let now = Date(timeIntervalSince1970: 1000)
         fixDate(now)
@@ -103,7 +106,7 @@ final class DiskCacheTest: XCTestCase {
         XCTAssertEqual(cachedURLsBeforeClean.count, 3)
         
         NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
-        sleep(1)
+        usleep(100_000)
         
         let cachedURLsAfterClean = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,
@@ -119,7 +122,7 @@ final class DiskCacheTest: XCTestCase {
         try! FileManager.default.removeItem(at: info)
 
         NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
-        sleep(1)
+        usleep(100_000)
 
         let cachedURLsAfterCleanAll = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,

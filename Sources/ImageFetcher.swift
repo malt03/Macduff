@@ -18,13 +18,13 @@ public final class ImageFetcher: ObservableObject {
 
     private var cancellables = Set<AnyCancellable>()
     
-    public init(provider: ImageProvider?, config: Config = .default) {
+    public init(with provider: ImageProvider?, config: Config = .default) {
         self.provider = provider
         self.config = config
     }
     
-    public convenience init(source: Source, config: Config = .default) {
-        self.init(provider: source.provider, config: config)
+    public convenience init(with source: Source, config: Config = .default) {
+        self.init(with: source.provider, config: config)
     }
     
     public func fetch(completion: ((Status) -> Void)?) {

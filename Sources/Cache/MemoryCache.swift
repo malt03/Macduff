@@ -76,7 +76,7 @@ public final class MemoryCache: Cache {
         return cached
     }
     
-    private func removeAll() {
+    public func removeAll() {
         lock.lock()
         defer { lock.unlock() }
 

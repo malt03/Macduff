@@ -17,6 +17,7 @@ final class MemoryCacheTest: XCTestCase {
     
     func test() {
         let cache = MemoryCache(fallbackCache: nil)
+        defer { cache.removeAll() }
         
         let now = Date(timeIntervalSince1970: 1000)
         fixDate(now)

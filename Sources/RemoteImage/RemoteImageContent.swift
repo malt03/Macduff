@@ -25,7 +25,7 @@ struct RemoteImageContent<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
-        imageFetcher = ImageFetcher(provider: provider, config: config)
+        imageFetcher = ImageFetcher(with: provider, config: config)
         
         imageViewHandler = imageView
         loadingPlaceHolderHandler = loadingPlaceHolder
