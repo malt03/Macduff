@@ -42,7 +42,7 @@ extension Cache {
                 result(provided.image)
                 
                 guard let data = provided.originalData ?? provided.image.pngData() else { return }
-                let cacheImage = CacheImage(originalData: data, info: .init(expiresAt: Date().addingTimeInterval(ttl)))
+                let cacheImage = CacheImage(originalData: data, info: .init(expiresAt: DateGenerator.now().addingTimeInterval(ttl)))
                 if let key = cacheKey {
                     self.store(image: cacheImage, for: key)
                     self.fallbackCache?.store(image: cacheImage, for: key)

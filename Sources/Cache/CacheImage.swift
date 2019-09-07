@@ -15,7 +15,7 @@ public final class CacheImage {
         let expiresAt: Date
         
         var isExpired: Bool {
-            return expiresAt.timeIntervalSince(Date()) < 0
+            return expiresAt.timeIntervalSince(DateGenerator.now()) < 0
         }
     }
     

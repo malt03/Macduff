@@ -52,7 +52,10 @@ public final class DiskCache: Cache {
                     let contents = try FileManager.default.contentsOfDirectory(at: self.cacheDirectory, includingPropertiesForKeys: [], options: [])
                     for content in contents {
                         if willExpiration { break }
-                        guard let info = try? CacheImage.Info.load(from: content) else { continue }
+                        guard let info = try? CacheImage.Info.load(from: content) else {
+                            try? FileManager.default.removeItem(at: content)
+                            continue
+                        }
                         if !info.isExpired { continue }
                         try? FileManager.default.removeItem(at: content)
                     }

@@ -12,6 +12,19 @@
 		ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */; };
 		ED008D762323C8B400641F21 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D752323C8B400641F21 /* StubRequest.swift */; };
 		ED008D7B2323D20300641F21 /* RemoteURLImageProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */; };
+		ED008D7E2323D49000641F21 /* DiskCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7D2323D49000641F21 /* DiskCacheTest.swift */; };
+		ED008D7F2323D49000641F21 /* DiskCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7D2323D49000641F21 /* DiskCacheTest.swift */; };
+		ED008D802323D49000641F21 /* DiskCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7D2323D49000641F21 /* DiskCacheTest.swift */; };
+		ED008D822323D53B00641F21 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
+		ED008D832323D53B00641F21 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
+		ED008D842323D53B00641F21 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
+		ED008D862323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
+		ED008D872323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
+		ED008D882323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
+		ED008D892323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
+		ED008D8B2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
+		ED008D8C2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
+		ED008D8D2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -161,6 +174,10 @@
 		ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
 		ED008D752323C8B400641F21 /* StubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
 		ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProviderTest.swift; sourceTree = "<group>"; };
+		ED008D7D2323D49000641F21 /* DiskCacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCacheTest.swift; sourceTree = "<group>"; };
+		ED008D812323D53B00641F21 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		ED008D852323DDA600641F21 /* DateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
+		ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedDateProvider.swift; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -277,6 +294,16 @@
 			path = ImageProvider;
 			sourceTree = "<group>";
 		};
+		ED008D7C2323D46D00641F21 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				ED008D7D2323D49000641F21 /* DiskCacheTest.swift */,
+				ED008D812323D53B00641F21 /* Dummy.swift */,
+				ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		ED09850A231D35B800A895E5 = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +351,7 @@
 				EDD03750231E614500D8047F /* MemoryCache.swift */,
 				EDD03754231E69DE00D8047F /* CacheImage.swift */,
 				EDC867BD2322488800D6EDC1 /* CacheKey.swift */,
+				ED008D852323DDA600641F21 /* DateGenerator.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -370,6 +398,7 @@
 				ED8A5AD12323416D007619AA /* ImageProcessor */,
 				ED008D722323C7B100641F21 /* ImageDownloader */,
 				ED008D792323D1C900641F21 /* ImageProvider */,
+				ED008D7C2323D46D00641F21 /* Cache */,
 				ED8A5ADF23234940007619AA /* BlurLena.png */,
 				ED8A5AE323234A14007619AA /* Lena.png */,
 				ED6A6AB82322B5A400E29B65 /* Info.plist */,
@@ -715,6 +744,7 @@
 				EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */,
 				ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */,
 				EDCD9C74232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
+				ED008D862323DDA600641F21 /* DateGenerator.swift in Sources */,
 				EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDD03751231E614500D8047F /* MemoryCache.swift in Sources */,
 				EDC867AE2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
@@ -733,11 +763,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED008D762323C8B400641F21 /* StubRequest.swift in Sources */,
+				ED008D8B2323DE4600641F21 /* FixedDateProvider.swift in Sources */,
 				ED8A5AD323234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
 				ED008D7B2323D20300641F21 /* RemoteURLImageProviderTest.swift in Sources */,
 				ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */,
 				ED8A5AD823234355007619AA /* Image.swift in Sources */,
+				ED008D7E2323D49000641F21 /* DiskCacheTest.swift in Sources */,
 				ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
+				ED008D822323D53B00641F21 /* Dummy.swift in Sources */,
 				ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,8 +780,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8A5AD423234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED008D7F2323D49000641F21 /* DiskCacheTest.swift in Sources */,
+				ED008D8C2323DE4600641F21 /* FixedDateProvider.swift in Sources */,
 				ED8A5AD923234355007619AA /* Image.swift in Sources */,
 				ED8A5AE923235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
+				ED008D832323D53B00641F21 /* Dummy.swift in Sources */,
 				ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,8 +794,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8A5AD523234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED008D802323D49000641F21 /* DiskCacheTest.swift in Sources */,
+				ED008D8D2323DE4600641F21 /* FixedDateProvider.swift in Sources */,
 				ED8A5ADA23234355007619AA /* Image.swift in Sources */,
 				ED8A5AEA23235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
+				ED008D842323D53B00641F21 /* Dummy.swift in Sources */,
 				ED6A6AE22322B9B900E29B65 /* DataHashedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +818,7 @@
 				EDCD9B9523212BC5009A17DB /* ImageDownloader.swift in Sources */,
 				EDCD9B9A23212BC5009A17DB /* Source.swift in Sources */,
 				EDCD9BA323212BC5009A17DB /* ImageFetcher.swift in Sources */,
+				ED008D872323DDA600641F21 /* DateGenerator.swift in Sources */,
 				EDCD9C75232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDC867AF2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
@@ -807,6 +847,7 @@
 				EDCD9BA423212BC5009A17DB /* ImageDownloader.swift in Sources */,
 				EDCD9BA923212BC5009A17DB /* Source.swift in Sources */,
 				EDCD9BB223212BC5009A17DB /* ImageFetcher.swift in Sources */,
+				ED008D882323DDA600641F21 /* DateGenerator.swift in Sources */,
 				EDCD9C76232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDC867B02322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
@@ -835,6 +876,7 @@
 				EDCD9BB323212BC6009A17DB /* ImageDownloader.swift in Sources */,
 				EDCD9BB823212BC6009A17DB /* Source.swift in Sources */,
 				EDCD9BC123212BC6009A17DB /* ImageFetcher.swift in Sources */,
+				ED008D892323DDA600641F21 /* DateGenerator.swift in Sources */,
 				EDCD9C77232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
 				EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
 				EDC867B12322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,

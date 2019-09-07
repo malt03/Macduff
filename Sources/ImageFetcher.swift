@@ -34,16 +34,16 @@ public final class ImageFetcher: ObservableObject {
 
         guard let provider = provider else { return }
         let key = CacheKey(provider: provider, processor: config.imageProcessor)
-        config.cache.getOrStore(key: key, ttl: config.cacheTTL, provide: { (fetchedHandler) in
+        config.cache.getOrStore(key: key, ttl: config.cacheTTL, provide: { (provided) in
             provider.run(progress: { (progress) in
                 DispatchQueue.main.async {
                     withAnimation { self.progress = progress }
                 }
             }, success: { (image) in
                 if let processor = self.config.imageProcessor {
-                    processor.processAsync(image: image, completion: fetchedHandler)
+                    processor.processAsync(image: image, completion: provided)
                 } else {
-                    fetchedHandler(image)
+                    provided(image)
                 }
             }, failure: { (error) in
                 DispatchQueue.main.async {
