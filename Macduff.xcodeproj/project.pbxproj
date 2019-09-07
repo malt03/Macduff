@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED008D6F2323C77600641F21 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED008D6E2323C77600641F21 /* Nocilla.framework */; };
+		ED008D712323C79300641F21 /* Nocilla.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED008D6E2323C77600641F21 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */; };
+		ED008D762323C8B400641F21 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D752323C8B400641F21 /* StubRequest.swift */; };
 		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -138,7 +142,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED008D702323C78C00641F21 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED008D712323C79300641F21 /* Nocilla.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		ED008D6E2323C77600641F21 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/iOS/Nocilla.framework; sourceTree = "<group>"; };
+		ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
+		ED008D752323C8B400641F21 /* StubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -187,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6A6AB92322B5A400E29B65 /* Macduff.framework in Frameworks */,
+				ED008D6F2323C77600641F21 /* Nocilla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,12 +251,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED008D6D2323C77600641F21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED008D6E2323C77600641F21 /* Nocilla.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED008D722323C7B100641F21 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
 		ED09850A231D35B800A895E5 = {
 			isa = PBXGroup;
 			children = (
 				ED098525231D37FC00A895E5 /* Sources */,
 				ED6A6AB52322B5A400E29B65 /* Tests */,
 				ED098518231D360000A895E5 /* Products */,
+				ED008D6D2323C77600641F21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,12 +356,13 @@
 		ED6A6AB52322B5A400E29B65 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ED8A5AD62323430F007619AA /* TestUtility */,
+				ED35B4D82322BA0100473AC8 /* Utility */,
 				ED8A5AD12323416D007619AA /* ImageProcessor */,
+				ED008D722323C7B100641F21 /* ImageDownloader */,
 				ED8A5ADF23234940007619AA /* BlurLena.png */,
 				ED8A5AE323234A14007619AA /* Lena.png */,
-				ED35B4D82322BA0100473AC8 /* Utility */,
 				ED6A6AB82322B5A400E29B65 /* Info.plist */,
+				ED8A5AD62323430F007619AA /* TestUtility */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -341,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				ED8A5AD723234355007619AA /* Image.swift */,
+				ED008D752323C8B400641F21 /* StubRequest.swift */,
 			);
 			path = TestUtility;
 			sourceTree = "<group>";
@@ -432,6 +472,7 @@
 				ED6A6AB02322B5A400E29B65 /* Sources */,
 				ED6A6AB12322B5A400E29B65 /* Frameworks */,
 				ED6A6AB22322B5A400E29B65 /* Resources */,
+				ED008D702323C78C00641F21 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -680,7 +721,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED008D762323C8B400641F21 /* StubRequest.swift in Sources */,
 				ED8A5AD323234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */,
 				ED8A5AD823234355007619AA /* Image.swift in Sources */,
 				ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
 				ED6A6AE02322B9B900E29B65 /* DataHashedTests.swift in Sources */,
@@ -1017,6 +1060,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1088,6 +1135,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

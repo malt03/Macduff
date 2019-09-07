@@ -31,7 +31,7 @@ final class ImageProcessorArrayTest: XCTestCase {
             step += 1
         }
         let arrayProcessor = [processor1, processor2] as ImageProcessor
-        let image = getImage(forResource: "Lena")
+        let image = getImage(resourceName: "Lena")
         let processed = arrayProcessor.process(image: image)
         
         XCTAssertEqual(processed, image)

@@ -10,8 +10,8 @@ import XCTest
 
 final class GaussianBlurImageProcessorTest: XCTestCase {
     func test() {
-        let processed = GaussianBlurImageProcessor().process(image: getImage(forResource: "Lena"))!
-        let expected = getImage(forResource: "BlurLena")
+        let processed = GaussianBlurImageProcessor().process(image: getImage(resourceName: "Lena"))!
+        let expected = getImage(resourceName: "BlurLena")
         XCTAssertEqual(createRawData(from: processed), createRawData(from: expected))
     }
 }

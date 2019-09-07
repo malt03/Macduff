@@ -14,12 +14,12 @@ extension XCTestCase {
     }
     
     #if os(macOS)
-    func getImage(name: String) -> NSImage {
+    func getImage(resourceName: String) -> NSImage {
         
     }
     #else
-    func getImage(forResource: String) -> UIImage {
-        UIImage(contentsOfFile: Bundle(for: type(of: self)).path(forResource: forResource, ofType: "png")!)!
+    func getImage(resourceName: String) -> UIImage {
+        UIImage(contentsOfFile: Bundle(for: type(of: self)).path(forResource: resourceName, ofType: "png")!)!
     }
     
     func createRawData(from image: UIImage) -> [UInt8] {
