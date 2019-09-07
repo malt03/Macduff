@@ -11,12 +11,13 @@
 		ED008D712323C79300641F21 /* Nocilla.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED008D6E2323C77600641F21 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */; };
 		ED008D762323C8B400641F21 /* StubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D752323C8B400641F21 /* StubRequest.swift */; };
+		ED008D7B2323D20300641F21 /* RemoteURLImageProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */; };
 		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
 		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
 		ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
 		ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
-		ED098538231D536D00A895E5 /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* URLImageProvider.swift */; };
+		ED098538231D536D00A895E5 /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
 		ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
 		ED09853F231D644C00A895E5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
 		ED098541231D66B800A895E5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
@@ -65,7 +66,7 @@
 		EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
 		EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
 		EDCD9B9823212BC5009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9B9923212BC5009A17DB /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* URLImageProvider.swift */; };
+		EDCD9B9923212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
 		EDCD9B9A23212BC5009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
 		EDCD9B9B23212BC5009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		EDCD9B9C23212BC5009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -79,7 +80,7 @@
 		EDCD9BA523212BC5009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
 		EDCD9BA623212BC5009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
 		EDCD9BA723212BC5009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9BA823212BC5009A17DB /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* URLImageProvider.swift */; };
+		EDCD9BA823212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
 		EDCD9BA923212BC5009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
 		EDCD9BAA23212BC5009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		EDCD9BAB23212BC5009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -93,7 +94,7 @@
 		EDCD9BB423212BC6009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
 		EDCD9BB523212BC6009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
 		EDCD9BB623212BC6009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9BB723212BC6009A17DB /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* URLImageProvider.swift */; };
+		EDCD9BB723212BC6009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
 		EDCD9BB823212BC6009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
 		EDCD9BB923212BC6009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
 		EDCD9BBA23212BC6009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
@@ -159,13 +160,14 @@
 		ED008D6E2323C77600641F21 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/iOS/Nocilla.framework; sourceTree = "<group>"; };
 		ED008D732323C7CF00641F21 /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
 		ED008D752323C8B400641F21 /* StubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRequest.swift; sourceTree = "<group>"; };
+		ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProviderTest.swift; sourceTree = "<group>"; };
 		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		ED09852D231D38E100A895E5 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		ED098530231D4C4300A895E5 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		ED098535231D4D9100A895E5 /* NativeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSupport.swift; sourceTree = "<group>"; };
-		ED098537231D536D00A895E5 /* URLImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageProvider.swift; sourceTree = "<group>"; };
+		ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProvider.swift; sourceTree = "<group>"; };
 		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -267,6 +269,14 @@
 			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
+		ED008D792323D1C900641F21 /* ImageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */,
+			);
+			path = ImageProvider;
+			sourceTree = "<group>";
+		};
 		ED09850A231D35B800A895E5 = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				ED098530231D4C4300A895E5 /* ImageProvider.swift */,
-				ED098537231D536D00A895E5 /* URLImageProvider.swift */,
+				ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */,
 				EDD03715231E11CE00D8047F /* Source.swift */,
 			);
 			path = ImageProvider;
@@ -359,6 +369,7 @@
 				ED35B4D82322BA0100473AC8 /* Utility */,
 				ED8A5AD12323416D007619AA /* ImageProcessor */,
 				ED008D722323C7B100641F21 /* ImageDownloader */,
+				ED008D792323D1C900641F21 /* ImageProvider */,
 				ED8A5ADF23234940007619AA /* BlurLena.png */,
 				ED8A5AE323234A14007619AA /* Lena.png */,
 				ED6A6AB82322B5A400E29B65 /* Info.plist */,
@@ -696,7 +707,7 @@
 				ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */,
 				EDC867B3232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
 				ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */,
-				ED098538231D536D00A895E5 /* URLImageProvider.swift in Sources */,
+				ED098538231D536D00A895E5 /* RemoteURLImageProvider.swift in Sources */,
 				ED09853F231D644C00A895E5 /* Status.swift in Sources */,
 				ED098541231D66B800A895E5 /* Config.swift in Sources */,
 				ED09852B231D383D00A895E5 /* Cache.swift in Sources */,
@@ -723,6 +734,7 @@
 			files = (
 				ED008D762323C8B400641F21 /* StubRequest.swift in Sources */,
 				ED8A5AD323234191007619AA /* GaussianBlurImageProcessorTest.swift in Sources */,
+				ED008D7B2323D20300641F21 /* RemoteURLImageProviderTest.swift in Sources */,
 				ED008D742323C7CF00641F21 /* ImageDownloaderTest.swift in Sources */,
 				ED8A5AD823234355007619AA /* Image.swift in Sources */,
 				ED8A5AE823235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */,
@@ -774,7 +786,7 @@
 				EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
 				EDC867BF2322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BA123212BC5009A17DB /* Status.swift in Sources */,
-				EDCD9B9923212BC5009A17DB /* URLImageProvider.swift in Sources */,
+				EDCD9B9923212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */,
 				EDC867C4232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */,
 			);
@@ -802,7 +814,7 @@
 				EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
 				EDC867C02322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BB023212BC5009A17DB /* Status.swift in Sources */,
-				EDCD9BA823212BC5009A17DB /* URLImageProvider.swift in Sources */,
+				EDCD9BA823212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */,
 				EDC867C5232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9BA623212BC5009A17DB /* NativeSupport.swift in Sources */,
 			);
@@ -830,7 +842,7 @@
 				EDC867AC23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
 				EDC867C12322488800D6EDC1 /* CacheKey.swift in Sources */,
 				EDCD9BBF23212BC6009A17DB /* Status.swift in Sources */,
-				EDCD9BB723212BC6009A17DB /* URLImageProvider.swift in Sources */,
+				EDCD9BB723212BC6009A17DB /* RemoteURLImageProvider.swift in Sources */,
 				EDC867C6232248F100D6EDC1 /* Data+hashed.swift in Sources */,
 				EDCD9BB523212BC6009A17DB /* NativeSupport.swift in Sources */,
 			);

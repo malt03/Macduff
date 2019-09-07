@@ -1,5 +1,5 @@
 //
-//  URLImageProvider.swift
+//  RemoteURLImageProvider.swift
 //  Macduff
 //
 //  Created by Koji Murata on 2019/09/02.
