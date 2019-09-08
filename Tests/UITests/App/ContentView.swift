@@ -13,19 +13,19 @@ struct ContentView: View {
         case dummy
     }
     
-    @State private var source: Source?
+    @State private var sources = [nil, nil, nil, nil] as [Source?]
     
     private func goNextStep() {
         if !TestStep.goNext() { return }
         switch TestStep.current {
-        case .initial:                 source = nil
-        case .creatingProvider:        source = Source(_provider: Provider(cacheKey: "success"))
-        case .progressingProvider:     source?._provider.progress?(0.5)
-        case .success:                 source?._provider.success?(ProvidingImage(image: image, originalData: nil))
-        case .removingProvider:        source = nil
-        case .recreatingProvider:      source = Source(_provider: Provider(cacheKey: "success"))
-        case .creatingFailureProvider: source = Source(_provider: Provider(cacheKey: "failure"))
-        case .failure:                 source?._provider.failure?(Errors.dummy)
+        case .initial:                 sources = (0..<4).map { _ in nil }
+        case .creatingProvider:        sources = (0..<4).map { _ in Source(provider: Provider(cacheKey: "success")) }
+        case .progressingProvider:     sources.forEach { $0?._provider.progress?(0.5) }
+        case .success:                 sources.forEach { $0?._provider.success?(ProvidingImage(image: image, originalData: nil)) }
+        case .removingProvider:        sources = (0..<4).map { _ in nil }
+        case .recreatingProvider:      sources = (0..<4).map { _ in Source(provider: Provider(cacheKey: "success")) }
+        case .creatingFailureProvider: sources = (0..<4).map { _ in Source(provider: Provider(cacheKey: "failure")) }
+        case .failure:                 sources.forEach { $0?._provider.failure?(Errors.dummy) }
         }
     }
     
@@ -52,18 +52,25 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: { self.goNextStep() }, label: { Text("Next") })
-            RemoteImage(
-                with: source,
-                loadingPlaceHolder: { ProgressView(progress: $0) },
-                errorPlaceHolder: { ErrorView(error: $0) }
-            ).frame(width: 100, height: 100, alignment: .center)
+            RemoteImage(with: sources[0])
+                .frame(width: 50, height: 50, alignment: .center)
+            RemoteImage(with: sources[1], placeHolder: { PlaceHolder() })
+                .frame(width: 50, height: 50, alignment: .center)
+            RemoteImage(with: sources[2], loadingPlaceHolder: { ProgressView(progress: $0) }, errorPlaceHolder: { ErrorView(error: $0) })
+                .frame(width: 50, height: 50, alignment: .center)
+            RemoteImage(with: sources[3], imageView: { Image(uiImage: $0).resizable() }, loadingPlaceHolder: { ProgressView(progress: $0) }, errorPlaceHolder: { ErrorView(error: $0) })
+                .frame(width: 50, height: 50, alignment: .center)
         }
     }
 }
 
-private struct Source: Macduff.Source {
+private final class Source: Macduff.Source {
     var provider: ImageProvider { _provider }
     let _provider: Provider
+    
+    init(provider: Provider) {
+        _provider = provider
+    }
 }
 
 private final class Provider: ImageProvider {
@@ -81,6 +88,12 @@ private final class Provider: ImageProvider {
         self.progress = progress
         self.success = success
         self.failure = failure
+    }
+}
+
+struct PlaceHolder: View {
+    var body: some View {
+        Text("PlaceHolder")
     }
 }
 
