@@ -20,7 +20,7 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
         
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "0.0" }.count, 2)
@@ -28,7 +28,7 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "0.5" }.count, 2)
@@ -36,13 +36,13 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertFalse(app.staticTexts.firstMatch.exists)
         XCTAssertEqual(app.images.count, 4)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "0.0" }.count, 2)
@@ -50,13 +50,13 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertFalse(app.staticTexts.firstMatch.exists)
         XCTAssertEqual(app.images.count, 4)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "0.0" }.count, 2)
@@ -64,7 +64,7 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
-        usleep(100_000)
+        sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "The operation couldn’t be completed. (AppForUITest.ContentView.Errors error 0.)" }.count, 2)
