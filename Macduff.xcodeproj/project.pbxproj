@@ -221,7 +221,7 @@
 		EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
 		EDC867BD2322488800D6EDC1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
 		EDC867C2232248F100D6EDC1 /* Data+hashed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+hashed.swift"; sourceTree = "<group>"; };
-		EDC867FB2325E20700D6EDC1 /* AppForUITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForUITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC867FB2325E20700D6EDC1 /* AppForTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC867FD2325E20700D6EDC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC867FF2325E20700D6EDC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDC868012325E20700D6EDC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 				EDCD9B8D23212BB2009A17DB /* Macduff.framework */,
 				ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */,
 				ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */,
-				EDC867FB2325E20700D6EDC1 /* AppForUITest.app */,
+				EDC867FB2325E20700D6EDC1 /* AppForTest.app */,
 				EDC868102325E20900D6EDC1 /* MacduffTests-iOS.xctest */,
 			);
 			name = Products;
@@ -628,9 +628,9 @@
 			productReference = ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EDC867FA2325E20700D6EDC1 /* AppForUITest */ = {
+		EDC867FA2325E20700D6EDC1 /* AppForTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDC8681B2325E20A00D6EDC1 /* Build configuration list for PBXNativeTarget "AppForUITest" */;
+			buildConfigurationList = EDC8681B2325E20A00D6EDC1 /* Build configuration list for PBXNativeTarget "AppForTest" */;
 			buildPhases = (
 				EDC867F72325E20700D6EDC1 /* Sources */,
 				EDC867F82325E20700D6EDC1 /* Frameworks */,
@@ -640,9 +640,9 @@
 			);
 			dependencies = (
 			);
-			name = AppForUITest;
+			name = AppForTest;
 			productName = App;
-			productReference = EDC867FB2325E20700D6EDC1 /* AppForUITest.app */;
+			productReference = EDC867FB2325E20700D6EDC1 /* AppForTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EDC8680F2325E20900D6EDC1 /* MacduffTests-iOS */ = {
@@ -774,7 +774,7 @@
 				EDC8680F2325E20900D6EDC1 /* MacduffTests-iOS */,
 				ED6A6AC22322B90E00E29B65 /* MacduffTests-tvOS */,
 				ED6A6AD12322B91700E29B65 /* MacduffTests-macOS */,
-				EDC867FA2325E20700D6EDC1 /* AppForUITest */,
+				EDC867FA2325E20700D6EDC1 /* AppForTest */,
 			);
 		};
 /* End PBXProject section */
@@ -1044,7 +1044,7 @@
 		};
 		EDC868122325E20A00D6EDC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EDC867FA2325E20700D6EDC1 /* AppForUITest */;
+			target = EDC867FA2325E20700D6EDC1 /* AppForTest */;
 			targetProxy = EDC868112325E20A00D6EDC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1563,7 +1563,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.malt03.AppForUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malt03.AppForTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1630,7 +1630,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.malt03.AppForUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malt03.AppForTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1715,7 +1715,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppForUITest;
+				TEST_TARGET_NAME = AppForTest;
 			};
 			name = Debug;
 		};
@@ -1786,7 +1786,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppForUITest;
+				TEST_TARGET_NAME = AppForTest;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2293,7 +2293,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDC8681B2325E20A00D6EDC1 /* Build configuration list for PBXNativeTarget "AppForUITest" */ = {
+		EDC8681B2325E20A00D6EDC1 /* Build configuration list for PBXNativeTarget "AppForTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDC868172325E20A00D6EDC1 /* Debug */,

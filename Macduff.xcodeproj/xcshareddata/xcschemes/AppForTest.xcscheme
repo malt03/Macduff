@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDC867FA2325E20700D6EDC1"
-               BuildableName = "AppForUITest.app"
-               BlueprintName = "AppForUITest"
+               BuildableName = "AppForTest.app"
+               BlueprintName = "AppForTest"
                ReferencedContainer = "container:Macduff.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDC867FA2325E20700D6EDC1"
-            BuildableName = "AppForUITest.app"
-            BlueprintName = "AppForUITest"
+            BuildableName = "AppForTest.app"
+            BlueprintName = "AppForTest"
             ReferencedContainer = "container:Macduff.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,8 +73,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDC867FA2325E20700D6EDC1"
-            BuildableName = "AppForUITest.app"
-            BlueprintName = "AppForUITest"
+            BuildableName = "AppForTest.app"
+            BlueprintName = "AppForTest"
             ReferencedContainer = "container:Macduff.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
