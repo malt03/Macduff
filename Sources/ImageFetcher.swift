@@ -20,9 +20,9 @@ public final class ImageFetcher: ObservableObject {
         var errorDescription: String? { "Already Fetching" }
     }
     
-    @Published var progress: Float = 0
-    @Published var image: NativeImage? = nil
-    @Published var error: Error? = nil
+    @Published public private(set) var progress: Float = 0
+    @Published public private(set) var image: NativeImage? = nil
+    @Published public private(set) var error: Error? = nil
     
     private let provider: ImageProvider?
     private let config: Config
