@@ -106,7 +106,7 @@ final class DiskCacheTest: XCTestCase {
         XCTAssertEqual(cachedURLsBeforeClean.count, 3)
         
         NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
-        sleep(1)
+        sleep(2)
         
         let cachedURLsAfterClean = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,
