@@ -93,7 +93,7 @@ final class ImageFetcherTest: XCTestCase {
                 XCTAssertNil(image)
                 usleep(100_000)
                 provider.success?(ProvidingImage(image: expectedImage, originalData: nil))
-                waitForExpectations(timeout: 0.1, handler: nil)
+                waitForExpectations(timeout: 1, handler: nil)
                 XCTAssertEqual(image, expectedImage)
                 XCTAssertEqual(fetchedImage, expectedImage)
                 cancellable.cancel()

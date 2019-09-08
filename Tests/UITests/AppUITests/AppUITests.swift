@@ -6,8 +6,13 @@
 //
 
 import XCTest
+@testable import Macduff
 
 class AppUITests: XCTestCase {
+    func testHoge() {
+        XCTAssertEqual("Hello World!".data(using: .utf8)!.hashed, "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069")
+    }
+    
     func test() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
