@@ -5,8 +5,4 @@ xcode_scheme: AppForTest
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xʀ
 
 before_install:
-  - carthage bootstrap --use-ssh --cache-builds
-
-env:
-  global:
-    secure: lt9GSmFMKRHr1W6ah/RPBG8Ki/xl1Em9lUhIIuyEOG1RPZWlGjl7ltWQhaGyVs/Vq4/cnHmbRdOhSCKdCP19t0SdrXJjkd/BBxA0+BF1on9OfmiLYxm1cyxgy/p5JoBz+O0jQ6R43BGs6bQ6ltaC/TK0t0Hvw8duUQsSpQRBcSC/wRwV4mzHhj2VlSAQQ1rHTS1GrJZsdi8RCtuyy6BeZsVD5L82rgN8AD6dCAA18w1muWxDL8OEhgcWi4fPoWVZPZNC1/W9oOKmdnTdJ8NAA9oyo2PbHbLeqS3n1e75R65E/bORukikbh+R7s5Z6Sy2AWTiCMbCfzMaj47yNgWDm3lGEx3JpNZvkwtBn1Zzh9woqIEu4I5FT7QL/hix1TEbThkYXTRnZBWic4Sm7pWmciqXStCTjyEOHTRcZbk80YSYFxc1sDjR0qsLuhSO6Locrb+FjnADNcnUdu160c/EBTBC5+F69qDiilPg9OpFPuPmL46CYbTh/htZpckq+l+c7eET7yS5WeFKuxh1WIU7Ekk7JkSm/1iLA13GHYGoTrFfAGfh4gQxDGFrxwvUYMneJ6tIyx4ymTvyy0ac80vEegfcJxA6oVi0TsK0AwXIQstRoT2QIr3vNQiJngtZ+mWmhB/fAsmkuvJAqgGio7ppZGRjVDY3g82IFYqo3ySB120=
+  - carthage bootstrap --cache-builds
