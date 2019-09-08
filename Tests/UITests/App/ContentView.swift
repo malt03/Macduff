@@ -16,9 +16,9 @@ struct ContentView: View {
     @State private var sources = [nil, nil, nil, nil] as [Source?]
     
     private func goNextStep() {
-        if !TestStep.goNext() { return }
+        TestStep.goNext()
         switch TestStep.current {
-        case .initial:                 sources = (0..<4).map { _ in nil }
+        case .initial:                 assertionFailure()
         case .creatingProvider:        sources = (0..<4).map { _ in Source(provider: Provider(cacheKey: "success")) }
         case .progressingProvider:     sources.forEach { $0?._provider.progress?(0.5) }
         case .success:                 sources.forEach { $0?._provider.success?(ProvidingImage(image: image, originalData: nil)) }
@@ -33,10 +33,8 @@ struct ContentView: View {
     
     enum TestStep: Int {
         static var current = TestStep.initial
-        static func goNext() -> Bool {
-            guard let next = TestStep(rawValue: current.rawValue + 1) else { return false }
-            current = next
-            return true
+        static func goNext() {
+            current = TestStep(rawValue: current.rawValue + 1)!
         }
         
         case initial

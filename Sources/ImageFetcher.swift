@@ -15,6 +15,11 @@ public final class ImageFetcher: ObservableObject {
         case finished
     }
     
+    enum Errors: LocalizedError {
+        case alreadyFetching
+        var errorDescription: String? { "Already Fetching" }
+    }
+    
     @Published var progress: Float = 0
     @Published var image: NativeImage? = nil
     @Published var error: Error? = nil
@@ -40,7 +45,10 @@ public final class ImageFetcher: ObservableObject {
         fetchLock.lock()
         defer { fetchLock.unlock() }
         
-        if fetchState != .notStarted && fetchState != .finished { return }
+        if fetchState != .notStarted && fetchState != .finished {
+            completion?(.failure(Errors.alreadyFetching))
+            return
+        }
 
         progress = 0
         image = nil

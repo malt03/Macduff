@@ -21,8 +21,6 @@ public struct DateGenerator {
     public static func setDefaultProvider() {
         provider = DefaultDateProvider()
     }
-    
-    private init() {}
 }
 
 public protocol DateProvider {

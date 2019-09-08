@@ -65,6 +65,19 @@ final class ImageFetcherTest: XCTestCase {
                 }
             }
             
+            do {
+                var fetchedError: Error? = nil
+                fetcher.fetch { (status) in
+                    switch status {
+                    case .success:
+                        XCTAssert(false)
+                    case .failure(let error):
+                        fetchedError = error
+                    }
+                }
+                XCTAssertEqual(fetchedError?.localizedDescription, "Already Fetching")
+            }
+            
             XCTAssertNil(fetchedImage)
             
             do {
