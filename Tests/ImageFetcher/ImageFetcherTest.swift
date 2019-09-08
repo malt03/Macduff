@@ -91,6 +91,7 @@ final class ImageFetcherTest: XCTestCase {
                     expectation.fulfill()
                 }
                 XCTAssertNil(image)
+                usleep(100_000)
                 provider.success?(ProvidingImage(image: expectedImage, originalData: nil))
                 waitForExpectations(timeout: 0.1, handler: nil)
                 XCTAssertEqual(image, expectedImage)
@@ -158,6 +159,7 @@ final class ImageFetcherTest: XCTestCase {
             expectation.fulfill()
         }
         XCTAssertNil(image)
+        usleep(100_000)
         provider.success?(ProvidingImage(image: expectedImage, originalData: nil))
         waitForExpectations(timeout: 0.1, handler: nil)
         XCTAssertEqual(image, expectedImage)
@@ -199,6 +201,7 @@ final class ImageFetcherTest: XCTestCase {
             expectation.fulfill()
         }
         XCTAssertNil(image)
+        usleep(100_000)
         provider.success?(ProvidingImage(image: expectedImage, originalData: nil))
         waitForExpectations(timeout: 0.1, handler: nil)
         XCTAssertEqual(image, expectedImage)

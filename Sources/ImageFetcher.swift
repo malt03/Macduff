@@ -9,12 +9,21 @@ import SwiftUI
 import Combine
 
 public final class ImageFetcher: ObservableObject {
+    private enum FetchState {
+        case notStarted
+        case started
+        case finished
+    }
+    
     @Published var progress: Float = 0
     @Published var image: NativeImage? = nil
     @Published var error: Error? = nil
     
     private let provider: ImageProvider?
     private let config: Config
+    
+    private var fetchState = FetchState.notStarted
+    private let fetchLock = NSLock()
 
     private var cancellables = Set<AnyCancellable>()
     
@@ -28,11 +37,23 @@ public final class ImageFetcher: ObservableObject {
     }
     
     public func fetch(completion: ((Status) -> Void)?) {
+        fetchLock.lock()
+        defer { fetchLock.unlock() }
+        
+        if fetchState != .notStarted && fetchState != .finished { return }
+
         progress = 0
         image = nil
         error = nil
 
         guard let provider = provider else { return }
+
+        fetchState = .started
+        func complete(status: Status) {
+            fetchState = .finished
+            completion?(status)
+        }
+
         let key = CacheKey(provider: provider, processor: config.imageProcessor)
         config.cache.getOrStore(key: key, ttl: config.cacheTTL, provide: { (provided) in
             provider.run(progress: { (progress) in
@@ -48,13 +69,13 @@ public final class ImageFetcher: ObservableObject {
             }, failure: { (error) in
                 DispatchQueue.main.async {
                     withAnimation { self.error = error }
-                    completion?(.failure(error))
+                    complete(status: .failure(error))
                 }
             })
         }, result: { (image) in
             DispatchQueue.main.async {
                 withAnimation { self.image = image }
-                completion?(.success(image))
+                complete(status: .success(image))
             }
         })
     }

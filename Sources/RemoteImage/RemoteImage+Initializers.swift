@@ -9,7 +9,7 @@ import SwiftUI
 
 extension RemoteImage {
     public init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         imageView: @escaping (NativeImage) -> ImageView,
         loadingPlaceHolder: @escaping (Float) -> LoadingPlaceHolder,
         errorPlaceHolder: @escaping (Error) -> ErrorPlaceHolder,
@@ -27,7 +27,7 @@ extension RemoteImage {
     }
     
     public init(
-        with source: Source,
+        with source: Source?,
         imageView: @escaping (NativeImage) -> ImageView,
         loadingPlaceHolder: @escaping (Float) -> LoadingPlaceHolder,
         errorPlaceHolder: @escaping (Error) -> ErrorPlaceHolder,
@@ -35,7 +35,7 @@ extension RemoteImage {
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            with: source.provider,
+            with: source?.provider,
             imageView: imageView,
             loadingPlaceHolder: loadingPlaceHolder,
             errorPlaceHolder: errorPlaceHolder,
@@ -47,7 +47,7 @@ extension RemoteImage {
 
 extension RemoteImage where ImageView == Image {
     public init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         loadingPlaceHolder: @escaping (Float) -> LoadingPlaceHolder,
         errorPlaceHolder: @escaping (Error) -> ErrorPlaceHolder,
         config: Config = .default,
@@ -64,14 +64,14 @@ extension RemoteImage where ImageView == Image {
     }
     
     public init(
-        with source: Source,
+        with source: Source?,
         loadingPlaceHolder: @escaping (Float) -> LoadingPlaceHolder,
         errorPlaceHolder: @escaping (Error) -> ErrorPlaceHolder,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            with: source.provider,
+            with: source?.provider,
             loadingPlaceHolder: loadingPlaceHolder,
             errorPlaceHolder: errorPlaceHolder,
             config: config,
@@ -82,7 +82,7 @@ extension RemoteImage where ImageView == Image {
 
 extension RemoteImage where ImageView == Image, LoadingPlaceHolder == ErrorPlaceHolder {
     public init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         placeHolder: @escaping () -> LoadingPlaceHolder,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
@@ -97,13 +97,13 @@ extension RemoteImage where ImageView == Image, LoadingPlaceHolder == ErrorPlace
     }
     
     public init(
-        with source: Source,
+        with source: Source?,
         placeHolder: @escaping () -> LoadingPlaceHolder,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            with: source.provider,
+            with: source?.provider,
             placeHolder: placeHolder,
             config: config,
             completion: completion
@@ -113,7 +113,7 @@ extension RemoteImage where ImageView == Image, LoadingPlaceHolder == ErrorPlace
 
 extension RemoteImage where ImageView == Image, LoadingPlaceHolder == EmptyView, ErrorPlaceHolder == EmptyView {
     public init(
-        with provider: ImageProvider,
+        with provider: ImageProvider?,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
@@ -128,12 +128,12 @@ extension RemoteImage where ImageView == Image, LoadingPlaceHolder == EmptyView,
     }
     
     public init(
-        with source: Source,
+        with source: Source?,
         config: Config = .default,
         completion: ((Status) -> Void)? = nil
     ) {
         self.init(
-            with: source.provider,
+            with: source?.provider,
             config: config,
             completion: completion
         )

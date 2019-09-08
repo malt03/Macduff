@@ -36,7 +36,7 @@ struct RemoteImageContent<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
         transition = config.transition
         fetchTrigger = config.fetchTrigger
 
-        if fetchTrigger == .initialize {
+        if fetchTrigger.contains(.onInitialize) {
             self.fetch()
         }
     }
@@ -66,7 +66,7 @@ extension RemoteImageContent: View {
             loadingPlaceHolder.transition(transition)
             errorPlaceHolder.transition(transition)
         }.onAppear {
-            if self.fetchTrigger == .appear { self.fetch() }
+            if self.fetchTrigger.contains(.onAppear) { self.fetch() }
         }
     }
 }
