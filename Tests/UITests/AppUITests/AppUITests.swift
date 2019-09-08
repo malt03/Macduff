@@ -67,7 +67,7 @@ class AppUITests: XCTestCase {
         sleep(1)
 
         XCTAssertEqual(app.staticTexts.count, 3)
-        XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "The operation couldn’t be completed. (AppForUITest.ContentView.Errors error 0.)" }.count, 2)
+        XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "The operation couldn’t be completed. (AppForTest.ContentView.Errors error 0.)" }.count, 2)
         XCTAssertEqual(app.staticTexts.allElementsBoundByIndex.filter { $0.label == "PlaceHolder" }.count, 1)
         XCTAssertFalse(app.images.firstMatch.exists)
     }
