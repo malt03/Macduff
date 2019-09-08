@@ -106,7 +106,7 @@ final class DiskCacheTest: XCTestCase {
         XCTAssertEqual(cachedURLsBeforeClean.count, 3)
         
         NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
-        usleep(100_000)
+        sleep(1)
         
         let cachedURLsAfterClean = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,
@@ -122,7 +122,7 @@ final class DiskCacheTest: XCTestCase {
         try! FileManager.default.removeItem(at: info)
 
         NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
-        usleep(100_000)
+        sleep(1)
 
         let cachedURLsAfterCleanAll = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,
@@ -133,6 +133,7 @@ final class DiskCacheTest: XCTestCase {
         #endif
         
         try! cache.removeAll()
+        sleep(1)
         let cachedURLsAfterRemoveAll = try! FileManager.default.contentsOfDirectory(
             at: DiskCache.defaultCacheDirectory!,
             includingPropertiesForKeys: nil,
