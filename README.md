@@ -57,7 +57,7 @@ struct ContentView: View {
             imageView: { Image(uiImage: $0).resizable().rotationEffect(.degrees(180)) },
             loadingPlaceHolder: { ProgressView(progress: $0) },
             errorPlaceHolder: { ErrorView(error: $0) },
-            config: Config.init(transition: .scale, imageProcessor: GaussianBlurImageProcessor()),
+            config: Config(transition: .scale, imageProcessor: GaussianBlurImageProcessor()),
             completion: { (status) in
                 switch status {
                 case .success(let image): print("success! imageSize:", image.size)
@@ -90,3 +90,60 @@ struct ErrorView: View {
 }
 ```
 
+## More Functions
+### Downloading Image without RemoteView
+```swift
+let fetcher = ImageFetcher(with: URL(string: "http://example.com/image")!)
+fetcher.$progress.sink { print($0) }.store(in: &cancellables)
+fetcher.$image.sink { print($0?.size) }.store(in: &cancellables)
+fetcher.$error.sink { print($0?.localizedDescription) }.store(in: &cancellables)
+fetcher.fetch { (status) in
+    switch status {
+    case .success(let image): print(image.size)
+    case .failure(let error): print(error.localizedDescription)
+    }
+}
+```
+
+### Removing disk cache
+```swift
+try DiskCache()?.removeAll()
+```
+
+### Only memory cache
+```swift
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Config.default = Config(cache: MemoryCache(fallbackCache: nil))
+        return true
+    }
+}
+```
+
+### Custom Image Processor
+```swift
+private struct MyImageProcessor1: ImageProcessor {
+    var cacheKey: String { "com.malt03.MyImageProcessor1" }
+    func process(image: NativeImage) -> NativeImage? {
+        // process image...
+        return image
+    }
+}
+
+private struct MyImageProcessor2: ImageProcessor {
+    var cacheKey: String { "com.malt03.MyImageProcessor2" }
+    func process(image: NativeImage) -> NativeImage? {
+        // process image...
+        return image
+    }
+}
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Config.default = Config(imageProcessor: [MyImageProcessor1(), MyImageProcessor2()])
+        return true
+    }
+}
+```
