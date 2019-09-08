@@ -9,17 +9,23 @@ import SwiftUI
 import Macduff
 
 struct ContentView: View {
+    enum Errors: Error {
+        case dummy
+    }
+    
     @State private var provider: Provider?
     
     private func goNextStep() {
         if !TestStep.goNext() { return }
         switch TestStep.current {
-        case .initial:             provider = nil
-        case .creatingProvider:    provider = Provider()
-        case .progressingProvider: provider?.progress?(0.5)
-        case .success:             provider?.success?(ProvidingImage(image: image, originalData: nil))
-        case .removingProvider:    provider = nil
-        case .recreatingProvider:  provider = Provider()
+        case .initial:                 provider = nil
+        case .creatingProvider:        provider = Provider(cacheKey: "success")
+        case .progressingProvider:     provider?.progress?(0.5)
+        case .success:                 provider?.success?(ProvidingImage(image: image, originalData: nil))
+        case .removingProvider:        provider = nil
+        case .recreatingProvider:      provider = Provider(cacheKey: "success")
+        case .creatingFailureProvider: provider = Provider(cacheKey: "failure")
+        case .failure:                 provider?.failure?(Errors.dummy)
         }
     }
     
@@ -39,6 +45,8 @@ struct ContentView: View {
         case success
         case removingProvider
         case recreatingProvider
+        case creatingFailureProvider
+        case failure
     }
     
     var body: some View {
@@ -54,7 +62,11 @@ struct ContentView: View {
 }
 
 private final class Provider: ImageProvider {
-    var cacheKey: String { "dummy" }
+    let cacheKey: String
+    
+    init(cacheKey: String) {
+        self.cacheKey = cacheKey
+    }
     
     var progress: ((Float) -> Void)?
     var success: ((ProvidingImage) -> Void)?
