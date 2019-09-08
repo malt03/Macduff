@@ -4,5 +4,9 @@ xcode_project: Macduff.xcodeproj
 xcode_scheme: AppForTest
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xʀ
 
+cache:
+  directories:
+    - Carthage
+  
 before_install:
   - carthage bootstrap --cache-builds
