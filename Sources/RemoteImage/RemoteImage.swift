@@ -27,24 +27,6 @@ public struct RemoteImage<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
             completion: completion
         )
     }
-    
-    init(
-        with source: Source?,
-        imageView: @escaping (NativeImage) -> ImageView,
-        loadingPlaceHolder: ((Float) -> LoadingPlaceHolder)?,
-        errorPlaceHolder: ((Error) -> ErrorPlaceHolder)?,
-        config: Config = .default,
-        completion: ((Status) -> Void)? = nil
-    ) {
-        self.init(
-            with: source?.provider,
-            imageView: imageView,
-            loadingPlaceHolder: loadingPlaceHolder,
-            errorPlaceHolder: errorPlaceHolder,
-            config: config,
-            completion: completion
-        )
-    }
 }
 
 extension RemoteImage: View {

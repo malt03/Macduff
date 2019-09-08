@@ -13,19 +13,19 @@ struct ContentView: View {
         case dummy
     }
     
-    @State private var provider: Provider?
+    @State private var source: Source?
     
     private func goNextStep() {
         if !TestStep.goNext() { return }
         switch TestStep.current {
-        case .initial:                 provider = nil
-        case .creatingProvider:        provider = Provider(cacheKey: "success")
-        case .progressingProvider:     provider?.progress?(0.5)
-        case .success:                 provider?.success?(ProvidingImage(image: image, originalData: nil))
-        case .removingProvider:        provider = nil
-        case .recreatingProvider:      provider = Provider(cacheKey: "success")
-        case .creatingFailureProvider: provider = Provider(cacheKey: "failure")
-        case .failure:                 provider?.failure?(Errors.dummy)
+        case .initial:                 source = nil
+        case .creatingProvider:        source = Source(_provider: Provider(cacheKey: "success"))
+        case .progressingProvider:     source?._provider.progress?(0.5)
+        case .success:                 source?._provider.success?(ProvidingImage(image: image, originalData: nil))
+        case .removingProvider:        source = nil
+        case .recreatingProvider:      source = Source(_provider: Provider(cacheKey: "success"))
+        case .creatingFailureProvider: source = Source(_provider: Provider(cacheKey: "failure"))
+        case .failure:                 source?._provider.failure?(Errors.dummy)
         }
     }
     
@@ -53,12 +53,17 @@ struct ContentView: View {
         VStack {
             Button(action: { self.goNextStep() }, label: { Text("Next") })
             RemoteImage(
-                with: provider,
+                with: source,
                 loadingPlaceHolder: { ProgressView(progress: $0) },
                 errorPlaceHolder: { ErrorView(error: $0) }
             ).frame(width: 100, height: 100, alignment: .center)
         }
     }
+}
+
+private struct Source: Macduff.Source {
+    var provider: ImageProvider { _provider }
+    let _provider: Provider
 }
 
 private final class Provider: ImageProvider {

@@ -18,36 +18,43 @@ class AppUITests: XCTestCase {
         XCTAssertFalse(app.images.firstMatch.exists)
         
         app.buttons.firstMatch.tap()
+        usleep(100_000)
         
         XCTAssertEqual(app.staticTexts.firstMatch.label, "0.0")
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
 
         XCTAssertEqual(app.staticTexts.firstMatch.label, "0.5")
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
 
         XCTAssertFalse(app.staticTexts.firstMatch.exists)
         XCTAssertTrue(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
 
         XCTAssertEqual(app.staticTexts.firstMatch.label, "0.0")
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
         
         XCTAssertFalse(app.staticTexts.firstMatch.exists)
         XCTAssertTrue(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
 
         XCTAssertEqual(app.staticTexts.firstMatch.label, "0.0")
         XCTAssertFalse(app.images.firstMatch.exists)
 
         app.buttons.firstMatch.tap()
+        usleep(100_000)
 
         XCTAssertEqual(app.staticTexts.firstMatch.label, "The operation couldn’t be completed. (AppForUITest.ContentView.Errors error 0.)")
         XCTAssertFalse(app.images.firstMatch.exists)
