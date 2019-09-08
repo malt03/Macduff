@@ -43,7 +43,15 @@ struct RemoteImageContent<ImageView: View, LoadingPlaceHolder: View, ErrorPlaceH
 
     private func fetch() {
         if self.imageFetcher.image != nil { return }
-        imageFetcher.fetch(completion: completionHandler)
+        imageFetcher.fetch { (status) in
+            guard let completionHandler = self.completionHandler else { return }
+            switch status {
+            case .success: completionHandler(status)
+            case .failure(let error):
+                if let error = error as? ImageFetcher.Errors, error == .alreadyFetching { return }
+                completionHandler(status)
+            }
+        }
     }
 }
 
