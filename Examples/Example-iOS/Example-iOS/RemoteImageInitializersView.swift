@@ -34,7 +34,6 @@ struct RemoteImageInitializersView: View {
 }
 
 struct RotateImage: View {
-    @State var spin = false
     let image: UIImage
     
     var body: some View {
