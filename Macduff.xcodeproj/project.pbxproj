@@ -149,6 +149,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ED3DB78B232621A900798B43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED09850B231D35B800A895E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED098516231D360000A895E5;
+			remoteInfo = "Macduff-iOS";
+		};
 		ED6A6AC92322B90E00E29B65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED09850B231D35B800A895E5 /* Project object */;
@@ -639,6 +646,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				ED3DB78C232621A900798B43 /* PBXTargetDependency */,
 			);
 			name = AppForTest;
 			productName = App;
@@ -1032,6 +1040,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		ED3DB78C232621A900798B43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED098516231D360000A895E5 /* Macduff-iOS */;
+			targetProxy = ED3DB78B232621A900798B43 /* PBXContainerItemProxy */;
+		};
 		ED6A6ACA2322B90E00E29B65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDCD9B7F23212B86009A17DB /* Macduff-tvOS */;
