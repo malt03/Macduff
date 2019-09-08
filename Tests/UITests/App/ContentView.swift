@@ -50,7 +50,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: { self.goNextStep() }, label: { Text("Next") })
-            RemoteImage(with: sources[0])
+            RemoteImage(with: sources[0], completion: { print($0) })
                 .frame(width: 50, height: 50, alignment: .center)
             RemoteImage(with: sources[1], placeHolder: { PlaceHolder() })
                 .frame(width: 50, height: 50, alignment: .center)
