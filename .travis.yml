@@ -5,8 +5,13 @@ xcode_scheme: AppForTest
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone Xʀ
 
 cache:
+  bundler: true
   directories:
     - Carthage
   
-before_install:
+install:
   - carthage bootstrap --cache-builds
+  - bundle install
+
+after_success:
+  - slather
