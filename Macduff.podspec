@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'Macduff'
   s.version          = '0.0.1'
-  s.summary          = 'A library to download and cache images for SwiftUI.'
+  s.summary          = 'Macduff is a library for downloading, caching and displaying images on SwiftUI.'
 
   s.description      = <<-DESC
-Macduff is a library to download and cache images for SwiftUI.
+Macduff is a library for downloading, caching and displaying images on SwiftUI.
 You can create ProgressView or ErrorView, and customize ImageView.
                        DESC
 
