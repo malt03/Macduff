@@ -88,9 +88,15 @@ struct ErrorView: View {
 ### Downloading Image without RemoteView
 ```swift
 let fetcher = ImageFetcher(with: URL(string: "http://example.com/image")!)
-fetcher.$progress.sink { print($0) }.store(in: &cancellables)
-fetcher.$image.sink { print($0?.size) }.store(in: &cancellables)
-fetcher.$error.sink { print($0?.localizedDescription) }.store(in: &cancellables)
+
+/* 
+These variables are private because the build doesn't pass due to a bug in Xcode.
+They will be made public as soon as the bug is resolved.
+*/
+// fetcher.$progress.sink { print($0) }.store(in: &cancellables)
+// fetcher.$image.sink { print($0?.size) }.store(in: &cancellables)
+// fetcher.$error.sink { print($0?.localizedDescription) }.store(in: &cancellables)
+
 fetcher.fetch { (status) in
     switch status {
     case .success(let image): print(image.size)
