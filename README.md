@@ -32,6 +32,8 @@ Of course, if the imageURL is updated, the displayed image will also be updated.
 
 ### [CocoaPods](https://github.com/cocoapods/cocoapods)
 
+**Since cocoapods does not yet support Xcode11, Macduff has not yet been released for cocoapods.**
+
 - Insert `pod 'Macduff'` to your Podfile.
 - Run `pod install`.
 
