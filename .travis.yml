@@ -9,9 +9,8 @@ cache:
   directories:
     - Carthage
   
-install:
+before_install:
   - carthage bootstrap --cache-builds
-  - bundle install
 
 after_success:
   - slather
