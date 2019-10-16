@@ -24,6 +24,11 @@ Of course, if the imageURL is updated, the displayed image will also be updated.
 
 ## Installation
 
+### [SwiftPM](https://github.com/apple/swift-package-manager) (Recommended)
+
+- On Xcode, click `File` > `Swift Packages` > `Add Package Dependency...`
+- Input `https://github.com/malt03/Macduff.git`
+
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 - Insert `github "malt03/Macduff"` to your Cartfile.
