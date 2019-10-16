@@ -11,10 +11,6 @@
 		ED008D802323D49000641F21 /* DiskCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D7D2323D49000641F21 /* DiskCacheTest.swift */; };
 		ED008D832323D53B00641F21 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
 		ED008D842323D53B00641F21 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
-		ED008D862323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
-		ED008D872323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
-		ED008D882323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
-		ED008D892323DDA600641F21 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D852323DDA600641F21 /* DateGenerator.swift */; };
 		ED008D8C2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		ED008D8D2323DE4600641F21 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		ED008D902323E7F100641F21 /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */; };
@@ -23,15 +19,6 @@
 		ED008D952323EBC500641F21 /* FallbackCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D922323EBC500641F21 /* FallbackCacheTest.swift */; };
 		ED008D9923240E0B00641F21 /* ImageFetcherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D9723240E0B00641F21 /* ImageFetcherTest.swift */; };
 		ED008D9A23240E0B00641F21 /* ImageFetcherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D9723240E0B00641F21 /* ImageFetcherTest.swift */; };
-		ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
-		ED09852B231D383D00A895E5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
-		ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
-		ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
-		ED098538231D536D00A895E5 /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
-		ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
-		ED09853F231D644C00A895E5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
-		ED098541231D66B800A895E5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
 		ED6A6AC82322B90E00E29B65 /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9B8D23212BB2009A17DB /* Macduff.framework */; };
 		ED6A6AD72322B91700E29B65 /* Macduff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCD9B8D23212BB2009A17DB /* Macduff.framework */; };
 		ED6A6AE12322B9B900E29B65 /* DataHashedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A6ADF2322B9B900E29B65 /* DataHashedTests.swift */; };
@@ -46,26 +33,94 @@
 		ED8A5AE623234A14007619AA /* Lena.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8A5AE323234A14007619AA /* Lena.png */; };
 		ED8A5AE923235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */; };
 		ED8A5AEA23235BB0007619AA /* ImageProcessorArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */; };
-		EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
-		EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
-		EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
-		EDC867AC23223F5700D6EDC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */; };
-		EDC867AE2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
-		EDC867AF2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
-		EDC867B02322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
-		EDC867B12322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */; };
-		EDC867B3232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
-		EDC867B4232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
-		EDC867B5232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
-		EDC867B6232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */; };
-		EDC867BE2322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
-		EDC867BF2322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
-		EDC867C02322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
-		EDC867C12322488800D6EDC1 /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867BD2322488800D6EDC1 /* CacheKey.swift */; };
-		EDC867C3232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
-		EDC867C4232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
-		EDC867C5232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
-		EDC867C6232248F100D6EDC1 /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867C2232248F100D6EDC1 /* Data+hashed.swift */; };
+		ED92E9D3235697E000F94FBB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B6235697DF00F94FBB /* NativeSupport.swift */; };
+		ED92E9D4235697E000F94FBB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B6235697DF00F94FBB /* NativeSupport.swift */; };
+		ED92E9D5235697E000F94FBB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B6235697DF00F94FBB /* NativeSupport.swift */; };
+		ED92E9D6235697E000F94FBB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B6235697DF00F94FBB /* NativeSupport.swift */; };
+		ED92E9D7235697E000F94FBB /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B8235697DF00F94FBB /* Data+hashed.swift */; };
+		ED92E9D8235697E000F94FBB /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B8235697DF00F94FBB /* Data+hashed.swift */; };
+		ED92E9D9235697E000F94FBB /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B8235697DF00F94FBB /* Data+hashed.swift */; };
+		ED92E9DA235697E000F94FBB /* Data+hashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9B8235697DF00F94FBB /* Data+hashed.swift */; };
+		ED92E9DB235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */; };
+		ED92E9DC235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */; };
+		ED92E9DD235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */; };
+		ED92E9DE235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */; };
+		ED92E9DF235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */; };
+		ED92E9E0235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */; };
+		ED92E9E1235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */; };
+		ED92E9E2235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */; };
+		ED92E9E3235697E000F94FBB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */; };
+		ED92E9E4235697E000F94FBB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */; };
+		ED92E9E5235697E000F94FBB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */; };
+		ED92E9E6235697E000F94FBB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */; };
+		ED92E9E7235697E000F94FBB /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BE235697DF00F94FBB /* DateGenerator.swift */; };
+		ED92E9E8235697E000F94FBB /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BE235697DF00F94FBB /* DateGenerator.swift */; };
+		ED92E9E9235697E000F94FBB /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BE235697DF00F94FBB /* DateGenerator.swift */; };
+		ED92E9EA235697E000F94FBB /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BE235697DF00F94FBB /* DateGenerator.swift */; };
+		ED92E9EB235697E000F94FBB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BF235697DF00F94FBB /* MemoryCache.swift */; };
+		ED92E9EC235697E000F94FBB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BF235697DF00F94FBB /* MemoryCache.swift */; };
+		ED92E9ED235697E000F94FBB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BF235697DF00F94FBB /* MemoryCache.swift */; };
+		ED92E9EE235697E000F94FBB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9BF235697DF00F94FBB /* MemoryCache.swift */; };
+		ED92E9EF235697E000F94FBB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C0235697DF00F94FBB /* DiskCache.swift */; };
+		ED92E9F0235697E000F94FBB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C0235697DF00F94FBB /* DiskCache.swift */; };
+		ED92E9F1235697E000F94FBB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C0235697DF00F94FBB /* DiskCache.swift */; };
+		ED92E9F2235697E000F94FBB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C0235697DF00F94FBB /* DiskCache.swift */; };
+		ED92E9F3235697E000F94FBB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C1235697DF00F94FBB /* Cache.swift */; };
+		ED92E9F4235697E000F94FBB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C1235697DF00F94FBB /* Cache.swift */; };
+		ED92E9F5235697E000F94FBB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C1235697DF00F94FBB /* Cache.swift */; };
+		ED92E9F6235697E000F94FBB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C1235697DF00F94FBB /* Cache.swift */; };
+		ED92E9F7235697E000F94FBB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C2235697DF00F94FBB /* CacheImage.swift */; };
+		ED92E9F8235697E000F94FBB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C2235697DF00F94FBB /* CacheImage.swift */; };
+		ED92E9F9235697E000F94FBB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C2235697DF00F94FBB /* CacheImage.swift */; };
+		ED92E9FA235697E000F94FBB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C2235697DF00F94FBB /* CacheImage.swift */; };
+		ED92E9FB235697E000F94FBB /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C3235697DF00F94FBB /* CacheKey.swift */; };
+		ED92E9FC235697E000F94FBB /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C3235697DF00F94FBB /* CacheKey.swift */; };
+		ED92E9FD235697E000F94FBB /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C3235697DF00F94FBB /* CacheKey.swift */; };
+		ED92E9FE235697E000F94FBB /* CacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C3235697DF00F94FBB /* CacheKey.swift */; };
+		ED92EA03235697E000F94FBB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C5235697DF00F94FBB /* Status.swift */; };
+		ED92EA04235697E000F94FBB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C5235697DF00F94FBB /* Status.swift */; };
+		ED92EA05235697E000F94FBB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C5235697DF00F94FBB /* Status.swift */; };
+		ED92EA06235697E000F94FBB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C5235697DF00F94FBB /* Status.swift */; };
+		ED92EA07235697E000F94FBB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C7235697DF00F94FBB /* Source.swift */; };
+		ED92EA08235697E000F94FBB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C7235697DF00F94FBB /* Source.swift */; };
+		ED92EA09235697E000F94FBB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C7235697DF00F94FBB /* Source.swift */; };
+		ED92EA0A235697E000F94FBB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C7235697DF00F94FBB /* Source.swift */; };
+		ED92EA0B235697E000F94FBB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C8235697DF00F94FBB /* ImageProvider.swift */; };
+		ED92EA0C235697E000F94FBB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C8235697DF00F94FBB /* ImageProvider.swift */; };
+		ED92EA0D235697E000F94FBB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C8235697DF00F94FBB /* ImageProvider.swift */; };
+		ED92EA0E235697E000F94FBB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C8235697DF00F94FBB /* ImageProvider.swift */; };
+		ED92EA0F235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */; };
+		ED92EA10235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */; };
+		ED92EA11235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */; };
+		ED92EA12235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */; };
+		ED92EA13235697E000F94FBB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */; };
+		ED92EA14235697E000F94FBB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */; };
+		ED92EA15235697E000F94FBB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */; };
+		ED92EA16235697E000F94FBB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */; };
+		ED92EA17235697E000F94FBB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */; };
+		ED92EA18235697E000F94FBB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */; };
+		ED92EA19235697E000F94FBB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */; };
+		ED92EA1A235697E000F94FBB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */; };
+		ED92EA1B235697E000F94FBB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CD235697E000F94FBB /* ImageDownloader.swift */; };
+		ED92EA1C235697E000F94FBB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CD235697E000F94FBB /* ImageDownloader.swift */; };
+		ED92EA1D235697E000F94FBB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CD235697E000F94FBB /* ImageDownloader.swift */; };
+		ED92EA1E235697E000F94FBB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CD235697E000F94FBB /* ImageDownloader.swift */; };
+		ED92EA1F235697E000F94FBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CE235697E000F94FBB /* Config.swift */; };
+		ED92EA20235697E000F94FBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CE235697E000F94FBB /* Config.swift */; };
+		ED92EA21235697E000F94FBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CE235697E000F94FBB /* Config.swift */; };
+		ED92EA22235697E000F94FBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9CE235697E000F94FBB /* Config.swift */; };
+		ED92EA23235697E000F94FBB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D0235697E000F94FBB /* RemoteImage.swift */; };
+		ED92EA24235697E000F94FBB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D0235697E000F94FBB /* RemoteImage.swift */; };
+		ED92EA25235697E000F94FBB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D0235697E000F94FBB /* RemoteImage.swift */; };
+		ED92EA26235697E000F94FBB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D0235697E000F94FBB /* RemoteImage.swift */; };
+		ED92EA27235697E000F94FBB /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */; };
+		ED92EA28235697E000F94FBB /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */; };
+		ED92EA29235697E000F94FBB /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */; };
+		ED92EA2A235697E000F94FBB /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */; };
+		ED92EA2B235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */; };
+		ED92EA2C235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */; };
+		ED92EA2D235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */; };
+		ED92EA2E235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */; };
 		EDC867FE2325E20700D6EDC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867FD2325E20700D6EDC1 /* AppDelegate.swift */; };
 		EDC868002325E20700D6EDC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC867FF2325E20700D6EDC1 /* SceneDelegate.swift */; };
 		EDC868022325E20700D6EDC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC868012325E20700D6EDC1 /* ContentView.swift */; };
@@ -91,61 +146,6 @@
 		EDC8687023260B6200D6EDC1 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D812323D53B00641F21 /* Dummy.swift */; };
 		EDC8687123260B6200D6EDC1 /* FixedDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */; };
 		EDC8687223260B8700D6EDC1 /* ImageFetcherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED008D9723240E0B00641F21 /* ImageFetcherTest.swift */; };
-		EDCD9B9523212BC5009A17DB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
-		EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
-		EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
-		EDCD9B9823212BC5009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9B9923212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
-		EDCD9B9A23212BC5009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
-		EDCD9B9B23212BC5009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
-		EDCD9B9C23212BC5009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
-		EDCD9B9D23212BC5009A17DB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
-		EDCD9B9E23212BC5009A17DB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* CacheImage.swift */; };
-		EDCD9BA023212BC5009A17DB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
-		EDCD9BA123212BC5009A17DB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
-		EDCD9BA223212BC5009A17DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
-		EDCD9BA323212BC5009A17DB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03713231E11B300D8047F /* ImageFetcher.swift */; };
-		EDCD9BA423212BC5009A17DB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
-		EDCD9BA523212BC5009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
-		EDCD9BA623212BC5009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
-		EDCD9BA723212BC5009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9BA823212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
-		EDCD9BA923212BC5009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
-		EDCD9BAA23212BC5009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
-		EDCD9BAB23212BC5009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
-		EDCD9BAC23212BC5009A17DB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
-		EDCD9BAD23212BC5009A17DB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* CacheImage.swift */; };
-		EDCD9BAF23212BC5009A17DB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
-		EDCD9BB023212BC5009A17DB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
-		EDCD9BB123212BC5009A17DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
-		EDCD9BB223212BC5009A17DB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03713231E11B300D8047F /* ImageFetcher.swift */; };
-		EDCD9BB323212BC6009A17DB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853A231D599900A895E5 /* ImageDownloader.swift */; };
-		EDCD9BB423212BC6009A17DB /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
-		EDCD9BB523212BC6009A17DB /* NativeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098535231D4D9100A895E5 /* NativeSupport.swift */; };
-		EDCD9BB623212BC6009A17DB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098530231D4C4300A895E5 /* ImageProvider.swift */; };
-		EDCD9BB723212BC6009A17DB /* RemoteURLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */; };
-		EDCD9BB823212BC6009A17DB /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
-		EDCD9BB923212BC6009A17DB /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852A231D383D00A895E5 /* Cache.swift */; };
-		EDCD9BBA23212BC6009A17DB /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09852D231D38E100A895E5 /* DiskCache.swift */; };
-		EDCD9BBB23212BC6009A17DB /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
-		EDCD9BBC23212BC6009A17DB /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* CacheImage.swift */; };
-		EDCD9BBE23212BC6009A17DB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098527231D37FC00A895E5 /* RemoteImage.swift */; };
-		EDCD9BBF23212BC6009A17DB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09853E231D644C00A895E5 /* Status.swift */; };
-		EDCD9BC023212BC6009A17DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED098540231D66B800A895E5 /* Config.swift */; };
-		EDCD9BC123212BC6009A17DB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03713231E11B300D8047F /* ImageFetcher.swift */; };
-		EDCD9C74232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */; };
-		EDCD9C75232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */; };
-		EDCD9C76232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */; };
-		EDCD9C77232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */; };
-		EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03713231E11B300D8047F /* ImageFetcher.swift */; };
-		EDD03716231E11CE00D8047F /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03715231E11CE00D8047F /* Source.swift */; };
-		EDD03751231E614500D8047F /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03750231E614500D8047F /* MemoryCache.swift */; };
-		EDD03755231E69DE00D8047F /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD03754231E69DE00D8047F /* CacheImage.swift */; };
-		EDFA1E682320D86D009E68D3 /* ImageDownloaderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */; };
-		EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
-		EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
-		EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
-		EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,21 +199,10 @@
 		ED008D7A2323D20300641F21 /* RemoteURLImageProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProviderTest.swift; sourceTree = "<group>"; };
 		ED008D7D2323D49000641F21 /* DiskCacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCacheTest.swift; sourceTree = "<group>"; };
 		ED008D812323D53B00641F21 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
-		ED008D852323DDA600641F21 /* DateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
 		ED008D8A2323DE4600641F21 /* FixedDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedDateProvider.swift; sourceTree = "<group>"; };
 		ED008D8E2323E7F100641F21 /* MemoryCacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheTest.swift; sourceTree = "<group>"; };
 		ED008D922323EBC500641F21 /* FallbackCacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallbackCacheTest.swift; sourceTree = "<group>"; };
 		ED008D9723240E0B00641F21 /* ImageFetcherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcherTest.swift; sourceTree = "<group>"; };
-		ED09851B231D360100A895E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED098527231D37FC00A895E5 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
-		ED09852A231D383D00A895E5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		ED09852D231D38E100A895E5 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
-		ED098530231D4C4300A895E5 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		ED098535231D4D9100A895E5 /* NativeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSupport.swift; sourceTree = "<group>"; };
-		ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProvider.swift; sourceTree = "<group>"; };
-		ED09853A231D599900A895E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		ED09853E231D644C00A895E5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		ED098540231D66B800A895E5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ED6A6AB82322B5A400E29B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6A6AC32322B90E00E29B65 /* MacduffTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6A6AD22322B91700E29B65 /* MacduffTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,11 +212,29 @@
 		ED8A5ADF23234940007619AA /* BlurLena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlurLena.png; sourceTree = "<group>"; };
 		ED8A5AE323234A14007619AA /* Lena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lena.png; sourceTree = "<group>"; };
 		ED8A5AE723235BB0007619AA /* ImageProcessorArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessorArrayTest.swift; sourceTree = "<group>"; };
-		EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIFilterImageProcessor.swift; sourceTree = "<group>"; };
-		EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
-		EDC867BD2322488800D6EDC1 /* CacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
-		EDC867C2232248F100D6EDC1 /* Data+hashed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+hashed.swift"; sourceTree = "<group>"; };
+		ED92E9B6235697DF00F94FBB /* NativeSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeSupport.swift; sourceTree = "<group>"; };
+		ED92E9B8235697DF00F94FBB /* Data+hashed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+hashed.swift"; sourceTree = "<group>"; };
+		ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilterImageProcessor.swift; sourceTree = "<group>"; };
+		ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlurImageProcessor.swift; sourceTree = "<group>"; };
+		ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		ED92E9BE235697DF00F94FBB /* DateGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
+		ED92E9BF235697DF00F94FBB /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		ED92E9C0235697DF00F94FBB /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		ED92E9C1235697DF00F94FBB /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		ED92E9C2235697DF00F94FBB /* CacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		ED92E9C3235697DF00F94FBB /* CacheKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheKey.swift; sourceTree = "<group>"; };
+		ED92E9C4235697DF00F94FBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Macduff/Info.plist; sourceTree = "<group>"; };
+		ED92E9C5235697DF00F94FBB /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Macduff/Status.swift; sourceTree = "<group>"; };
+		ED92E9C7235697DF00F94FBB /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		ED92E9C8235697DF00F94FBB /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteURLImageProvider.swift; sourceTree = "<group>"; };
+		ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = Macduff/ImageFetcher.swift; sourceTree = "<group>"; };
+		ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloaderSession.swift; sourceTree = "<group>"; };
+		ED92E9CD235697E000F94FBB /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		ED92E9CE235697E000F94FBB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Macduff/Config.swift; sourceTree = "<group>"; };
+		ED92E9D0235697E000F94FBB /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageContent.swift; sourceTree = "<group>"; };
+		ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemoteImage+Initializers.swift"; sourceTree = "<group>"; };
 		EDC867FB2325E20700D6EDC1 /* AppForTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppForTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC867FD2325E20700D6EDC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC867FF2325E20700D6EDC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,13 +246,6 @@
 		EDC868102325E20900D6EDC1 /* MacduffTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MacduffTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC868142325E20A00D6EDC1 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		EDCD9B8D23212BB2009A17DB /* Macduff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macduff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteImage+Initializers.swift"; sourceTree = "<group>"; };
-		EDD03713231E11B300D8047F /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
-		EDD03715231E11CE00D8047F /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		EDD03750231E614500D8047F /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
-		EDD03754231E69DE00D8047F /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
-		EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderSession.swift; sourceTree = "<group>"; };
-		EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,59 +381,19 @@
 		ED098525231D37FC00A895E5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ED09851B231D360100A895E5 /* Info.plist */,
-				EDC867B7232247BF00D6EDC1 /* Utility */,
-				EDC867A723223F3900D6EDC1 /* ImageProcessor */,
-				EDC867A623223F1300D6EDC1 /* RemoteImage */,
-				ED098539231D597F00A895E5 /* ImageDownloader */,
-				ED098534231D4D7700A895E5 /* NativeSupport */,
-				ED09852F231D4C3700A895E5 /* ImageProvider */,
-				ED09852C231D38C100A895E5 /* Cache */,
-				ED09853E231D644C00A895E5 /* Status.swift */,
-				ED098540231D66B800A895E5 /* Config.swift */,
-				EDD03713231E11B300D8047F /* ImageFetcher.swift */,
+				ED92E9BD235697DF00F94FBB /* Cache */,
+				ED92E9CB235697E000F94FBB /* ImageDownloader */,
+				ED92E9B9235697DF00F94FBB /* ImageProcessor */,
+				ED92E9C6235697DF00F94FBB /* ImageProvider */,
+				ED92E9B5235697DF00F94FBB /* NativeSupport */,
+				ED92E9CF235697E000F94FBB /* RemoteImage */,
+				ED92E9B7235697DF00F94FBB /* Utility */,
+				ED92E9CE235697E000F94FBB /* Config.swift */,
+				ED92E9CA235697DF00F94FBB /* ImageFetcher.swift */,
+				ED92E9C5235697DF00F94FBB /* Status.swift */,
+				ED92E9C4235697DF00F94FBB /* Info.plist */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		ED09852C231D38C100A895E5 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				ED09852A231D383D00A895E5 /* Cache.swift */,
-				ED09852D231D38E100A895E5 /* DiskCache.swift */,
-				EDD03750231E614500D8047F /* MemoryCache.swift */,
-				EDD03754231E69DE00D8047F /* CacheImage.swift */,
-				EDC867BD2322488800D6EDC1 /* CacheKey.swift */,
-				ED008D852323DDA600641F21 /* DateGenerator.swift */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
-		ED09852F231D4C3700A895E5 /* ImageProvider */ = {
-			isa = PBXGroup;
-			children = (
-				ED098530231D4C4300A895E5 /* ImageProvider.swift */,
-				ED098537231D536D00A895E5 /* RemoteURLImageProvider.swift */,
-				EDD03715231E11CE00D8047F /* Source.swift */,
-			);
-			path = ImageProvider;
-			sourceTree = "<group>";
-		};
-		ED098534231D4D7700A895E5 /* NativeSupport */ = {
-			isa = PBXGroup;
-			children = (
-				ED098535231D4D9100A895E5 /* NativeSupport.swift */,
-			);
-			path = NativeSupport;
-			sourceTree = "<group>";
-		};
-		ED098539231D597F00A895E5 /* ImageDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				ED09853A231D599900A895E5 /* ImageDownloader.swift */,
-				EDFA1E672320D86D009E68D3 /* ImageDownloaderSession.swift */,
-			);
-			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 		ED35B4D82322BA0100473AC8 /* Utility */ = {
@@ -480,32 +440,79 @@
 			path = TestUtility;
 			sourceTree = "<group>";
 		};
-		EDC867A623223F1300D6EDC1 /* RemoteImage */ = {
+		ED92E9B5235697DF00F94FBB /* NativeSupport */ = {
 			isa = PBXGroup;
 			children = (
-				EDFA1E872321F998009E68D3 /* RemoteImageContent.swift */,
-				ED098527231D37FC00A895E5 /* RemoteImage.swift */,
-				EDCD9C73232159A5009A17DB /* RemoteImage+Initializers.swift */,
+				ED92E9B6235697DF00F94FBB /* NativeSupport.swift */,
 			);
-			path = RemoteImage;
+			name = NativeSupport;
+			path = Macduff/NativeSupport;
 			sourceTree = "<group>";
 		};
-		EDC867A723223F3900D6EDC1 /* ImageProcessor */ = {
+		ED92E9B7235697DF00F94FBB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				EDC867A823223F5700D6EDC1 /* ImageProcessor.swift */,
-				EDC867AD2322405100D6EDC1 /* CIFilterImageProcessor.swift */,
-				EDC867B2232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift */,
+				ED92E9B8235697DF00F94FBB /* Data+hashed.swift */,
 			);
-			path = ImageProcessor;
+			name = Utility;
+			path = Macduff/Utility;
 			sourceTree = "<group>";
 		};
-		EDC867B7232247BF00D6EDC1 /* Utility */ = {
+		ED92E9B9235697DF00F94FBB /* ImageProcessor */ = {
 			isa = PBXGroup;
 			children = (
-				EDC867C2232248F100D6EDC1 /* Data+hashed.swift */,
+				ED92E9BA235697DF00F94FBB /* CIFilterImageProcessor.swift */,
+				ED92E9BB235697DF00F94FBB /* GaussianBlurImageProcessor.swift */,
+				ED92E9BC235697DF00F94FBB /* ImageProcessor.swift */,
 			);
-			path = Utility;
+			name = ImageProcessor;
+			path = Macduff/ImageProcessor;
+			sourceTree = "<group>";
+		};
+		ED92E9BD235697DF00F94FBB /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				ED92E9BE235697DF00F94FBB /* DateGenerator.swift */,
+				ED92E9BF235697DF00F94FBB /* MemoryCache.swift */,
+				ED92E9C0235697DF00F94FBB /* DiskCache.swift */,
+				ED92E9C1235697DF00F94FBB /* Cache.swift */,
+				ED92E9C2235697DF00F94FBB /* CacheImage.swift */,
+				ED92E9C3235697DF00F94FBB /* CacheKey.swift */,
+			);
+			name = Cache;
+			path = Macduff/Cache;
+			sourceTree = "<group>";
+		};
+		ED92E9C6235697DF00F94FBB /* ImageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				ED92E9C7235697DF00F94FBB /* Source.swift */,
+				ED92E9C8235697DF00F94FBB /* ImageProvider.swift */,
+				ED92E9C9235697DF00F94FBB /* RemoteURLImageProvider.swift */,
+			);
+			name = ImageProvider;
+			path = Macduff/ImageProvider;
+			sourceTree = "<group>";
+		};
+		ED92E9CB235697E000F94FBB /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				ED92E9CC235697E000F94FBB /* ImageDownloaderSession.swift */,
+				ED92E9CD235697E000F94FBB /* ImageDownloader.swift */,
+			);
+			name = ImageDownloader;
+			path = Macduff/ImageDownloader;
+			sourceTree = "<group>";
+		};
+		ED92E9CF235697E000F94FBB /* RemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				ED92E9D0235697E000F94FBB /* RemoteImage.swift */,
+				ED92E9D1235697E000F94FBB /* RemoteImageContent.swift */,
+				ED92E9D2235697E000F94FBB /* RemoteImage+Initializers.swift */,
+			);
+			name = RemoteImage;
+			path = Macduff/RemoteImage;
 			sourceTree = "<group>";
 		};
 		EDC867FC2325E20700D6EDC1 /* App */ = {
@@ -733,10 +740,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1120;
 				TargetAttributes = {
 					ED098516231D360000A895E5 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 					ED6A6AC22322B90E00E29B65 = {
 						CreatedOnToolsVersion = 11.0;
@@ -753,12 +761,15 @@
 					};
 					EDCD9B7223212B48009A17DB = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 					EDCD9B7F23212B86009A17DB = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 					EDCD9B8C23212BB2009A17DB = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -860,28 +871,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED098536231D4D9100A895E5 /* NativeSupport.swift in Sources */,
-				EDC867B3232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
-				ED098531231D4C4300A895E5 /* ImageProvider.swift in Sources */,
-				ED098538231D536D00A895E5 /* RemoteURLImageProvider.swift in Sources */,
-				ED09853F231D644C00A895E5 /* Status.swift in Sources */,
-				ED098541231D66B800A895E5 /* Config.swift in Sources */,
-				ED09852B231D383D00A895E5 /* Cache.swift in Sources */,
-				ED09852E231D38E100A895E5 /* DiskCache.swift in Sources */,
-				EDD03714231E11B300D8047F /* ImageFetcher.swift in Sources */,
-				ED098529231D37FC00A895E5 /* RemoteImage.swift in Sources */,
-				EDCD9C74232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
-				ED008D862323DDA600641F21 /* DateGenerator.swift in Sources */,
-				EDFA1E882321F998009E68D3 /* RemoteImageContent.swift in Sources */,
-				EDD03751231E614500D8047F /* MemoryCache.swift in Sources */,
-				EDC867AE2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
-				ED09853B231D599900A895E5 /* ImageDownloader.swift in Sources */,
-				EDC867A923223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
-				EDC867BE2322488800D6EDC1 /* CacheKey.swift in Sources */,
-				EDD03755231E69DE00D8047F /* CacheImage.swift in Sources */,
-				EDD03716231E11CE00D8047F /* Source.swift in Sources */,
-				EDC867C3232248F100D6EDC1 /* Data+hashed.swift in Sources */,
-				EDFA1E682320D86D009E68D3 /* ImageDownloaderSession.swift in Sources */,
+				ED92E9F7235697E000F94FBB /* CacheImage.swift in Sources */,
+				ED92EA13235697E000F94FBB /* ImageFetcher.swift in Sources */,
+				ED92EA17235697E000F94FBB /* ImageDownloaderSession.swift in Sources */,
+				ED92EA23235697E000F94FBB /* RemoteImage.swift in Sources */,
+				ED92E9DF235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */,
+				ED92EA1F235697E000F94FBB /* Config.swift in Sources */,
+				ED92E9F3235697E000F94FBB /* Cache.swift in Sources */,
+				ED92E9EF235697E000F94FBB /* DiskCache.swift in Sources */,
+				ED92E9E7235697E000F94FBB /* DateGenerator.swift in Sources */,
+				ED92E9DB235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */,
+				ED92E9FB235697E000F94FBB /* CacheKey.swift in Sources */,
+				ED92E9E3235697E000F94FBB /* ImageProcessor.swift in Sources */,
+				ED92E9EB235697E000F94FBB /* MemoryCache.swift in Sources */,
+				ED92E9D7235697E000F94FBB /* Data+hashed.swift in Sources */,
+				ED92EA27235697E000F94FBB /* RemoteImageContent.swift in Sources */,
+				ED92E9D3235697E000F94FBB /* NativeSupport.swift in Sources */,
+				ED92EA03235697E000F94FBB /* Status.swift in Sources */,
+				ED92EA0B235697E000F94FBB /* ImageProvider.swift in Sources */,
+				ED92EA2B235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */,
+				ED92EA07235697E000F94FBB /* Source.swift in Sources */,
+				ED92EA1B235697E000F94FBB /* ImageDownloader.swift in Sources */,
+				ED92EA0F235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,28 +965,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCD9B9E23212BC5009A17DB /* CacheImage.swift in Sources */,
-				EDC867B4232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
-				EDCD9B9D23212BC5009A17DB /* MemoryCache.swift in Sources */,
-				EDCD9B9B23212BC5009A17DB /* Cache.swift in Sources */,
-				EDCD9BA223212BC5009A17DB /* Config.swift in Sources */,
-				EDCD9BA023212BC5009A17DB /* RemoteImage.swift in Sources */,
-				EDCD9B9C23212BC5009A17DB /* DiskCache.swift in Sources */,
-				EDCD9B9823212BC5009A17DB /* ImageProvider.swift in Sources */,
-				EDCD9B9523212BC5009A17DB /* ImageDownloader.swift in Sources */,
-				EDCD9B9A23212BC5009A17DB /* Source.swift in Sources */,
-				EDCD9BA323212BC5009A17DB /* ImageFetcher.swift in Sources */,
-				ED008D872323DDA600641F21 /* DateGenerator.swift in Sources */,
-				EDCD9C75232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
-				EDFA1E892321F998009E68D3 /* RemoteImageContent.swift in Sources */,
-				EDC867AF2322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
-				EDCD9B9623212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
-				EDC867AA23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
-				EDC867BF2322488800D6EDC1 /* CacheKey.swift in Sources */,
-				EDCD9BA123212BC5009A17DB /* Status.swift in Sources */,
-				EDCD9B9923212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */,
-				EDC867C4232248F100D6EDC1 /* Data+hashed.swift in Sources */,
-				EDCD9B9723212BC5009A17DB /* NativeSupport.swift in Sources */,
+				ED92E9F8235697E000F94FBB /* CacheImage.swift in Sources */,
+				ED92EA14235697E000F94FBB /* ImageFetcher.swift in Sources */,
+				ED92EA18235697E000F94FBB /* ImageDownloaderSession.swift in Sources */,
+				ED92EA24235697E000F94FBB /* RemoteImage.swift in Sources */,
+				ED92E9E0235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */,
+				ED92EA20235697E000F94FBB /* Config.swift in Sources */,
+				ED92E9F4235697E000F94FBB /* Cache.swift in Sources */,
+				ED92E9F0235697E000F94FBB /* DiskCache.swift in Sources */,
+				ED92E9E8235697E000F94FBB /* DateGenerator.swift in Sources */,
+				ED92E9DC235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */,
+				ED92E9FC235697E000F94FBB /* CacheKey.swift in Sources */,
+				ED92E9E4235697E000F94FBB /* ImageProcessor.swift in Sources */,
+				ED92E9EC235697E000F94FBB /* MemoryCache.swift in Sources */,
+				ED92E9D8235697E000F94FBB /* Data+hashed.swift in Sources */,
+				ED92EA28235697E000F94FBB /* RemoteImageContent.swift in Sources */,
+				ED92E9D4235697E000F94FBB /* NativeSupport.swift in Sources */,
+				ED92EA04235697E000F94FBB /* Status.swift in Sources */,
+				ED92EA0C235697E000F94FBB /* ImageProvider.swift in Sources */,
+				ED92EA2C235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */,
+				ED92EA08235697E000F94FBB /* Source.swift in Sources */,
+				ED92EA1C235697E000F94FBB /* ImageDownloader.swift in Sources */,
+				ED92EA10235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,28 +994,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCD9BAD23212BC5009A17DB /* CacheImage.swift in Sources */,
-				EDC867B5232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
-				EDCD9BAC23212BC5009A17DB /* MemoryCache.swift in Sources */,
-				EDCD9BAA23212BC5009A17DB /* Cache.swift in Sources */,
-				EDCD9BB123212BC5009A17DB /* Config.swift in Sources */,
-				EDCD9BAF23212BC5009A17DB /* RemoteImage.swift in Sources */,
-				EDCD9BAB23212BC5009A17DB /* DiskCache.swift in Sources */,
-				EDCD9BA723212BC5009A17DB /* ImageProvider.swift in Sources */,
-				EDCD9BA423212BC5009A17DB /* ImageDownloader.swift in Sources */,
-				EDCD9BA923212BC5009A17DB /* Source.swift in Sources */,
-				EDCD9BB223212BC5009A17DB /* ImageFetcher.swift in Sources */,
-				ED008D882323DDA600641F21 /* DateGenerator.swift in Sources */,
-				EDCD9C76232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
-				EDFA1E8A2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
-				EDC867B02322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
-				EDCD9BA523212BC5009A17DB /* ImageDownloaderSession.swift in Sources */,
-				EDC867AB23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
-				EDC867C02322488800D6EDC1 /* CacheKey.swift in Sources */,
-				EDCD9BB023212BC5009A17DB /* Status.swift in Sources */,
-				EDCD9BA823212BC5009A17DB /* RemoteURLImageProvider.swift in Sources */,
-				EDC867C5232248F100D6EDC1 /* Data+hashed.swift in Sources */,
-				EDCD9BA623212BC5009A17DB /* NativeSupport.swift in Sources */,
+				ED92E9F9235697E000F94FBB /* CacheImage.swift in Sources */,
+				ED92EA15235697E000F94FBB /* ImageFetcher.swift in Sources */,
+				ED92EA19235697E000F94FBB /* ImageDownloaderSession.swift in Sources */,
+				ED92EA25235697E000F94FBB /* RemoteImage.swift in Sources */,
+				ED92E9E1235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */,
+				ED92EA21235697E000F94FBB /* Config.swift in Sources */,
+				ED92E9F5235697E000F94FBB /* Cache.swift in Sources */,
+				ED92E9F1235697E000F94FBB /* DiskCache.swift in Sources */,
+				ED92E9E9235697E000F94FBB /* DateGenerator.swift in Sources */,
+				ED92E9DD235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */,
+				ED92E9FD235697E000F94FBB /* CacheKey.swift in Sources */,
+				ED92E9E5235697E000F94FBB /* ImageProcessor.swift in Sources */,
+				ED92E9ED235697E000F94FBB /* MemoryCache.swift in Sources */,
+				ED92E9D9235697E000F94FBB /* Data+hashed.swift in Sources */,
+				ED92EA29235697E000F94FBB /* RemoteImageContent.swift in Sources */,
+				ED92E9D5235697E000F94FBB /* NativeSupport.swift in Sources */,
+				ED92EA05235697E000F94FBB /* Status.swift in Sources */,
+				ED92EA0D235697E000F94FBB /* ImageProvider.swift in Sources */,
+				ED92EA2D235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */,
+				ED92EA09235697E000F94FBB /* Source.swift in Sources */,
+				ED92EA1D235697E000F94FBB /* ImageDownloader.swift in Sources */,
+				ED92EA11235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1012,28 +1023,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCD9BBC23212BC6009A17DB /* CacheImage.swift in Sources */,
-				EDC867B6232243EE00D6EDC1 /* GaussianBlurImageProcessor.swift in Sources */,
-				EDCD9BBB23212BC6009A17DB /* MemoryCache.swift in Sources */,
-				EDCD9BB923212BC6009A17DB /* Cache.swift in Sources */,
-				EDCD9BC023212BC6009A17DB /* Config.swift in Sources */,
-				EDCD9BBE23212BC6009A17DB /* RemoteImage.swift in Sources */,
-				EDCD9BBA23212BC6009A17DB /* DiskCache.swift in Sources */,
-				EDCD9BB623212BC6009A17DB /* ImageProvider.swift in Sources */,
-				EDCD9BB323212BC6009A17DB /* ImageDownloader.swift in Sources */,
-				EDCD9BB823212BC6009A17DB /* Source.swift in Sources */,
-				EDCD9BC123212BC6009A17DB /* ImageFetcher.swift in Sources */,
-				ED008D892323DDA600641F21 /* DateGenerator.swift in Sources */,
-				EDCD9C77232159A5009A17DB /* RemoteImage+Initializers.swift in Sources */,
-				EDFA1E8B2321F998009E68D3 /* RemoteImageContent.swift in Sources */,
-				EDC867B12322405100D6EDC1 /* CIFilterImageProcessor.swift in Sources */,
-				EDCD9BB423212BC6009A17DB /* ImageDownloaderSession.swift in Sources */,
-				EDC867AC23223F5700D6EDC1 /* ImageProcessor.swift in Sources */,
-				EDC867C12322488800D6EDC1 /* CacheKey.swift in Sources */,
-				EDCD9BBF23212BC6009A17DB /* Status.swift in Sources */,
-				EDCD9BB723212BC6009A17DB /* RemoteURLImageProvider.swift in Sources */,
-				EDC867C6232248F100D6EDC1 /* Data+hashed.swift in Sources */,
-				EDCD9BB523212BC6009A17DB /* NativeSupport.swift in Sources */,
+				ED92E9FA235697E000F94FBB /* CacheImage.swift in Sources */,
+				ED92EA16235697E000F94FBB /* ImageFetcher.swift in Sources */,
+				ED92EA1A235697E000F94FBB /* ImageDownloaderSession.swift in Sources */,
+				ED92EA26235697E000F94FBB /* RemoteImage.swift in Sources */,
+				ED92E9E2235697E000F94FBB /* GaussianBlurImageProcessor.swift in Sources */,
+				ED92EA22235697E000F94FBB /* Config.swift in Sources */,
+				ED92E9F6235697E000F94FBB /* Cache.swift in Sources */,
+				ED92E9F2235697E000F94FBB /* DiskCache.swift in Sources */,
+				ED92E9EA235697E000F94FBB /* DateGenerator.swift in Sources */,
+				ED92E9DE235697E000F94FBB /* CIFilterImageProcessor.swift in Sources */,
+				ED92E9FE235697E000F94FBB /* CacheKey.swift in Sources */,
+				ED92E9E6235697E000F94FBB /* ImageProcessor.swift in Sources */,
+				ED92E9EE235697E000F94FBB /* MemoryCache.swift in Sources */,
+				ED92E9DA235697E000F94FBB /* Data+hashed.swift in Sources */,
+				ED92EA2A235697E000F94FBB /* RemoteImageContent.swift in Sources */,
+				ED92E9D6235697E000F94FBB /* NativeSupport.swift in Sources */,
+				ED92EA06235697E000F94FBB /* Status.swift in Sources */,
+				ED92EA0E235697E000F94FBB /* ImageProvider.swift in Sources */,
+				ED92EA2E235697E000F94FBB /* RemoteImage+Initializers.swift in Sources */,
+				ED92EA0A235697E000F94FBB /* Source.swift in Sources */,
+				ED92EA1E235697E000F94FBB /* ImageDownloader.swift in Sources */,
+				ED92EA12235697E000F94FBB /* RemoteURLImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,12 +1088,64 @@
 		ED09850F231D35B800A895E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		ED098510231D35B800A895E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
@@ -1142,7 +1205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1216,7 +1279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1243,6 +1306,7 @@
 		ED6A6ACC2322B90E00E29B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1314,6 +1378,7 @@
 		ED6A6ACD2322B90E00E29B65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1379,6 +1444,7 @@
 		ED6A6ADB2322B91700E29B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1450,6 +1516,7 @@
 		ED6A6ADC2322B91700E29B65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1861,7 +1928,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1936,7 +2003,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2016,7 +2083,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2090,7 +2157,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2171,7 +2238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2245,7 +2312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Macduff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
